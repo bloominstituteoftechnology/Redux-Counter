@@ -15,6 +15,7 @@ class Counter extends Component {
     };
 
     render() {
+        console.log(this.props);
         return (
             <p>
                 Clicked: {this.props.count} times
@@ -45,8 +46,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({ increment, decrement }, dispatch);
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(mapStateToProps, { increment, decrement })(Counter);
