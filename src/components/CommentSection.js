@@ -35,7 +35,7 @@ export default class CommentSection extends Component {
             <div className="comment-section">
                 {this.state.comments.map((comment, i) =>
                     <div className="comment" key={i}>
-                        <div className="comment-user">{comment.username}</div>
+                        <div className="comment-user"><b>{comment.username}</b></div>
                         <div className="comment-text">{comment.text}</div>
                     </div>
                 )}
