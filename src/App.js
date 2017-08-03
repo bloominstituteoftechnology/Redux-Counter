@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import SearchBar from './SearchBar';
+import SearchBar from './components/SearchBar';
+import PostContainer from './containers/PostContainer';
 import postData from './application-data';
-
-import PostContainer from './PostContainer';
 
 class App extends Component {
   render() {

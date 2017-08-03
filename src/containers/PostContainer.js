@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import CommentSection from './CommentSection';
+import CommentSection from '../components/CommentSection';
 
-export default class PostContainer extends Component {
-    constructor(props) {
+class PostContainer extends Component {
+    constructor() {
         super();
     }
 
@@ -21,3 +21,5 @@ export default class PostContainer extends Component {
         );
     }
 }
+
+export default PostContainer;
