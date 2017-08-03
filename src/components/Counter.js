@@ -11,7 +11,7 @@ class Counter extends Component {
     };
 
     incrementAsync = () => {
-        setTimeout(this.props.increment(), 1000);
+        setTimeout(() => this.props.increment(), 1000);
     };
 
     render() {
