@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import CommentSection from '../components/CommentSection';
 
 class PostContainer extends Component {
-    constructor() {
-        super();
-    }
-
     render() {
         return (
             <div className="post-container">
@@ -16,7 +12,7 @@ class PostContainer extends Component {
                 <div className="image">
                     <img src={this.props.postData.imageUrl} />
                 </div>
-                <CommentSection comments={this.props.postData.comments} /> 
+                <CommentSection postIndex={this.props.index} comments={this.props.postData.comments} /> 
             </div>
         );
     }

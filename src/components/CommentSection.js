@@ -1,39 +1,27 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { findDOMNode } from 'react-dom';
+import { addComment } from '../actions';
 
-export default class CommentSection extends Component {
-    constructor(props) {
-        super();
-
-        this.state = {
-            comments: []
-        };
-    }
-
-    componentDidMount() {
-        this.setState({
-            comments: this.props.comments
-        });
-    }
-
+class CommentSection extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         const text = findDOMNode(this.refs.commentInput).value;
         const newComment = {
-            username: 'Sean',
-            text
+            postIndex: this.props.postIndex,
+            body: {
+                username: 'Sean',
+                text
+            }
         };
-
-        this.setState({
-            comments: [...this.state.comments, newComment]
-        });
+        this.props.dispatch(addComment(newComment));
         findDOMNode(this.refs.commentInput).value = '';
     };
 
     render() {
         return (
             <div className="comment-section">
-                {this.state.comments.map((comment, i) =>
+                {this.props.comments.map((comment, i) =>
                     <div className="comment" key={i}>
                         <div className="comment-user"><b>{comment.username}</b></div>
                         <div className="comment-text">{comment.text}</div>
@@ -48,3 +36,5 @@ export default class CommentSection extends Component {
         );
     }
 }
+
+export default connect()(CommentSection);
