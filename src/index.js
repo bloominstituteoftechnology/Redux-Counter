@@ -10,11 +10,12 @@ const store = createStore(counter);
 const render = () => {
     ReactDOM.render(
         <Provider store={createStore(counter)}>
-            <Counter
+            <Counter />
+            {/* <Counter
                 value={store.getState()}
                 onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
                 onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
-            />
+            /> */}
         </Provider>,
         document.getElementById('root'),
     );

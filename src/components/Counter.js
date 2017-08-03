@@ -1,28 +1,30 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { increment, decrement } from '../actions';
 
 class Counter extends Component {
     incrementIfOdd = () => {
-        if (this.props.value % 2 !== 0) {
-            this.props.onIncrement();
+        if (this.props.count % 2 !== 0) {
+            this.props.increment();
         }
     };
 
     incrementAsync = () => {
-        setTimeout(this.props.onIncrement, 1000);
+        setTimeout(this.props.increment(), 1000);
     };
 
     render() {
         console.log('this.props: ', this.props);
         return (
             <p>
-                Clicked: {this.props.value} times
+                Clicked: {this.props.count} times
                 {" "}
-                <button onClick={this.props.onIncrement}>
+                <button onClick={() => this.props.increment()}>
                     +
                 </button>
                 {" "}
-                <button onClick={this.props.onDecrement}>
+                <button onClick={() => this.props.decrement()}>
                     -
                 </button>
                 {" "}
@@ -38,4 +40,14 @@ class Counter extends Component {
     }
 }
 
-export default connect()(Counter);
+const mapStateToProps = (state) => {
+    return {
+        count: state
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators({ increment, decrement }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
