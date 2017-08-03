@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux';
 
 class Counter extends Component {
     incrementIfOdd = () => {
@@ -12,6 +13,7 @@ class Counter extends Component {
     };
 
     render() {
+        console.log('this.props: ', this.props);
         return (
             <p>
                 Clicked: {this.props.value} times
@@ -36,4 +38,4 @@ class Counter extends Component {
     }
 }
 
-export default Counter;
+export default connect()(Counter);
