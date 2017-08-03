@@ -56,17 +56,9 @@ const mapStateToProps = (state) => {
     };
 };
 
-// This function receives the store's dispatch method and wires it
-// up with the action creator functions that this component receives,
-// namely `increment` and `decrement`. It is what allows us to dispatch
-// the action creator functions this component received from its parents
-const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({ increment, decrement }, dispatch);
-};
-
 // The connect function is called in order to make this component aware
 // of the rest of the redux architecture. Without this, this component
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
-// makes itself known to this component
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+// makes itself known to this component.
+export default connect(mapStateToProps, { increment, decrement })(Counter);
