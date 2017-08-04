@@ -12,6 +12,6 @@ export default (count = 0, action) => {
         case DECREMENT:
             // Fill in the body of this case
         default:
-            return state;
+            return count;
     }
 };
