@@ -3,15 +3,15 @@ import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
 class Counter extends Component {
-    incrementIfOdd = () => {
-        // Extra: Implement an increment function that
-        // only increments if the counter value is odd
-    };
+    // incrementIfOdd = () => {
+    //     // Extra: Implement an increment function that
+    //     // only increments if the counter value is odd
+    // };
 
-    incrementAsync = () => {
-        // Extra: Implement an increment function that
-        // increments after waiting for one second
-    };
+    // incrementAsync = () => {
+    //     // Extra: Implement an increment function that
+    //     // increments after waiting for one second
+    // };
 
     render() {
         // Fill in the two button onClick methods
@@ -21,11 +21,11 @@ class Counter extends Component {
             <p>
                 Clicked: {this.props.count} times
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => this.props.increment()/* Fill me in */ }>
                     +
                 </button>
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => this.props.decrement()/* Fill me in */ }>
                     -
                 </button>
                 {" "}
@@ -45,7 +45,7 @@ class Counter extends Component {
 
 // The mapStateToProps function specifies which portion of the 
 // state tree this component needs to receive. In this case, 
-// since our redux store is only storing the value of the count,
+// since our redux this.props is only storing the value of the count,
 // this component receives the whole state. In a more complex
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
