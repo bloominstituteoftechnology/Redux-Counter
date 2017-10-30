@@ -10,10 +10,16 @@ export const DECREMENT = 'DECREMENT';
 // is left to the reducer(s).
 
 export const increment = () => {
-   // Fill in this function 
+  // Fill in this function
+  return {
+    type: INCREMENT
+  };
 };
 
-
+// Action creator
 export const decrement = () => {
-   // Fill in this function 
+  // Action
+  return {
+    type: DECREMENT
+  };
 };

@@ -5,13 +5,17 @@ import { INCREMENT, DECREMENT } from '../actions';
 // of our redux store, along with an action created
 // by our action creator. What does the reducer
 // need to do the count in each case?
+
+// Reducer
 export default (count = 0, action) => {
-    switch (action.type) {
-        case INCREMENT:
-            // Fill in the body of this case
-        case DECREMENT:
-            // Fill in the body of this case
-        default:
-            return count;
-    }
+  switch (action.type) {
+    case INCREMENT:
+      // Fill in the body of this case
+      console.log(count);
+      return ++count;
+    case DECREMENT:
+      return --count;
+    default:
+      return count;
+  }
 };
