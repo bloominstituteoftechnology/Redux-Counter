@@ -16,8 +16,9 @@ export const increment = () => {
   };
 };
 
+// Action creator
 export const decrement = () => {
-  // Fill in this function
+  // Action
   return {
     action: DECREMENT
   };
