@@ -10,10 +10,24 @@ export const DECREMENT = 'DECREMENT';
 // is left to the reducer(s).
 
 export const increment = () => {
-   // Fill in this function 
+  // Fill in this function 
+  return {
+    type: INCREMENT
+  }
 };
 
 
 export const decrement = () => {
-   // Fill in this function 
+  // Fill in this function 
+  return {
+    type: DECREMENT
+  }
 };
+
+// example on how to delete a post that has a postID
+// export const deletePost = (postID) => {
+//   return {
+//     type: 'DELETE_POST',
+//     payload: postID
+//   }
+// };
