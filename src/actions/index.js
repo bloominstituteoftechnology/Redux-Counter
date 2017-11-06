@@ -11,9 +11,22 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
    // Fill in this function 
+   return {
+       type: INCREMENT
+   }
 };
 
-
+//action creator
 export const decrement = () => {
-   // Fill in this function 
+   // Fill in this function
+   return {
+       type: DECREMENT
+    }
 };
+
+// export const deletePost = (postId) => {
+//     return {
+//         type: 'DELETE_POST',
+//         payload: postId
+//     }
+// }
