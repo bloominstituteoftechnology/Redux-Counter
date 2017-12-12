@@ -6,11 +6,15 @@ class Counter extends Component {
     incrementIfOdd = () => {
         // Extra: Implement an increment function that
         // only increments if the counter value is odd
+        if (this.props.count % 2 !== 0) {
+            this.props.increment();
+        }
     };
 
     incrementAsync = () => {
         // Extra: Implement an increment function that
         // increments after waiting for one second
+        setTimeout(() => this.props.increment(), 1000);
     };
 
     render() {
@@ -50,8 +54,9 @@ class Counter extends Component {
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
+    const dogs = state.dogs;
     return {
-        count: state
+        dogs
     };
 };
 
@@ -61,3 +66,6 @@ const mapStateToProps = (state) => {
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
 export default connect(mapStateToProps, { increment, decrement })(Counter);
+
+/*equivalent to const connected = connect(mapStateToProps, { increment, decrement });
+export default connected(Counter);*/
