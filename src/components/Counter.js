@@ -21,23 +21,23 @@ class Counter extends Component {
             <p>
                 Clicked: {this.props.count} times
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() =>  }>
                     +
                 </button>
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => }>
                     -
                 </button>
                 {" "}
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                { <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
                 {" "}
                 <button onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button>  }
             </p>
         );
     }
