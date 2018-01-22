@@ -1,6 +1,7 @@
 # Redux Mini Sprint
 
 ## Topics
+  * Immutability in JavaScript
   * Actions
   * Reducers
   * The central store
@@ -8,7 +9,11 @@
 
 ![alt text](https://camo.githubusercontent.com/9de527b9432cc9244dc600875b46b43311918b59/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6d656469612d702e736c69642e65732f75706c6f6164732f3336343831322f696d616765732f323438343739302f415243482d5265647578322d657874656e6465642d7265616c2d6465636c657261746976652e676966)
 
-In this mini sprint, you'll be eased in the code base of a small Redux application. The application itself is a counter, with increment and decrement buttons. The increment button should increment the counter by 1. Conversely, the decrement button should decrement the counter by 1. The aim of this mini sprint is to familiarize you with the overarching data flow pattern of Redux, as well as exposing you to how Redux is typically hooked up to a React application. 
+In this mini sprint, you'll first get some practiced with objects and arrays with an `immutiable` context and then you'll be eased in the code base of a small Redux application. The application itself is a counter, with increment and decrement buttons. 
+
+Start by working in the `immutable.js` file. Work through the problems in there with a partner.
+
+The increment button should increment the counter by 1. Conversely, the decrement button should decrement the counter by 1. The aim of this mini sprint is to familiarize you with the overarching data flow pattern of Redux, as well as exposing you to how Redux is typically hooked up to a React application. 
 
 To run the mini sprint code, `npm install` inside of the root directory, then `npm start`. You'll see that the application isn't working. There are a couple of spots that you'll need to fill in in the application in order to get it to function. These spots are in `reducers/index.js`, `actions/index.js`, and `components/Counter.js`. 
 
