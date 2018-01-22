@@ -14,7 +14,12 @@
   Lets say that `newPerson` has the same hometown, but different name and age.
   Be sure to console.log() both references to ensure that they are pointing to different objects.
 */
-
+const person =  {
+  name: 'Perry',
+  age: 49,
+  hometown: 'Island Park',
+}
+const newPerson = Object.assign({}, person, {name: 'Joe', age: '29'});
 console.log(person);
 console.log(newPerson);
 
@@ -23,7 +28,7 @@ console.log(newPerson);
   Create a separate array of `superVillains`
   Concatenate the two of them together using `.concat()`
 */
-
+const superHeroes = ['Superman', 'Batman'];
 console.log(superHeroes);
 console.log(superVillains);
 console.log(combinedSupers);
