@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Counter from './components/Counter';
@@ -17,7 +17,7 @@ const store = createStore(counter);
 // This is needed because the store needs to know where it
 // is passing its state to. The Provider component is also 
 // where the store "lives". 
-ReactDOM.render(
+render(
     <Provider store={store}>
         <Counter />
     </Provider>,
