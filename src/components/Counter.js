@@ -7,7 +7,7 @@ class Counter extends Component {
   // Extra: Implement an increment function that
   // only increments if the counter value is odd
     let count = this.props.count;
-    if ((count % 2) > 0) {
+    if ((count % 2) !== 0) {
       this.props.increment();
     }
   };
