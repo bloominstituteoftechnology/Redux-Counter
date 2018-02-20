@@ -20,7 +20,7 @@ const person = {
   hometown: 'Washington'
 };
 
-const newPerson = Object.assign(person);
+const newPerson = Object.assign({}, person);
 
 console.log(person);
 console.log(newPerson);
