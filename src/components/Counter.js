@@ -1,17 +1,28 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement, INCREMENT } from '../actions';
 
 class Counter extends Component {
-    incrementIfOdd = () => {
+    incrementIfOdd = (dispatch, getState) => {
         // Extra: Implement an increment function that
         // only increments if the counter value is odd
+        // const { counter } = getState();
+        // if (counter % 2 === 0) {
+        //     return;
+        // };
+
+        //increment();
     };
 
-    incrementAsync = () => {
+    incrementAsync = (delay = 1000) => {
+        // return dispatch => {
+        //     setTimeout(() => {
+        //         increment();
+        //     }, delay);
+        // };
         // Extra: Implement an increment function that
         // increments after waiting for one second
-    };
+    }
 
     render() {
         // Fill in the two button onClick methods
@@ -21,11 +32,11 @@ class Counter extends Component {
             <p>
                 Clicked: {this.props.count} times
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={increment(this.count)/* Fill me in */ }>
                     +
                 </button>
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={decrement(this.count)/* Fill me in */ }>
                     -
                 </button>
                 {" "}
