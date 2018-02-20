@@ -55,9 +55,22 @@ console.log(combinedSupers);
 const studentScores {
   name: 'Glenn',
   age: '64',
-  scores: [50, 48, 40, 45,30]
+  scores: [50, 48, 40, 45, 30]
 }
 console.log(studentScores);
 
-const studentAverage = Object.assign({}, studentScores)
+const studentScores = {
+  name: 'Glenn',
+  age: '64',
+  scores: [50, 48, 40, 45,30]
+}
+console.log(studentScores);
+let filteredScores = studentScores.scores.filter(score => score > 33);
+console.log (filteredScores);
+ 
+// let studentAverage = (filteredScores.sum/filteredScores.length);
+let totalScores = filteredScores.reduce((accumulator,currentValue) => accumulator + currentValue);
+console.log(totalScores);
+const studentAverage = totalScores / filteredScores.length;
+
 console.log(studentAverage);
