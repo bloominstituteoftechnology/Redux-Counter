@@ -16,7 +16,7 @@ const store = createStore(counter);
 // Provider tags, which come from the react-redux package.
 // This is needed because the store needs to know where it
 // is passing its state to. The Provider component is also 
-// where the store "lives". 
+// where the store "lives".
 ReactDOM.render(
     <Provider store={store}>
         <Counter />

@@ -14,7 +14,15 @@
   Lets say that `newPerson` has the same hometown, but different name and age.
   Be sure to console.log() both references to ensure that they are pointing to different objects.
 */
-
+const person = {
+  name: 'John',
+  age: '33',
+  hometown: 'Tulsa',
+}
+const newPerson = Object.assign({}, person);
+newPerson.name = 'Peter';
+newPerson.age = '35';
+newPerson.hometown = 'BA';
 console.log(person);
 console.log(newPerson);
 
@@ -23,7 +31,9 @@ console.log(newPerson);
   Create a separate array of `superVillains`
   Concatenate the two of them together using `.concat()`
 */
-
+const superHeroes = ['Superman', 'Hulk', 'Ironman' ];
+const superVillains = ['Loki', 'Mystique', 'Magneto' ]
+const combinedSupers = superHeroes.concat(superVillains);
 console.log(superHeroes);
 console.log(superVillains);
 console.log(combinedSupers);
@@ -35,6 +45,11 @@ console.log(combinedSupers);
   Create a new object `studentAverage` using Object.assign() from the given original object.
   The new object should filter out any scores that are < 34 Array.filter should be used here.
 */
-
+const studentScores = {
+  name: 'Peter',
+  age: 30,
+  scores: [1, 50, 34, 25, 45, 22, 40],
+}
+studentAverage = Object.assign({}, studentScores.scores.filter(x => x < 34));
 console.log(studentScores);
 console.log(studentAverage);
