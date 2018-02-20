@@ -1,0 +1,75 @@
+html, body, #root, #root>div {
+  height: 100%;
+}
+body {
+  background: #e6e6e6;
+  font-family: Nunito Sans;
+  font-size: 62.5%;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+}
+
+.button-mix {
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 3px;
+  border: 1px double rgb(81, 113, 131);
+  background: white;
+  padding: 3px 6px 3px 6px;
+  margin: 2px;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px double rgb(90, 172, 219);
+    padding: 2px 5px 2px 5px;
+  }
+  &:active {
+    background: rgba(90, 172, 219, 0.3);
+  }
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .counter {
+    font-size: 1rem;
+    width: 29%;
+    height: 120px;
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #cecece;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .count-reg {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+
+      span {
+        margin-right: 15px;
+        user-select: none;
+      }
+      button {
+        height: 20px;
+        line-height: 10px;
+      }
+    }
+    .count-additional {
+      margin: 5px;
+    }
+
+    button {
+      .button-mix();
+    }
+  }
+}
