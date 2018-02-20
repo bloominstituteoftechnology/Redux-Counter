@@ -9,16 +9,14 @@ export const DECREMENT = "DECREMENT";
 // logic of updating the centra Redux store. That
 // is left to the reducer(s).
 
-export const increment = inc => {
+export const increment = () => {
   return {
     type: "INCREMENT",
-    payload: inc
   };
 };
 
-export const decrement = dec => {
+export const decrement = () => {
   return {
     type: "DECREMENT",
-    payload: dec
   };
 };
