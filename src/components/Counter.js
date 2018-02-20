@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement, INCREMENT } from '../actions';
+import { bindActionCreators } from "../../../../../Library/Caches/typescript/2.6/node_modules/redux";
 
 class Counter extends Component {
     incrementIfOdd = (dispatch, getState) => {
@@ -32,11 +33,11 @@ class Counter extends Component {
             <p>
                 Clicked: {this.props.count} times
                 {" "}
-                <button onClick={increment(this.count)/* Fill me in */ }>
+                <button onClick={this.props.increment/* Fill me in */ }>
                     +
                 </button>
                 {" "}
-                <button onClick={decrement(this.count)/* Fill me in */ }>
+                <button onClick={this.props.decrement/* Fill me in */ }>
                     -
                 </button>
                 {" "}
