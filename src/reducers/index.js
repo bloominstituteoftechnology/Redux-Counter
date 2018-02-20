@@ -6,11 +6,12 @@ import { INCREMENT, DECREMENT } from '../actions';
 // by our action creator. What does the reducer
 // need to do the count in each case?
 export default (count = 0, action) => {
+    let retCount = count;
     switch (action.type) {
         case INCREMENT:
-            // Fill in the body of this case
+            return retCount + 1;
         case DECREMENT:
-            // Fill in the body of this case
+            return retCount - 1;
         default:
             return count;
     }

@@ -1,5 +1,5 @@
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
+export const INCREMENT = "INCREMENT";
+export const DECREMENT = "DECREMENT";
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -9,11 +9,16 @@ export const DECREMENT = 'DECREMENT';
 // logic of updating the centra Redux store. That
 // is left to the reducer(s).
 
-export const increment = () => {
-   // Fill in this function 
+export const increment = inc => {
+  return {
+    type: "INCREMENT",
+    payload: inc
+  };
 };
 
-
-export const decrement = () => {
-   // Fill in this function 
+export const decrement = dec => {
+  return {
+    type: "DECREMENT",
+    payload: dec
+  };
 };
