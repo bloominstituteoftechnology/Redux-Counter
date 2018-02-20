@@ -4,8 +4,7 @@ import { increment, decrement } from '../actions';
 
 class Counter extends Component {
     incrementIfOdd = () => {
-        // Extra: Implement an increment function that
-        // only increments if the counter value is odd
+        
     };
 
     incrementAsync = () => {
