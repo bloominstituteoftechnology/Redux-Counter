@@ -57,7 +57,7 @@ const studentScores = {
 }
 
 const studentAverage = Object.assign({}, studentScores)
-studentAverage.scores = studentScores.scores.filter((score) => {return score >= 34})
+studentAverage.scores = studentScores.scores.filter(score => score >= 34)
 
 console.log(studentScores);
 console.log(studentAverage);
