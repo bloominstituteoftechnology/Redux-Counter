@@ -9,11 +9,11 @@ export default (count = 0, action) => {
     switch (action.type) {
         case INCREMENT:
             // Fill in the body of this case
-            console.log(count, action);
-            return Object.assign({}, ++count);
+            console.log('inc');
+            return ++count;
         case DECREMENT:
             // Fill in the body of this case
-            return Object.assign({}, --count);
+            return --count;
         default:
             return count;
     }
