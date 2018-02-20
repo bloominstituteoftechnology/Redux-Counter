@@ -15,6 +15,14 @@
   Be sure to console.log() both references to ensure that they are pointing to different objects.
 */
 
+const person = {
+    name:'Dixie',
+    age: 26,
+    hometown:'Irvington'
+}
+
+const newPerson = Object.assign({}, person)
+
 console.log(person);
 console.log(newPerson);
 
