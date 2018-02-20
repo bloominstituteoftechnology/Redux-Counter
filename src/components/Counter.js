@@ -6,7 +6,7 @@ class Counter extends Component {
     incrementIfOdd = () => {
         // Extra: Implement an increment function that
         // only increments if the counter value is odd
-        return (this.props.count%2 !== 0 ? this.props.store.dispatch(increment()) : null);
+        return (this.props.count%2 !== 0 ? this.props.store.dispatch(increment()): null);
     };
 
     incrementAsync = () => {
