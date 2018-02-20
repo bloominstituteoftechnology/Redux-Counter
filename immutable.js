@@ -51,10 +51,11 @@ console.log(combinedSupers);
 const studentScores = {
   name: 'Colleen',
   age: 25,
-  scores: [ 48, 49, 47 ],
+  scores: [ 48, 49, 47, 30, 25, 45, 27 ],
 };
 
-const studentAverage = Object.assign({}, studentScores.scores.filter(avg => avg < 34));
+const studentAverage = Object.assign({}, studentScores);
+studentAverage.scores = studentAverage.scores.filter(avg => avg < 34)
 
 
 console.log(studentScores);
