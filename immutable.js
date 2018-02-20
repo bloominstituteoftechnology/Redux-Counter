@@ -21,9 +21,7 @@ const person = {
   hometown: 'Timmyville'
 }
 
-const newPerson = Object.assign({}, person);
-newPerson.name = 'Billy';
-newPerson.age = 42;
+const newPerson = Object.assign({}, person, {name: Billy, age: 42});
 
 console.log(person);
 console.log(newPerson);
@@ -55,8 +53,6 @@ const studentScores = {
   scores: [42, 50, 23, 45, 22, 4, 13, 33, 34, 45, 49, 47, 23, 33, 30]
 }
 
-const studentAverage = Object.assign({}, studentScores);
-studentAverage.scores = studentAverage.scores.filter(number => number>33);
-
+const studentAverage = Object.assign({}, studentScores, {scores: studentScores.scores.filter(number => number>33)});
 console.log(studentScores);
 console.log(studentAverage);
