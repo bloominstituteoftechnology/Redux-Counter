@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
+//Framework for count is there but doesn't update count yet
+
+
 class Counter extends Component {
     incrementIfOdd = () => {
         // Extra: Implement an increment function that
@@ -21,11 +24,11 @@ class Counter extends Component {
             <p>
                 Clicked: {this.props.count} times
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={this.increment}>
                     +
                 </button>
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={ this.decrement}>
                     -
                 </button>
                 {" "}
