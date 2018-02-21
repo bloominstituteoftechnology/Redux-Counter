@@ -1,19 +1,23 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
-// Our action creators will return
-// an action packet that our reducer will
-// receive. What does the action packet look like?
-// Note that the action creator is not at all
-// responsible for handling any of the actual
-// logic of updating the centra Redux store. That
-// is left to the reducer(s).
+/* Our action creators will return
+an action packet that our reducer will
+receive. What does the action packet look like?
+Note that the action creator is not at all
+responsible for handling any of the actual
+logic of updating the centra Redux store. That
+is left to the reducer(s).
+*/
 
 export const increment = () => {
-   // Fill in this function 
+   return {type:INCREMENT, state: +1};  // const from line 1
+  
 };
 
 
 export const decrement = () => {
-   // Fill in this function 
+   // requires 'return' + statement to update state
+   return {type:DECREMENT}; //const from line 2
 };
+

@@ -6,6 +6,9 @@ class Counter extends Component {
     incrementIfOdd = () => {
         // Extra: Implement an increment function that
         // only increments if the counter value is odd
+        if (this.props.count % 2 !== 0) {
+            return increment()
+        }
     };
 
     incrementAsync = () => {
@@ -21,11 +24,11 @@ class Counter extends Component {
             <p>
                 Clicked: {this.props.count} times
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => increment }> {/* variable from ./actions/index.js*/}
                     +
                 </button>
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => decrement }>  {/* variable from ./actions/index.js*/}
                     -
                 </button>
                 {" "}
@@ -50,6 +53,7 @@ class Counter extends Component {
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
+    console.log(state); //optional to understand behavior
     return {
         count: state
     };
