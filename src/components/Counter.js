@@ -6,13 +6,13 @@ class Counter extends Component {
     incrementIfOdd = () => {
         // Extra: Implement an increment function that
         // only increments if the counter value is odd
-        return (this.props.count%2 !== 0 ? this.props.store.dispatch(increment()): null);
+        return (this.props.count%2 !== 0 ? this.props.increment(): null);
     };
 
     incrementAsync = () => {
         // Extra: Implement an increment function that
         // increments after waiting for one second
-        setTimeout(() => this.props.store.dispatch(increment()), 1000);
+        setTimeout(() => this.props.increment(), 1000);
     };
 
     render() {
@@ -23,11 +23,11 @@ class Counter extends Component {
             <p>
                 Clicked: {this.props.count} times
                 {" "}
-                <button onClick={() => this.props.store.dispatch(increment()) }>
+                <button onClick={() => this.props.increment() }>
                     +
                 </button>
                 {" "}
-                <button onClick={() => this.props.store.dispatch(decrement()) }>
+                <button onClick={() => this.props.decrement() }>
                     -
                 </button>
                 {" "}
