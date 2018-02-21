@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import Counter from './components/Counter';
+import React from 'react'; // importing react library
+import ReactDOM from 'react-dom'; // importing the virtual DOM
+import { createStore } from 'redux'; //  destrctuing redux and using creatStore module
+import { Provider } from 'react-redux';// using provider from react-redux to wrap the app
+import Counter from './components/Counter';// importing the counter component to pass it to the store aka createStore() function
 import counter from './reducers';
 
 // This line instantiates our central Redux store.
