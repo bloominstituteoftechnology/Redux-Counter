@@ -25,7 +25,7 @@ class Counter extends Component {
                     +
                 </button>
                 {" "}
-                <button onClick={() => /* Fill me in */ this.props.decrement}>
+                <button onClick={() => /* Fill me in */ this.props.decrement()}>
                     -
                 </button>
                 {" "}
