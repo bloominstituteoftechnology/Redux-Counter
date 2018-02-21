@@ -39,7 +39,7 @@ class Counter extends Component {
                 {" "}
                 <button onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button> 
             </p>
         );
     }
