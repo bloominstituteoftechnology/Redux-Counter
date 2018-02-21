@@ -24,11 +24,11 @@ class Counter extends Component {
             <p>
                 Clicked: {this.props.count} times
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => increment }> {/* variable from ./actions/index.js*/}
                     +
                 </button>
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => decrement }>  {/* variable from ./actions/index.js*/}
                     -
                 </button>
                 {" "}

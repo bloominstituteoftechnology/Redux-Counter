@@ -11,12 +11,13 @@ is left to the reducer(s).
 */
 
 export const increment = () => {
-   return {type:INCREMENT};
-
+   return {type:INCREMENT, state: +1};  // const from line 1
+  
 };
 
 
 export const decrement = () => {
-   // Fill in this function 
-   return {type:DECREMENT};
+   // requires 'return' + statement to update state
+   return {type:DECREMENT}; //const from line 2
 };
+
