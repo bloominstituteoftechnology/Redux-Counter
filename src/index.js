@@ -9,9 +9,7 @@ import counter from './reducers';
 // The `createStore` function receives the reducer
 // that is responsible for updating the store, along
 // with any initial state that we may want the store
-// to start out with (which is none in this case).
-// QUESTION: What does Sean mean by 'none'.  Isn't the initial state set to 'counter = 0'
-// in the Counter.js file?
+// to start out with (which is none in this case). 
 const store = createStore(counter);
 
 // Here, we wrap our main React component inside of

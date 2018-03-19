@@ -3,45 +3,41 @@ import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
 class Counter extends Component {
-
     incrementIfOdd = () => {
         // Extra: Implement an increment function that
         // only increments if the counter value is odd
-        if (this.props.count % 2 !== 0) {this.props.increment()};
     };
 
     incrementAsync = () => {
         // Extra: Implement an increment function that
         // increments after waiting for one second
-        setTimeout(() => this.props.increment(), 1000);
     };
 
     render() {
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
-        const pstyles = {textAlign: 'center', background: 'lavender', width: '25%', margin: 'auto', border: '10px dashed black'}
-        const mstyles = {marginTop: '15px', marginBottom: '15px'}
-
         return (
-            <p style={pstyles}>
-                <h2> Redux Counter </h2>
+            <p>
                 Clicked: {this.props.count} times
                 {" "}
-                <button onClick={() => this.props.decrement() }> - </button>
+                <button onClick={() => /* Fill me in */ }>
+                    +
+                </button>
                 {" "}
-                <button onClick={() => this.props.increment() }> + </button>
+                <button onClick={() => /* Fill me in */ }>
+                    -
+                </button>
                 {" "}
-                
-
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                <br/>
-                <div style={mstyles}>
-                    <button onClick={this.incrementIfOdd}> Increment if odd </button>
-                    {" "}
-                    <button onClick={this.incrementAsync}> Increment async </button>
-                </div> 
+                {/* <button onClick={this.incrementIfOdd}>
+                    Increment if odd
+                </button>
+                {" "}
+                <button onClick={this.incrementAsync}>
+                    Increment async
+                </button>  */}
             </p>
         );
     }
@@ -53,9 +49,9 @@ class Counter extends Component {
 // this component receives the whole state. In a more complex
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
-        count: state,
+        count: state
     };
 };
 
