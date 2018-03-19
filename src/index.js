@@ -4,6 +4,8 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Counter from './components/Counter';
 import counter from './reducers';
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
 
 // This line instantiates our central Redux store.
 // The `createStore` function receives the reducer
@@ -18,8 +20,10 @@ const store = createStore(counter);
 // is passing its state to. The Provider component is also 
 // where the store "lives". 
 ReactDOM.render(
+    <div className="buttonCount">
     <Provider store={store}>
         <Counter />
-    </Provider>,
+    </Provider>
+    </div>,
     document.getElementById('root')
 );

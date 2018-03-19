@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
+import { Button } from 'reactstrap';
 
 class Counter extends Component {
     incrementIfOdd = () => {
@@ -18,16 +19,16 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
-            <p>
+            <div className="buttonCount">
                 Clicked: {this.props.count} times
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <Button color="success" onClick={() => this.props.increment() }>
                     +
-                </button>
+                </Button>
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <Button color="success" onClick={() => this.props.decrement() }>
                     -
-                </button>
+                </Button>
                 {" "}
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
@@ -38,7 +39,7 @@ class Counter extends Component {
                 <button onClick={this.incrementAsync}>
                     Increment async
                 </button>  */}
-            </p>
+            </div>
         );
     }
 }
