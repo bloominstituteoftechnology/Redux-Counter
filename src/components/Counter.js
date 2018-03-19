@@ -19,7 +19,7 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
-            <p>
+            <div className="buttonCount">
                 Clicked: {this.props.count} times
                 {" "}
                 <Button color="success" onClick={() => this.props.increment() }>
@@ -39,7 +39,7 @@ class Counter extends Component {
                 <button onClick={this.incrementAsync}>
                     Increment async
                 </button>  */}
-            </p>
+            </div>
         );
     }
 }

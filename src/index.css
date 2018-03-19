@@ -1,0 +1,6 @@
+.buttonCount {
+    display: flex;
+    align-items: center;
+    margin-left: 22%;
+    margin-top: 30px;
+}
