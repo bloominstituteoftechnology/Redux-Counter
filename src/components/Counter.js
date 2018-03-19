@@ -9,13 +9,20 @@ class Counter extends Component {
         }
     };
     
-    // resetIfPrime = () => {
-    //     for(let i = 2; i <=Math.sqrt(this.props.count); i++) {
-    //         if(this.props.count % i === 0) {
-    //             this.props.count = 0;
-    //         }
-    //     }
-    // }
+    resetIfPrime = () => {
+        if (this.props.count === 1) return;
+        let factors = 1;
+        for(let i = 1; i <=Math.sqrt(this.props.count); i++) {
+            if(this.props.count % i === 0) {
+                factors++;
+            }
+        }
+        if(factors === 2) {
+            for(let i = 0; i < this.props.count; i++) {
+                this.props.decrement();
+            }
+        }
+    }
 
     incrementAsync = () => {
         setTimeout(() => {
@@ -44,9 +51,9 @@ class Counter extends Component {
                     Increment async
                 </button>
                 {" "}
-                {/* <button onClick={this.resetIfPrime}>
+                <button onClick={this.resetIfPrime}>
                     Is this prime (go to 0 if yes)?
-                </button> */}
+                </button>
             </p>
         );
     }
