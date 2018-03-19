@@ -20,11 +20,11 @@ class Counter extends Component {
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
-        const styles = {textAlign: 'center', background: 'lavender', width: '25%', margin: 'auto', border: '10px dashed black'}
-        const mstyle = {marginTop: '15px', marginBottom: '15px'}
+        const pstyles = {textAlign: 'center', background: 'lavender', width: '25%', margin: 'auto', border: '10px dashed black'}
+        const mstyles = {marginTop: '15px', marginBottom: '15px'}
 
         return (
-            <p style={styles}>
+            <p style={pstyles}>
                 <h2> Redux Counter </h2>
                 Clicked: {this.props.count} times
                 {" "}
@@ -37,7 +37,7 @@ class Counter extends Component {
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
                 <br/>
-                <div style={mstyle}>
+                <div style={mstyles}>
                     <button onClick={this.incrementIfOdd}> Increment if odd </button>
                     {" "}
                     <button onClick={this.incrementAsync}> Increment async </button>
