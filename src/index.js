@@ -10,6 +10,8 @@ import counter from './reducers';
 // that is responsible for updating the store, along
 // with any initial state that we may want the store
 // to start out with (which is none in this case). 
+
+
 const store = createStore(counter);
 
 // Here, we wrap our main React component inside of
@@ -19,7 +21,7 @@ const store = createStore(counter);
 // where the store "lives". 
 ReactDOM.render(
     <Provider store={store}>
-        <Counter />
+        <Counter dispatch={store.dispatch} />
     </Provider>,
     document.getElementById('root')
 );
