@@ -22,11 +22,11 @@ class Counter extends Component {
             <p>
                 Clicked: {this.props.count} times
                 {" "}
-                <Button color="sucess" onClick={() => this.props.increment() }>
+                <Button color="success" onClick={() => this.props.increment() }>
                     +
                 </Button>
                 {" "}
-                <Button color="sucess" onClick={() => this.props.decrement() }>
+                <Button color="success" onClick={() => this.props.decrement() }>
                     -
                 </Button>
                 {" "}
