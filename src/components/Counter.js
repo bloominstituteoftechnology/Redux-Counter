@@ -6,11 +6,15 @@ class Counter extends Component {
     incrementIfOdd = () => {
         // Extra: Implement an increment function that
         // only increments if the counter value is odd
+        if (this.props.count % 2 !== 0) {
+            this.props.increment();
+        }
     };
 
     incrementAsync = () => {
         // Extra: Implement an increment function that
         // increments after waiting for one second
+        setTimeout(() => { this.props.increment() }, 1000);
     };
 
     render() {
@@ -18,33 +22,31 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
-            <p>
-                Clicked: {this.props.count} times
-                {" "}
-                <button onClick={() => /* Fill me in */ }>
-                    +
-                </button>
-                {" "}
-                <button onClick={() => /* Fill me in */ }>
-                    -
-                </button>
-                {" "}
-                 {/* Uncomment these button tags if you got
-                around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
-                    Increment if odd
-                </button>
-                {" "}
-                <button onClick={this.incrementAsync}>
-                    Increment async
-                </button>  */}
-            </p>
+            <div className='counter'>
+                <div className='count-reg'>
+                    <span>Clicked: {this.props.count} times</span>
+                    <button onClick={() => this.props.increment()}>
+                        +
+                    </button>
+                    <button onClick={() => this.props.decrement() }>
+                        -
+                    </button>
+                </div>
+                <div className='count-additional'>
+                    <button onClick={this.incrementIfOdd}>
+                        Increment if odd
+                    </button>
+                    <button onClick={this.incrementAsync}>
+                        Increment async
+                    </button>
+                </div>
+            </div>
         );
     }
 }
 
-// The mapStateToProps function specifies which portion of the 
-// state tree this component needs to receive. In this case, 
+// The mapStateToProps function specifies which portion of the
+// state tree this component needs to receive. In this case,
 // since our redux store is only storing the value of the count,
 // this component receives the whole state. In a more complex
 // redux application, though, it would receive only the relevant
