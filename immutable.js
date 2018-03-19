@@ -13,7 +13,12 @@
   Create a `newPerson` object from `person` using Object.assign.
   Lets say that `newPerson` has the same hometown, but different name and age.
   Be sure to console.log() both references to ensure that they are pointing to different objects.
-*/
+*/ 
+const person = {
+  name,
+  age, 
+  hometown
+}
 
 console.log(person);
 console.log(newPerson);
