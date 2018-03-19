@@ -4,19 +4,26 @@ import { increment, decrement } from '../actions';
 
 class Counter extends Component {
     incrementIfOdd = () => {
-        // Extra: Implement an increment function that
-        // only increments if the counter value is odd
+        if (this.props.count % 2 === 1) {
+            this.props.increment();
+        }
     };
+    
+    // resetIfPrime = () => {
+    //     for(let i = 2; i <=Math.sqrt(this.props.count); i++) {
+    //         if(this.props.count % i === 0) {
+    //             this.props.count = 0;
+    //         }
+    //     }
+    // }
 
     incrementAsync = () => {
-        // Extra: Implement an increment function that
-        // increments after waiting for one second
+        setTimeout(() => {
+            this.props.increment();
+        }, 1000);
     };
 
     render() {
-        // Fill in the two button onClick methods
-        // Upon clicking these buttons, the count
-        // should decrement or increment accordingly
         return (
             <p>
                 Clicked: {this.props.count} times
@@ -29,15 +36,17 @@ class Counter extends Component {
                     -
                 </button>
                 {" "}
-                 {/* Uncomment these button tags if you got
-                around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
                 {" "}
                 <button onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button>
+                {" "}
+                {/* <button onClick={this.resetIfPrime}>
+                    Is this prime (go to 0 if yes)?
+                </button> */}
             </p>
         );
     }
