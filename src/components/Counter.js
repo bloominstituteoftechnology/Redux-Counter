@@ -21,13 +21,9 @@ class Counter extends Component {
             <p>
                 Clicked: {this.props.count} times
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
-                    +
-                </button>
+                <button onClick={() => this.props.increment()}>+</button>
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
-                    -
-                </button>
+                <button onClick={() => this.props.decrement()}>-</button>
                 {" "}
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
