@@ -11,6 +11,7 @@ import counter from './reducers';
 // with any initial state that we may want the store
 // to start out with (which is none in this case). 
 const store = createStore(counter);
+console.log(store);
 
 // Here, we wrap our main React component inside of
 // Provider tags, which come from the react-redux package.

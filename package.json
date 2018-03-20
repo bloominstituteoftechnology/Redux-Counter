@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "enzyme": "^2.8.2",
+    "ngrx-store-freeze": "^0.2.1",
     "react-scripts": "^1.0.2",
     "react-test-renderer": "^15.6.1"
   },
