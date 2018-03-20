@@ -25,6 +25,9 @@ const newPerson = Object.assign({}, person);
 newPerson.name = 'Petty Betty',
 newPerson.age = 35,
 
+//can also be done as the following
+//const newPerson = Object.assign({}, person, { name: 'Petty Betty', age: 35 });
+
 console.log(person);
 console.log(newPerson);
 
@@ -36,6 +39,8 @@ console.log(newPerson);
 const superHeroes = ['Black Panther', 'Luke Cage', 'Thor', 'Wonder Woman'];
 const superVillains = ['Erik Killmonger', 'Cottonmouth', 'Hela', 'Cheetah'];
 const combineSupers = superHeroes.concat(superVillains);
+// another way to do combineSupers 
+// const combineSupers = [...superHeroes, ...superVillians]
 
 console.log(superHeroes);
 console.log(superVillains);
@@ -52,11 +57,13 @@ console.log(combinedSupers);
 const studentScores = {
   name: 'Petty Betty',
   age: 42,
-  scores: [82, 91, 100]
+  scores: [3, 82, 91, 100]
 }
 
 const studentAverage = Object.assign({}, studentScores);
-studentScores.scores.filter(element => element < 34);
+studentScores.scores.filter(score => score >= 34);
 
+//another way to do line 63 
+// const student.Average = { ...studentScores, scores }
 console.log(studentScores);
 console.log(studentAverage);
