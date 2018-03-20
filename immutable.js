@@ -21,9 +21,18 @@ const person = {
   hometown: 'Bratislava'
 }
 
-const newPerson = Object.assign({}, person);
-newPerson.name = 'Forest';
-newPerson.age = '45';
+// const newPerson = Object.assign({}, person);
+// newPerson.name = 'Forest';
+// newPerson.age = '45';
+
+// OR in line short hand (ES5)
+
+// const newPerson = Object.assign({}, person, {name: 'Florest', age:'46'});
+
+// OR ES6
+
+const newPerson = { ...person, name: 'Zack', age: 21 };
+
 
 console.log(person);
 console.log(newPerson);
@@ -39,9 +48,16 @@ const superVillains= ['The Joker', 'Lex Luther', 'Cheetah', 'Grigori Rasputin']
 
 const combinedSupers = superHeroes.concat(superVillains)
 
+// Using ES6 spread operator
+const combinedSupersSPREAD = [ ...superHeroes, ...superVillains];
+
 console.log(superHeroes);
 console.log(superVillains);
 console.log(combinedSupers);
+console.log(combinedSupers === superHeroes)
+console.log(combinedSupers === superVillains)
+console.log(combinedSupersSPREAD)
+
 
 /* Problem 3
   Create an object `studentScores` with a 'name', 'age' and 'scores'
@@ -51,14 +67,27 @@ console.log(combinedSupers);
   The new object should filter out any scores that are < 34 Array.filter should be used here.
 */
 
+// const studentScores = {
+//   name: 'Sally',
+//   age: 12,
+//   scores: [30 , 45, 12, 50]
+// }
+
+// const studentAverage = Object.assign({}, studentScores);
+// studentAverage.scores = studentScores.scores.filter(num => num >= 34);
+
+// console.log(studentScores);
+// console.log(studentAverage);
+
+// Spread Op also works:
 const studentScores = {
   name: 'Sally',
   age: 12,
   scores: [30 , 45, 12, 50]
 }
 
-const studentAverage = Object.assign({}, studentScores);
-studentAverage.scores = studentScores.scores.filter(num => num >= 34);
+const scores = studentScores.scores.filter(num => num >= 34);
+const studentAverage = {...studentScores, scores}
 
 console.log(studentScores);
 console.log(studentAverage);

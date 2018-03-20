@@ -3,15 +3,17 @@ import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
 class Counter extends Component {
-    // incrementIfOdd = () => {
-    //     // Extra: Implement an increment function that
-    //     // only increments if the counter value is odd
-    // };
+    incrementIfOdd = () => {
+        // Extra: Implement an increment function that
+        // only increments if the counter value is odd
+        if (this.props.count % 2 !== 0) {this.props.increment()}
+    };
 
-    // incrementAsync = () => {
-    //     // Extra: Implement an increment function that
-    //     // increments after waiting for one second
-    // };
+    incrementAsync = () => {
+        // Extra: Implement an increment function that
+        // increments after waiting for one second
+        setTimeout(() => this.props.increment(), 1000)
+    };
 
     render() {
         // Fill in the two button onClick methods
@@ -27,13 +29,13 @@ class Counter extends Component {
                 {" "}
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
                 {" "}
                 <button onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button> 
             </p>
         );
     }

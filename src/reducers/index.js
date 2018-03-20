@@ -5,6 +5,8 @@ import { INCREMENT, DECREMENT } from '../actions';
 // of our redux store, along with an action created
 // by our action creator. What does the reducer
 // need to do the count in each case?
+
+// If an action.type INCREMENT is triggered, then increment count by 1.
 export default (count = 0, action) => {
     switch (action.type) {
         case INCREMENT:
