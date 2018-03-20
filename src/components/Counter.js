@@ -6,6 +6,7 @@ class Counter extends Component {
     incrementIfOdd = () => {
         // Extra: Implement an increment function that
         // only increments if the counter value is odd
+        
     };
 
     incrementAsync = () => {
@@ -19,13 +20,19 @@ class Counter extends Component {
         // should decrement or increment accordingly
         return (
             <p>
-                Clicked: {this.props.count} times
+                Clicked: {this.props.count.number} times
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => {
+                  this.props.store.dispatch(increment(this.props.count.number + 1));
+                  }
+                }>
                     +
                 </button>
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => {
+                  this.props.store.dispatch(decrement(this.props.count.number - 1));
+                  
+                }}>
                     -
                 </button>
                 {" "}
@@ -54,7 +61,6 @@ const mapStateToProps = (state) => {
         count: state
     };
 };
-
 // The connect function is called in order to make this component aware
 // of the rest of the redux architecture. Without this, this component
 // is only a dumb React component. We pass in all of the functions that
