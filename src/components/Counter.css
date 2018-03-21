@@ -1,0 +1,32 @@
+.container {
+  margin: 5rem;
+  text-align: center;
+  background: lightblue;
+  border-radius: 30px;
+  border: 5px solid black;
+}
+
+.text {
+  font-weight: 300;
+  color: darkblue;
+}
+
+button {
+  margin-top: 1rem;
+  background: #3498db;
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #3cb0fd;
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
