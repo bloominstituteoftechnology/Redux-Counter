@@ -16,11 +16,11 @@ export default (state, action) => {
     switch (action.type) {
         case INCREMENT:
           return Object.assign({},state,{
-            number:action.number
+            number: ++state.number
           });
         case DECREMENT:
           return Object.assign({},state,{
-            number:action.number
+            number: --state.number
           });
         default:
           return state;
