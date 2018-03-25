@@ -1,10 +1,10 @@
 /*
-  In this file you're going to working with some objects and arrays.
+  In this file you're going to work with some objects and arrays.
   Instead of mutating the data from within an object/array itself,
-    you're going to be using immutible techniques
-  Be sure to **TEST** out your code in an editor/browser REPL of your choice
-    Things like REPL.it, JSBin, and Quokka can all be used to test your code.
-    Or just simply run node over your immutable.js file
+    you're going to use immutible techniques.
+  Be sure to **TEST** out your code in an editor/browser REPL of your choice;
+    Things like REPL.it, JSBin, and Quokka can all be used to test your code,
+    or just simply run node over your immutable.js file
 */
 
 /* Problem 1
