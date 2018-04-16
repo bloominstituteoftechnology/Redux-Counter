@@ -9,9 +9,9 @@ export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
       // {count: count++}
-      return count++;
+      return ++count;
     case DECREMENT:
-      return count--;
+      return --count;
     default:
       return count;
   }
