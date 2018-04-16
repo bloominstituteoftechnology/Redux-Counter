@@ -12,7 +12,11 @@ return this.props.increment();
     };
 
     incrementAsync = () => {
-        return new Promis
+        return new Promise(resolve =>{
+            setTimeout(()=>{
+            return this.props.increment()
+        },1000)
+    })
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
     };
@@ -32,13 +36,13 @@ return this.props.increment();
                 </button>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                { <button onClick={this.incrementIfOdd}>
+                 <button onClick={this.incrementIfOdd}>
                 Works if odd
                 </button>
-                /*
+                
                 <button onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button> 
             </p>
         );
     }
