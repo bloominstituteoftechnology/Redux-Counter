@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { connect } from "react-redux";
+import { increment, decrement } from "../actions";
 
 class Counter extends Component {
     incrementIfOdd = () => {
@@ -20,13 +20,9 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
-                    +
-                </button>
-                <button onClick={() => /* Fill me in */ }>
-                    -
-                </button>
-                 {/* Uncomment these button tags if you got
+                <button onClick={() => this.props.increment()}>+</button>
+                <button onClick={() => this.props.decrement()}>-</button>
+                {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
                 {/* <button onClick={this.incrementIfOdd}>
                     Increment if odd
@@ -39,13 +35,13 @@ class Counter extends Component {
     }
 }
 
-// The mapStateToProps function specifies which portion of the 
-// state tree this component needs to receive. In this case, 
+// The mapStateToProps function specifies which portion of the
+// state tree this component needs to receive. In this case,
 // since our redux store is only storing the value of the count,
 // this component receives the whole state. In a more complex
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
         count: state
     };
