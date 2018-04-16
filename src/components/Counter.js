@@ -16,7 +16,7 @@ class Counter extends Component {
         // increments after waiting for one second
         setTimeout(() => {
             this.props.increment();
-        }, 1000);
+        }, 10000);
     };
 
     render() {
