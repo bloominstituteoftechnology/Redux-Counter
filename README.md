@@ -1,4 +1,4 @@
-# Redux Mini Sprint
+# Redux Counter
 
 ## Topics
   * Immutability in JavaScript
