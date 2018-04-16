@@ -4,6 +4,7 @@ import { increment, decrement } from '../actions';
 
 class Counter extends Component {
     incrementIfOdd = () => {
+        
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
     };
@@ -20,10 +21,10 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => this.props.increment() }>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => this.props.decrement()}>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
