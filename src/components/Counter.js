@@ -19,11 +19,7 @@ class Counter extends Component {
         // should decrement or increment accordingly
         return (
             <p>
-                Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
-                    +
-                </button>
-                <button onClick={() => /* Fill me in */ }>
+       
                     -
                 </button>
                  {/* Uncomment these button tags if you got
