@@ -11,7 +11,13 @@
 //  Create a `newPerson` object from `person` using Object.assign.
 //  Lets say that `newPerson` has the same hometown, but different name and age.
 //  Be sure to console.log() both references to ensure that they are pointing to different objects.
-//
+const person = {
+    name: 'Will',
+    age: 25,
+    hometown: 'Houston'
+};
+
+const newPerson = Object.assign({}, person, {name: 'Fred', age: 29 });
 
 console.log(person);
 console.log(newPerson);
@@ -21,6 +27,10 @@ console.log(newPerson);
 //  Create a separate array of `superVillains`
 //  Concatenate the two of them together using `.concat()`
 //  Now, concatenate the two of them using the `...` spread operator
+
+const superHeroes = [{name: 'Superman'}, {name: 'Batman'}, {name: 'Green Lantern'}];
+const superVillains = [{name: 'Lex Luthor'}, {name: 'Joker'}, {name: 'Sinestro'}];
+const combinedSupers = superHeroes.concat(superVillains);
 
 console.log(superHeroes);
 console.log(superVillains);
@@ -33,6 +43,9 @@ console.log(combinedSupers);
 //  Create a new object `studentAverage` using Object.assign() from the given original object.
 //  The new object should filter out any scores that are less than 34.
 //  Array.filter should be used here.
+const studentScores = { name: 'Jake', age: 28, scores: [12, 33, 32, 42] };
+const studentAverage = Object.assign({}, studentScores);
+studentAverage.scores = studentScores.scores.filter((item) => item >= 34);
 
 console.log(studentScores);
 console.log(studentAverage);
