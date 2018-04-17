@@ -10,9 +10,9 @@ export const DECREMENT = "DECREMENT";
 // is left to the reducer(s).
 
 export const increment = () => {
-  return { type: INCREMENT };
+  return { type: INCREMENT, payload: 1 };
 };
 
 export const decrement = () => {
-  return { type: DECREMENT };
+  return { type: DECREMENT, payload: 1 };
 };
