@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
+import './Counter.css';
+
 class Counter extends Component {
     incrementIfOdd = () => {
         // Stretch Problem: Implement an increment function that
@@ -22,27 +24,29 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
-            <p>
-                Clicked: {this.props.count} times
-                <button onClick={() => {
-                    this.props.increment();
-                }}>
-                    +
-                </button>
-                <button onClick={() => {
-                    this.props.decrement();
-                }}>
-                    -
-                </button>
-                 {/* Uncomment these button tags if you got
-                around to implementing the extra credit functions */}
-                <button onClick={this.incrementIfOdd}>
-                    Increment if odd
-                </button>
-                <button onClick={this.incrementAsync}>
-                    Increment async
-                </button>
-            </p>
+            <div className='Container'>
+                <p className='Counter'>Clicked: {this.props.count} times</p>
+                <div className='Buttons'>
+                    <button onClick={() => {
+                        this.props.increment();
+                    }}>
+                        +
+                    </button>
+                    <button onClick={() => {
+                        this.props.decrement();
+                    }}>
+                        -
+                    </button>
+                    {/* Uncomment these button tags if you got
+                    around to implementing the extra credit functions */}
+                    <button onClick={this.incrementIfOdd}>
+                        Increment if odd
+                    </button>
+                    <button onClick={this.incrementAsync}>
+                        Increment async
+                    </button>
+                </div>
+            </div>
         );
     }
 }

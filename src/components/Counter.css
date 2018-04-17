@@ -1,0 +1,23 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    height: 100px;
+}
+
+.Counter {
+    margin: 0 auto;
+    background-color: wheat;
+    padding: 5px 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.Buttons {
+    margin: 0 auto;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
