@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement, incrementIfOdd } from '../actions';
 
 class Counter extends Component {
     incrementIfOdd = () => {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
+        if (this.props.count % 2 !== 0) {
+            this.props.incrementIfOdd();
+        }
     };
 
     incrementAsync = () => {
@@ -26,12 +29,10 @@ class Counter extends Component {
                 <button onClick={() => this.props.decrement() }>
                     -
                 </button>
-                 {/* Uncomment these button tags if you got
-                around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
-                <button onClick={this.incrementAsync}>
+                {/* <button onClick={this.incrementAsync}>
                     Increment async
                 </button>  */}
             </p>
@@ -56,4 +57,4 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, { increment, decrement, incrementIfOdd })(Counter);
