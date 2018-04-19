@@ -24,11 +24,14 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => this.incrementIfOdd() }>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => this.props.decrement() }>
                     -
+                </button>
+                <button onClick={() => this.incrementAsync()}>
+                  async +
                 </button>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
