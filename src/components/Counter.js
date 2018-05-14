@@ -17,6 +17,16 @@ class Counter extends Component {
         window.setTimeout(this.props.increment, 1000);
     };
 
+    // Stretch Problem: add new action to increment by 2 if the 
+    // count is even after 5 seconds
+    incrementAsyncIfEven = () => {
+      window.setTimeout(() => {
+        if (this.props.count % 2 === 0) {
+          this.props.increment(2);
+        }
+      }, 5000);
+    };
+
     render() {
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
@@ -37,6 +47,9 @@ class Counter extends Component {
                 </button>
                 <button onClick={this.incrementAsync}>
                     Increment async
+                </button> 
+                <button onClick={this.incrementAsyncIfEven}>
+                    Increment async if even
                 </button> 
             </p>
         );
