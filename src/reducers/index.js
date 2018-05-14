@@ -10,12 +10,11 @@ export const counterA = (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
       // Fill in the body of this case
-      // return ++count;
-      // return count++;
-      return count + 1;
+      // return ++count; // OPTION 1 -> This 'mutate' the `count`argument.
+      // return count++; // OPTION 2 -> this dos not works!
+      return count + 1; // OPTION 3 -> Works, and do not 'mutates' `count`
     case DECREMENT:
       // Fill in the body of this case
-      // return --count;
       return count - 1;
     default:
       return count;
