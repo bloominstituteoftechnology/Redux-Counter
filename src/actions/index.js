@@ -1,3 +1,6 @@
+
+
+
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
@@ -10,9 +13,15 @@ export const DECREMENT = 'DECREMENT';
 // is left to the reducer(s).
 
 export const increment = () => {
-  // Fill in this function
+// Fill in this function
+  if (action.type === 'INCREMENT') {
+    return state + 1;
+   }
 };
 
 export const decrement = () => {
   // Fill in this function
+  if (action.type === 'DECREMENT') {
+    return state - 1;
+   }
 };
