@@ -23,10 +23,10 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => 0 }>
+                <button onClick={() => this.props.increment() }>
                     +
                 </button>
-                <button onClick={() => 0 }>
+                <button onClick={() => this.props.decrement() }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
