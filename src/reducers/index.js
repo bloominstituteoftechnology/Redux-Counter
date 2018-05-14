@@ -9,16 +9,13 @@ export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
     // Fill in the body of this case
-      return state + 1;
+      return count + 1;
     case DECREMENT:
     // Fill in the body of this case
-      return state - 1;
+      return count - 1;
     default:
       return count;
   }
 };
 
-const { createStore } = Redux;
-const store = createStore(counter);
 
-console.log(store.getState());

@@ -11,14 +11,10 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
-  if (action.type === 'INCREMENT') {
-    return state +1;
-  }
+  return {type: INCREMENT};
 };
 
 export const decrement = () => {
   // Fill in this function
-  if (action.type === 'DECREMENT') {
-    return state - 1;
-  }
+  return {type: DECREMENT};
 };
