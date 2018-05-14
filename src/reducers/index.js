@@ -1,4 +1,5 @@
 import { INCREMENT, DECREMENT } from '../actions';
+import { STATUS_CODES } from 'http';
 
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
@@ -9,9 +10,22 @@ export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
     // Fill in the body of this case
+      return ++action.count
     case DECREMENT:
     // Fill in the body of this case
+      return --action.count
     default:
       return count;
   }
 };
+
+// ```count++ === ( count = count +1 )```
+// on the other hand count + 1 does not mutate count
+
+// ++variable increments the variable, returning the new value.
+
+// variable++ increments the variable, but returns the old value.
+
+// --variable decrements the variable, returning the new value.
+
+// variable-- decrements the variable, but returns the old value.
