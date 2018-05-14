@@ -9,9 +9,9 @@ import { STATUS_CODES } from 'http';
 export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
-      return ++action.count
+      return count += action.payload;
     case DECREMENT:
-      return --action.count
+      return count -= action.payload;
     default:
       return count;
   }

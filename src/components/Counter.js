@@ -1,23 +1,21 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
-export const INCREMENTASYNC = 'INCREMENTASYNC';
-export const INCREMENTIFODD = 'INCREMENTIFODD';
 
 class Counter extends Component {
-    incrementIfOdd = (count) => {
+    incrementIfOdd = () => {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
-        if (count % 2 === 1) {
-            count =+ 1;
+        if (this.props.count % 2 === 1) {
+            this.props.increment();
         }
     };
 
-    incrementAsync = (count) => {
+    incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
         setTimeout(() => {
-            count -= 1;
+            this.props.increment();
         }, 1000);
     };
 
@@ -34,10 +32,10 @@ class Counter extends Component {
                 <button onClick={() => this.props.decrement(this.props.count) }>
                     -
                 </button>
-                <button onClick={this.incrementIfOdd(this.props.count)}>
+                <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
-                <button onClick={this.incrementAsync(this.props.count)}>
+                <button onClick={this.incrementAsync}>
                     Increment async
                 </button> 
             </p>
