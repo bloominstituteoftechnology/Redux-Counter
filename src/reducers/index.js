@@ -16,6 +16,6 @@ export default (count = 0, action) => {
     return count -= action.payload;
     
     default:
-      return count += 10;
+      return count;
   }
 };
