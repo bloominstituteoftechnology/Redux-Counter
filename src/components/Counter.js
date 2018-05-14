@@ -18,6 +18,14 @@ class Counter extends Component {
         setTimeout(()=> this.props.increment(), 1000)
     };
 
+    dreSean = () => {
+        if(this.props.count%2===0){
+            setTimeout( () => {
+                this.props.increment();
+                this.props.increment()}, 1000)
+        }
+    }
+
     render() {
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
@@ -38,6 +46,9 @@ class Counter extends Component {
                 </button>
                 <button onClick={this.incrementAsync}>
                     Increment async
+                </button>
+                <button onClick={this.dreSean}>
+                    Increment Dre'Sean
                 </button>
             </p>
         );
