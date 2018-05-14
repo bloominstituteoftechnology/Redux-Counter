@@ -11,8 +11,16 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
+  let count = 0;
+  return function counted() {
+    return ++count;
+  }
 };
 
 export const decrement = () => {
   // Fill in this function
+  let count = 0;
+  return function counted() {
+    return --count;
+  }
 };
