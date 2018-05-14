@@ -8,9 +8,11 @@ import { INCREMENT, DECREMENT } from '../actions';
 export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
-      return state.concat(action.payload);
+      count += action.payload;
+      return count;
     case DECREMENT:
-      return state.concat(action.payload);
+      count -= action.payload;
+      return count;
     default:
       return count;
   }
