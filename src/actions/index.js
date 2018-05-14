@@ -11,12 +11,14 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   return {
-    type: INCREMENT
+    type: INCREMENT,
+    payload: 1
   }
 };
 
 export const decrement = () => {
   return {
-    type: DECREMENT
+    type: DECREMENT,
+    payload: 1
   }
 };
