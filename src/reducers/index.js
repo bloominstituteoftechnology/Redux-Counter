@@ -10,11 +10,13 @@ export default (count = 0, action) => {
     case INCREMENT:
     // Fill in the body of this case
    
-    return count += action.payload;
+   //OPTION A: // return count += action.payload; //DO NOT DO THIS - This mutates original count
+   /*OPTION B:*/ return count + action.payload;
     case DECREMENT:
     // Fill in the body of this case
   
-    return count -= action.payload;
+   //OPTION A: // return count -= action.payload; //DO NOT DO THIS - This mutates original count
+   /*OPTION B:*/ return count - action.payload;
     default:
       return count;
   }

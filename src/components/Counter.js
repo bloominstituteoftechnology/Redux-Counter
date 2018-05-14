@@ -18,7 +18,7 @@ class Counter extends Component {
             clearInterval(x);
         } 
         
-        let x = setInterval(() => { 
+        let x = setInterval(() => {   // Should've used setTimeout instead because - “setInterval fires again and again in intervals, while setTimeout only fires once”
             this.props.increment();
             stopCount(x);
     }, 1000)     
