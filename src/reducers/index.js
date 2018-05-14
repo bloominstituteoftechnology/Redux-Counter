@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actions';
+import { INCREMENT, DECREMENT, INCREMENT_IF_ODD } from '../actions';
 
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
@@ -9,8 +9,10 @@ export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
     // Fill in the body of this case
+      return ++action.count
     case DECREMENT:
     // Fill in the body of this case
+      return --action.count
     default:
       return count;
   }
