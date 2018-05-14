@@ -19,6 +19,9 @@ export default (count = 0, action) => {
   }
 };
 
+// ```count++ === ( count = count +1 )```
+// on the other hand count + 1 does not mutate count
+
 // ++variable increments the variable, returning the new value.
 
 // variable++ increments the variable, but returns the old value.
