@@ -14,5 +14,5 @@ export const increment = () => {
 };
 
 export const decrement = () => {
-  return { type: INCREMENT }
+  return { type: DECREMENT }
 };
