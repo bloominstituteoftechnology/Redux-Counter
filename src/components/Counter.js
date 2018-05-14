@@ -20,13 +20,13 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={ this.props.increment }>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={ this.props.decrement }>
                     -
                 </button>
-                 {/* Uncomment these button tags if you got
+                {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
                 {/* <button onClick={this.incrementIfOdd}>
                     Increment if odd
