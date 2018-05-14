@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actions';
+import { INCREMENT, DECREMENT, INCREMENT_IF_ODD } from '../actions';
 
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
