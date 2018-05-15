@@ -1,20 +1,28 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement, increment_ifodd, increment_async } from '../actions';
+import { increment, decrement, incrementByFive } from '../actions';
 
 class Counter extends Component {
 
     incrementIfOdd = () => {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
-        this.props.increment_ifodd();
+        if (this.props.count % 2 !== 0) {
+            return this.props.increment();
+        }
     };
 
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
-        this.props.increment_async();
+        setTimeout(() => this.props.increment(), 1000)
     };
+
+    incrementByFive = () => {
+        if (this.props.count % 2 === 0) {
+            setTimeout(() => this.props.incrementByFive(), 5000);
+        }
+    }
 
     render() {
         // Fill in the two button onClick methods
@@ -23,14 +31,10 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => {
-                    this.props.increment();
-                }}>
+                <button onClick={() => this.props.increment()}>
                     +
                 </button>
-                <button onClick={() => {
-                    this.props.decrement();
-                }}>
+                <button onClick={() => this.props.decrement()}>
                     -
                 </button>
                 {/* Uncomment these button tags if you got
@@ -40,6 +44,9 @@ class Counter extends Component {
                 </button>
                 <button onClick={this.incrementAsync}>
                     Increment async
+                </button>
+                <button onClick={this.incrementByFive}>
+                    Increment by five after 5 seconds
                 </button>
             </p>
         );
@@ -63,4 +70,4 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement, increment_ifodd, increment_async })(Counter);
+export default connect(mapStateToProps, { increment, decrement, incrementByFive })(Counter);

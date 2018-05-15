@@ -1,7 +1,6 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
-export const INCREMENT_IFODD = 'INCREMENT_IFODD';
-export const INCREMENT_ASYNC = 'INCREMENT_ASYNC';
+export const INCREMENT_BY_FIVE = 'INCREMENT_BY_FIVE'; 
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -27,16 +26,11 @@ export const decrement = () => {
   }
 };
 
-export const increment_ifodd = () => {
+export const incrementByFive = () => {
   return {
-    type: INCREMENT_IFODD,
-    payload: 1
+    type: INCREMENT_BY_FIVE, 
+    payload: 5
   }
-};
+}; 
 
-export const increment_async = () => {
-  return {
-    type: INCREMENT_ASYNC,
-    payload: 1
-  }
-};
+
