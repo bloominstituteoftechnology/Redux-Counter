@@ -1,17 +1,24 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement, bytwo } from '../actions';
 
 class Counter extends Component {
     incrementIfOdd = () => {
-        // Stretch Problem: Implement an increment function that
-        // only increments if the counter value is odd
+       if( this.props.count % 2 !== 0 ){
+        return this.props.increment();
+       }
     };
 
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
+        setTimeout(this.props.increment(), 1000);
     };
+    incrementByTwo = () => {
+        if(this.props.count % 2 === 0){
+            setTimeout(() => this.props.bytwo(), 5000);
+        }
+    }
 
     render() {
         // Fill in the two button onClick methods
@@ -20,20 +27,24 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+                {" "}
+                <button onClick={() => this.props.increment() }>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                {" "}
+                <button onClick={() => this.props.decrement() }>
                     -
                 </button>
-                 {/* Uncomment these button tags if you got
-                around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+               
+                <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
                 <button onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button> 
+                <button onClick={this.incrementByTwo}>
+                    By Two
+                </button>
             </p>
         );
     }
@@ -56,4 +67,4 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, { increment, decrement, bytwo })(Counter);
