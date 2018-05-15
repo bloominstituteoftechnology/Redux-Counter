@@ -1,5 +1,6 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const INCREMENTBY5 = 'INCREMENTBY5';
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -12,13 +13,23 @@ export const DECREMENT = 'DECREMENT';
 export const increment = () => {
   // Fill in this function
   return {
-    type: INCREMENT
+    type: INCREMENT,
+    payload: 1
   };
 };
 
 export const decrement = () => {
   // Fill in this function
   return {
-    type: DECREMENT
+    type: DECREMENT,
+    payload: 1
+  };
+};
+
+export const incrementBy5 = () => {
+  // Fill in this function
+  return {
+    type: INCREMENTBY5,
+    payload: 5
   };
 };
