@@ -30,4 +30,4 @@ Take your time walking around the code base. There are lots of informative littl
 
 If you end up finishing quickly, you'll see there are a few Stretch Problem prompts at the top of the `Counter.js` component file. Feel free to take a stab at implementing those. Or, you could take a look at the awesome Redux documentation [here](http://redux.js.org/docs/basics/).
 
-Good luck and have fun!
+Good luck and have fun! 
