@@ -1,5 +1,6 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const BY_TWO = 'BYTWO';
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -11,12 +12,21 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   return {
-    type: INCREMENT
+    type: INCREMENT,
+    payload: 1,
   };
 };
 
 export const decrement = () => {
   return {
-    type: DECREMENT
+    type: DECREMENT,
+    payload: 1,
   }; 
 };
+
+export const bytwo = () => {
+  return {
+    type: BY_TWO,
+    payload: 2,
+  }
+}
