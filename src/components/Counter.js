@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement, reset } from '../actions';
+import store from '../index.js'
 
 class Counter extends Component {
     incrementIfOdd = () => {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
         if(this.props.count%2){
-            this.props.increment()
+            store.dispatch({
+                type: 'INCREMENT',
+                payload: 1
+            })
+            //this.props.increment()
         }
 
     };
@@ -15,9 +20,13 @@ class Counter extends Component {
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
-        setTimeout(()=> this.props.increment(), 1000)
+        //setTimeout(()=> this.props.increment(), 1000)
+        setTimeout(()=> {
+            console.log('increment: ', increment);
+            console.log('this.props.increment: ', this.props.increment);
+            store.dispatch(increment())}, 1000)
     };
-
+        //if count is even, increase count by 1 after 1 second
     dreSean = () => {
         if(this.props.count%2===0){
             setTimeout( () => {
@@ -30,17 +39,19 @@ class Counter extends Component {
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
+        console.log('Counter Props: ',this.props.increment)
         return (
             <p>
                 Clicked: {this.props.count} times
+                <br></br>
                 <button onClick={() => this.props.increment() }>
                     +
                 </button>
                 <button onClick={() => this.props.decrement() }>
                     -
                 </button>
-                 Uncomment these button tags if you got
-                around to implementing the extra credit functions
+                 {/* Uncomment these button tags if you got
+                around to implementing the extra credit functions */}
                 <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
@@ -49,6 +60,9 @@ class Counter extends Component {
                 </button>
                 <button onClick={this.dreSean}>
                     Increment Dre'Sean
+                </button>
+                <button onClick={() => this.props.reset() }>
+                    RESET
                 </button>
             </p>
         );
@@ -72,4 +86,4 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, { increment, decrement, reset })(Counter);
