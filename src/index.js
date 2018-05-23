@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Counter from './components/Counter';
-import counter from './reducers';
+import {counter} from './reducers';
 
 // This line instantiates our central Redux store.
 // The `createStore` function receives the reducer
@@ -11,6 +11,9 @@ import counter from './reducers';
 // with any initial state that we may want the store
 // to start out with (which is none in this case).
 const store = createStore(counter);
+//console.log("storex: ",store);
+// store.dispatch({type: 'INCREMENT', payload: 1})
+// console.log("store.getState: ",store.getState());
 
 // Here, we wrap our main React component inside of
 // Provider tags, which come from the react-redux package.
@@ -23,3 +26,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+export default store;

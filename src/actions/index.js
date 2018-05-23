@@ -1,5 +1,6 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const RESET = 'RESET';
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -9,10 +10,28 @@ export const DECREMENT = 'DECREMENT';
 // logic of updating the central Redux store. That
 // is left to the reducer(s).
 
-export const increment = () => {
+export const increment = (props) => {
+  // console.log("increment : ", increment)
+  // console.log("increment.props : ", this.props)
   // Fill in this function
+  return {
+    type: INCREMENT,
+    payload: 1,
+  }
 };
 
 export const decrement = () => {
   // Fill in this function
+  return {
+    type: DECREMENT,
+    payload: 1,
+  }
+};
+
+export const reset = () => {
+  // Fill in this function
+  return {
+    type: RESET,
+    payload: 0,
+  }
 };
