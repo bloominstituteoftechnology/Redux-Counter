@@ -1,6 +1,7 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 export const INCREMENT_ODD = 'INCREMENT_ODD';
+export const INCREMENT_ASYNC = 'INCREMENT_ASYNC';
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -32,3 +33,10 @@ export const increment_odd = () => {
     payload: 1,
   }
 };
+
+export const increment_async = () => {
+  return {
+    type: 'INCREMENT_ASYNC',
+    payload: 1,
+  }
+}
