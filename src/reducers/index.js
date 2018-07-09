@@ -8,9 +8,14 @@ import { INCREMENT, DECREMENT } from '../actions';
 export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
+    console.log('plus');
     // Fill in the body of this case
+    return count + 1;
+     
     case DECREMENT:
     // Fill in the body of this case
+    console.log('minus');
+    return count - 1;
     default:
       return count;
   }
