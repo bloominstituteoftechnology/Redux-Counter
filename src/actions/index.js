@@ -11,8 +11,10 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
+  console.log('increment');
 };
 
 export const decrement = () => {
   // Fill in this function
+  console.log('decrement');
 };
