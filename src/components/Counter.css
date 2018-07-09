@@ -1,0 +1,29 @@
+.center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 30px;
+}
+
+.big-button {
+    width: 100px;
+    height: 100px;
+    background: black;
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-align: center;
+
+    border: 5px solid aquamarine;
+    box-shadow: 0px 3px 12px teal;
+
+    text-decoration: none;
+
+    margin: 15px;
+}
+
+.big-button:focus {
+    outline: none;
+}
