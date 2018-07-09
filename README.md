@@ -2,7 +2,7 @@
 
 ## Topics
 
-* Immutability in JavaScript
+* Immutability in JavaScript 
 * Redux
 * Actions
 * Reducers
