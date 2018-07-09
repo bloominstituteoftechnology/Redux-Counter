@@ -3,14 +3,21 @@ import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
 class Counter extends Component {
-    incrementIfOdd = () => {
+    incrementIfOdd = (count) => {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
+        if(count % 2 === 0) {
+            return;
+        } else {
+            this.props.increment();
+        }
+        
     };
 
-    incrementAsync = () => {
+    incrementAsync = (cb) => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
+        setTimeout(cb, 1000);
     };
 
     render() {
@@ -20,20 +27,20 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => this.props.increment() }>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => this.props.decrement() }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                <button onClick={() => this.incrementIfOdd(this.props.count)}>
                     Increment if odd
                 </button>
-                <button onClick={this.incrementAsync}>
+                <button onClick={() => this.incrementAsync(this.props.increment)}>
                     Increment async
-                </button>  */}
+                </button>  
             </p>
         );
     }
@@ -46,8 +53,9 @@ class Counter extends Component {
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
+    console.log(state);
     return {
-        count: state
+        count: state.count
     };
 };
 
