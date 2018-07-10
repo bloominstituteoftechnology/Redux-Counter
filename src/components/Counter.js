@@ -36,7 +36,7 @@ class Counter extends Component {
                     Increment if odd
                 </button>
                 <button onClick={this.incrementAsync}>
-                    Increment async
+                    Increment async(+1 sec)
                 </button> 
             </p>
         );
