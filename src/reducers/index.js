@@ -12,7 +12,8 @@ export default (count = 0, action) => {
     return count + action.payload;
     case DECREMENT:
     // Fill in the body of this case
+    return count - action.payload;
     default:
-      return count - action.payload;
+    return count;
   }
 };
