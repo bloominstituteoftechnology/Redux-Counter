@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
+import FriendsList from "./FriendsList";
 
 class Counter extends Component {
     incrementIfOdd = () => {
@@ -38,6 +39,7 @@ class Counter extends Component {
                 <button onClick={this.incrementAsync}>
                     Increment async(+1 sec)
                 </button> 
+                <FriendsList />
             </p>
         );
     }
@@ -50,8 +52,9 @@ class Counter extends Component {
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
+    console.log('STATE: ', state);
     return {
-        count: state
+        count: state.count
     };
 };
 
