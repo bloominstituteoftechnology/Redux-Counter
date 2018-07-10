@@ -13,12 +13,10 @@ export const increment = () => {
   return {
     type: 'INCREMENT';
   }
-  // Fill in this function
 };
 
 export const decrement = () => {
   return {
     type: 'DECREMENT';
   }
-  // Fill in this function
 };
