@@ -8,11 +8,11 @@ import { INCREMENT, DECREMENT } from '../actions';
 export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
-    return Object.assign({}, count, {count: this.count + this.action})
+    return count + 1
     // Fill in the body of this case
     case DECREMENT:
+    return count - 1;
     // Fill in the body of this case
-    return Object.assign({}, count, {count: this.count - this.action})
     default:
       return count;
   }
