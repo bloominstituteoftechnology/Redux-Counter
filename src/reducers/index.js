@@ -8,10 +8,16 @@ import { INCREMENT, DECREMENT } from '../actions';
 export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
-    // Fill in the body of this case
+      return count = count + 1;
     case DECREMENT:
-    // Fill in the body of this case
+      return count = count - 1;
     default:
       return count;
   }
 };
+
+
+//You might need to make this reducer a pure funtion byt making those INC and DEC cases return something
+//like Object.assign({}, state, { name: action.payload });
+
+//45 minutes into the lecture
