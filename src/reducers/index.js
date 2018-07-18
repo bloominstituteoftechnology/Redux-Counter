@@ -5,12 +5,12 @@ import { INCREMENT, DECREMENT } from '../actions';
 // of our redux store, along with an action created
 // by our action creator. What does the reducer
 // need to do with the count in each case?
-export default (count = 0, action) => {
+export default (count = 0, action) => { //first argument is the current state
   switch (action.type) {
     case INCREMENT:
-      return (count+1)
+      return (count += action.payload)
     case DECREMENT:
-      return (count-1)
+      return (count -= action.payload)
     default:
       return count;
   }
