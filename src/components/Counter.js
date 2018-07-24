@@ -5,19 +5,14 @@ import { increment, decrement, ifOdd } from '../actions/index';
 
 class Counter extends Component {
 
-    incrementAsync = () => {
-        // Stretch Problem: Implement an increment function that
-        // increments after waiting for one second
+    async = () => {
         const interval = setInterval(() => {
             this.props.increment();
             clearInterval(interval);
         }, 1000)
-    };
+    }
 
     render() {
-        // Fill in the two button onClick methods
-        // Upon clicking these buttons, the count
-        // should decrement or increment accordingly
         return (
             <p>
                 Clicked: { this.props.count } times
@@ -30,7 +25,7 @@ class Counter extends Component {
                 <button onClick={() => this.props.ifOdd()}>
                     Increment If Odd
                 </button>
-                <button onClick={() => this.incrementAsync()}>
+                <button onClick={() => this.async()}>
                     Increment Async
                 </button>
             </p>
