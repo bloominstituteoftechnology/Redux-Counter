@@ -10,10 +10,10 @@ export default (count = 0, action) => {
     case INCREMENT:
     // Fill in the body of this case
       console.log('payload', action.payload);
-      return Object.assign({}, count, {count: action.payload + 1})
+      return action.payload + 1
     case DECREMENT:
     // Fill in the body of this case
-      return Object.assign({}, count, {count: action.payload - 1})
+      return action.payload - 1
     default:
       return count;
   }
