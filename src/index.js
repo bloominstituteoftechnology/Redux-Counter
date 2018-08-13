@@ -23,3 +23,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+// Counter is same as App that we're used to seeing
