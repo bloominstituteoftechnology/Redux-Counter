@@ -11,7 +11,11 @@ import counter from "./reducers";
 // with any initial state that we may want the store
 // to start out with (which is none in this case).
 const store = createStore(counter);
+
+// store.dispatch({ type: "DECREMENT" }); // triggers store before
+
 console.log("Initial State", store.getState());
+console.log("Initial State Store", store);
 // Here, we wrap our main React component inside of
 // Provider tags, which come from the react-redux package.
 // This is needed because the store needs to know where it
