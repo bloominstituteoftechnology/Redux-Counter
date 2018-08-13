@@ -8,7 +8,10 @@ import { INCREMENT, DECREMENT } from "../actions";
 // by our action creator. What does the reducer
 // need to do with the count in each case?
 export default (count = 0, action) => {
-  switch (action.type) {
+  // action is an object,
+  switch (
+    action.type // look at the argument we just passed in, an object, it has a key called type- what does it say. its a string "INCREMENT" or "DECREMENT"
+  ) {
     case INCREMENT:
       // Fill in the body of this case
       return count + 1;

@@ -1,4 +1,4 @@
-export const INCREMENT = "INCREMENT";
+export const INCREMENT = "INCREMENT"; // new, must be a string
 export const DECREMENT = "DECREMENT";
 
 // Our action creators will return
@@ -11,7 +11,8 @@ export const DECREMENT = "DECREMENT";
 
 export const increment = () => ({
   // Fill in this function
-  type: "INCREMENT"
+  type: "INCREMENT" //not optional
+  //payload : num is data
 });
 
 export const decrement = () => ({
