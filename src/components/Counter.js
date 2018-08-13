@@ -13,17 +13,17 @@ class Counter extends Component {
         // increments after waiting for one second
     };
 
-    render() {
+    render =() => {
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => {this.props.increment()} }>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => {this.props.decrement()} }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
@@ -39,6 +39,8 @@ class Counter extends Component {
     }
 }
 
+
+
 // The mapStateToProps function specifies which portion of the 
 // state tree this component needs to receive. In this case, 
 // since our redux store is only storing the value of the count,
@@ -50,6 +52,8 @@ const mapStateToProps = (state) => {
         count: state
     };
 };
+
+    
 
 // The connect function is called in order to make this component aware
 // of the rest of the redux architecture. Without this, this component
