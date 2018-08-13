@@ -6,17 +6,17 @@ import { Object } from 'core-js';
 // of our redux store, along with an action created
 // by our action creator. What does the reducer
 // need to do with the count in each case?
-export default (state = 0, action) => {
+export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
-      return Object.assign({}, state, {
+      return Object.assign({}, count, {
         count: action.payload
       })
     case DECREMENT:
-      return Object.assign({}, state, {
+      return Object.assign({}, count, {
         count: action.payload
       })
     default:
-      return state;
+      return count;
   }
 };
