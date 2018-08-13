@@ -1,3 +1,5 @@
+import {store} from '../index.js';
+
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
@@ -9,14 +11,19 @@ export const DECREMENT = 'DECREMENT';
 // logic of updating the central Redux store. That
 // is left to the reducer(s).
 
-export const increment = (count) => ({
+export const increment = () => (
+  store.dispatch({
+    type:INCREMENT
+  })
+)
   // Fill in this function
-  type: INCREMENT,
-  count
-});
+  
+  
 
-export const decrement = (count) => ({
+
+export const decrement = () => (
   // Fill in this function
-  type: DECREMENT,
-  count
-});
+  store.dispatch({
+    type: DECREMENT
+  })
+);

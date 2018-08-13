@@ -7,13 +7,14 @@ import { Object } from 'core-js';
 // by our action creator. What does the reducer
 // need to do with the count in each case?
 const counter = (count = 0, action) => {
+    console.log(action);
   switch (action.type) {
     case INCREMENT:
     // Fill in the body of this case
       return Object.assign({}, count, {count: count + 1})
     case DECREMENT:
     // Fill in the body of this case
-      return Object.assign({}, count, {count: count - 1})
+      return Object.assign({}, count, {count: count -1})
     default:
       return count;
   }

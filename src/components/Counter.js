@@ -17,6 +17,7 @@ class Counter extends Component {
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
+        console.log(this.props)
         return (
             <p>
                 Clicked: {this.props.count} times
@@ -38,7 +39,6 @@ class Counter extends Component {
         );
     }
 }
-
 // The mapStateToProps function specifies which portion of the 
 // state tree this component needs to receive. In this case, 
 // since our redux store is only storing the value of the count,
