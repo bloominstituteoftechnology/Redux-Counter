@@ -20,7 +20,7 @@ class Counter extends Component {
         console.log(this.props)
         return (
             <p>
-                Clicked: {this.props.count} times
+                {`Clicked: ${this.props.count} times`}
                 <button onClick={() => increment(this.props.count) }>
                     +
                 </button>
