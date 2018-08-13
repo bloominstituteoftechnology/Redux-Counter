@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
+import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 
 class Counter extends Component {
     incrementIfOdd = () => {
@@ -18,23 +19,48 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
-            <p>
-                Clicked: {this.props.count} times
-                <button onClick={() => this.props.increment() }>
-                    +
-                </button>
-                <button onClick={() => this.props.decrement()}>
-                    -
-                </button>
-                  Uncomment these button tags if you got
-                around to implementing the extra credit functions }
-                 <button onClick={this.incrementIfOdd}>
-                    Increment if odd
-                </button>
-                <button onClick={this.incrementAsync}>
-                    Increment async
-                </button>  }
-            </p>
+          <div className = "container">
+
+            <Row>
+            <Col sm="6">
+              <Card body>
+                <CardTitle>Increment/Decrement</CardTitle>
+                <CardText>Clicked: {this.props.count} times</CardText>
+                <Row>
+                  <div className= "col-2" >
+                  <Button onClick={() => this.props.increment() }>
+                      +
+                  </Button>
+                </div>
+                  <div className= "col-2" >
+                  <Button onClick={() => this.props.decrement()}>
+                      -
+                  </Button>
+                </div>
+                </Row>
+              </Card>
+            </Col>
+            <Col sm="6">
+              <Card body>
+                <CardTitle>Odd/Async</CardTitle>
+                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                <Row>
+                  <div className = "col">
+                  <Button onClick={this.incrementIfOdd}>
+                     Increment if odd
+                 </Button>
+               </div>
+               <div className = "col">
+                 <Button onClick={this.incrementAsync}>
+                     Increment async
+                 </Button>
+                 </div>
+                 </Row>
+              </Card>
+            </Col>
+          </Row>
+          </div>
+
         );
     }
 }
