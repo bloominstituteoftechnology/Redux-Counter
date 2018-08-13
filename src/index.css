@@ -1,0 +1,20 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-size: 175%;
+}
+
+button {
+  background: whitesmoke;
+  color: mediumslateblue;
+  margin-left: 10px;
+  border-radius: 5px;
+  border-color: darkslategray;
+  padding: 2px 8px;
+}
+
+button:hover {
+  color: whitesmoke;
+  background: mediumslateblue;
+  border-color: lightgray;
+}
