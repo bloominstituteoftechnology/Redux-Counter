@@ -1,6 +1,6 @@
 import { INCREMENT, DECREMENT } from '../actions';
 import { Object } from 'core-js';
-import logger from 'redux-logger'
+// import logger from 'redux-logger'
 
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
@@ -26,3 +26,5 @@ export default (count = 0, action) => { //action is an object. count = 0 this is
 //         count: count - 1
 //       })
 //wrong because it return an object. so [object object] gets returned. 
+
+//$r.store.state this is how you can get to state from the console.
