@@ -3,9 +3,13 @@ import { connect } from "react-redux";
 import { increment, decrement } from "../actions";
 
 class Counter extends Component {
-  incrementIfOdd = () => {
+  decrementIfOdd = props => {
     // Stretch Problem: Implement an increment function that
     // only increments if the counter value is odd
+    console.log("Odd Increment", props);
+    if (props.count % 2 != 0) {
+      this.props.decrement();
+    }
   };
 
   incrementAsync = () => {
@@ -22,6 +26,7 @@ class Counter extends Component {
       <p>
         Clicked: {this.props.count} times
         <button onClick={() => this.props.increment(this.props)}>+</button>
+        <button onClick={() => this.decrementIfOdd(this.props)}>+++</button>
         <button onClick={() => this.props.decrement()}>-</button>
         {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
@@ -43,7 +48,7 @@ class Counter extends Component {
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
 const mapStateToProps = state => {
-  console.log("State", state);
+  console.log("CountState", state);
   return {
     count: state
   };
