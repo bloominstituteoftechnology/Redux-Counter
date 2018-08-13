@@ -1,5 +1,6 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const INCREMENT_ODD = 'INCREMENT_ODD';
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -24,3 +25,10 @@ export const decrement = () => {
     payload: 1
   }
 };
+
+export const incrementOdd = () => {
+  return {
+    type: INCREMENT_ODD,
+    payload: Math.floor(Math.random() * 3)
+  }
+}
