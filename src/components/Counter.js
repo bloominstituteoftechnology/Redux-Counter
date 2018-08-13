@@ -34,10 +34,8 @@ class Counter extends Component {
                 </button>
                 {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                {<button onClick={this.props.incrementOdd}>
-                    Increment if odd
-                </button>
-                /*
+                {this.props.count%2!==0 ? <button onClick={this.props.incrementOdd}> Increment if odd </button> : <button onClick={null}> Increment if odd </button> }
+                {/*
                 <button onClick={this.incrementAsync}>
                     Increment async
                 </button>  */}
