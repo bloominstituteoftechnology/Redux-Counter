@@ -8,7 +8,7 @@
 * Reducers
 * The central store
 * Connecting React components to Redux
-
+-for PR
 ![alt text](https://camo.githubusercontent.com/9de527b9432cc9244dc600875b46b43311918b59/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6d656469612d702e736c69642e65732f75706c6f6164732f3336343831322f696d616765732f323438343739302f415243482d5265647578322d657874656e6465642d7265616c2d6465636c657261746976652e676966)
 
 In this Project, you'll be eased into the code base of a small Redux application. The application itself is just a counter with increment and decrement buttons.
