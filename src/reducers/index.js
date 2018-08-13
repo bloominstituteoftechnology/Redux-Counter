@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actions';
+import { INCREMENT, DECREMENT, RANDINCREMENT } from '../actions';
 import { Object } from 'core-js';
 
 // Our reducer that handles our two action cases:
@@ -13,6 +13,9 @@ export default (count = 0, action) => {
      
     case DECREMENT:
       return count - 1
+
+    case RANDINCREMENT:
+      return count + Math.floor(Math.random() * 11)
     
     default:
       return count;
