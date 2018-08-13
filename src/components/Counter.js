@@ -1,16 +1,62 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement, randincrement } from '../actions';
+
+import styled from 'styled-components';
+
+const DivContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+`;
+
+const DivButtons = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+`;
+
+const NormalButton = styled.button`
+    display: flex;
+    flex-direction: row;
+    width: 50px;
+    justify-content: center;
+    margin: 15px;
+    border-radius: 5px;
+`
+
+const SpecialButton = styled.button`
+    width: 150px;
+    justify-content: center;
+    margin: 15px;
+    border-radius: 5px;
+`
+
+const CounterText = styled.h2`
+    @import url('https://fonts.googleapis.com/css?family=Kirang Haerang');
+    font-family: 'Kirang Haerang';
+`
+
+
 
 class Counter extends Component {
     incrementIfOdd = () => {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
+        if(this.props.count % 2 === 1) {
+           this.props.increment();
+        }
     };
 
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
+        setTimeout(this.props.increment, 1000);
     };
 
     render() {
@@ -18,23 +64,28 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
-            <p>
-                Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
-                    +
-                </button>
-                <button onClick={() => /* Fill me in */ }>
-                    -
-                </button>
+            <DivContainer>
+                <CounterText>Clicked: {this.props.count} times </CounterText>
+                <DivButtons>
+                    <NormalButton onClick={() => this.props.increment() }>
+                        + 1
+                    </NormalButton>
+                    <NormalButton onClick={() => this.props.decrement() }>
+                        - 1
+                    </NormalButton>
+                </DivButtons>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                <SpecialButton onClick={this.incrementIfOdd}>
                     Increment if odd
-                </button>
-                <button onClick={this.incrementAsync}>
+                </SpecialButton>
+                <SpecialButton onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
-            </p>
+                </SpecialButton> 
+                <SpecialButton onClick={() => this.props.randincrement() }>
+                    Random + (0-10)
+                </SpecialButton> 
+            </DivContainer>
         );
     }
 }
@@ -56,4 +107,4 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, { increment, decrement, randincrement })(Counter);
