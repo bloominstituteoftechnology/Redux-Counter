@@ -6,15 +6,16 @@ import { Object } from 'core-js';
 // of our redux store, along with an action created
 // by our action creator. What does the reducer
 // need to do with the count in each case?
+
 const counter = (count = 0, action) => {
     console.log(action);
   switch (action.type) {
     case INCREMENT:
     // Fill in the body of this case
-      return Object.assign({}, count, {count: count + 1})
+      return count += action.payload
     case DECREMENT:
     // Fill in the body of this case
-      return Object.assign({}, count, {count: count -1})
+      return count -= action.payload
     default:
       return count;
   }

@@ -13,7 +13,8 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => (
   store.dispatch({
-    type:INCREMENT
+    type:INCREMENT, 
+    payload: 1
   })
 )
   // Fill in this function
@@ -24,6 +25,7 @@ export const increment = () => (
 export const decrement = () => (
   // Fill in this function
   store.dispatch({
-    type: DECREMENT
+    type: DECREMENT,
+    payload: 1 
   })
 );
