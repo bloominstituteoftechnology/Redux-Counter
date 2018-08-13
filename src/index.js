@@ -12,6 +12,10 @@ import counter from './reducers';
 // to start out with (which is none in this case).
 const store = createStore(counter);
 
+store.subscribe(() => {
+  console.log("State Changes", store.getState());
+});
+
 // Here, we wrap our main React component inside of
 // Provider tags, which come from the react-redux package.
 // This is needed because the store needs to know where it
@@ -19,7 +23,9 @@ const store = createStore(counter);
 // where the store "lives".
 ReactDOM.render(
   <Provider store={store}>
-    <Counter />
+    <Counter 
+    count={store.getState()}
+    />
   </Provider>,
   document.getElementById('root')
 );
