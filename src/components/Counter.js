@@ -23,7 +23,7 @@ class Counter extends Component {
                 <button onClick={() => this.props.incrementHandler(this.props.count) }>
                     +
                 </button>
-                <button onClick={() => decrement(this.props.count) }>
+                <button onClick={() => this.props.decrementHandler(this.props.count) }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
@@ -52,7 +52,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    incrementHandler: count => dispatch(increment(count))
+        incrementHandler: count => dispatch(increment(count)),
+        decrementHandler: count => dispatch(decrement(count))
 });
 
 // The connect function is called in order to make this component aware
@@ -60,4 +61,4 @@ const mapDispatchToProps = dispatch => ({
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
