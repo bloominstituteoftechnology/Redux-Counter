@@ -17,7 +17,10 @@ import { increment, decrement } from '../actions';
 //       return count;
 //   }
 // };
-export default handleActions({
-  [increment]: count => count + 1,
-  [decrement]: count => count - 1
-});
+export default handleActions(
+  {
+    [increment]: count => count + 1,
+    [decrement]: count => count - 1
+  },
+  0
+);
