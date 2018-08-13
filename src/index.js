@@ -25,6 +25,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Counter 
     count={store.getState()}
+    counterIncrement={() => store.dispatch({ type: 'INCREMENT' })}
+    counterDecrement={() => store.dispatch({ type: 'DECREMENT' })}
     />
   </Provider>,
   document.getElementById('root')
