@@ -1,13 +1,13 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
-export const increment = (count) => {
+export const increment = () => {
   return {  
     type: 'INCREMENT',
   }
 };
 
-export const decrement = (count) => {
+export const decrement = () => {
   return {  
     type: 'DECREMENT',
   }
