@@ -30,7 +30,7 @@ export const decrement = () => {
 export const incrementOdd = () => {
   return {
     type: INCREMENT_ODD,
-    payload: Math.floor(Math.random() * 3)
+    payload: Math.floor(Math.random() * 5)
   }
 }
 
