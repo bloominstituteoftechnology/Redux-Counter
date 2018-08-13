@@ -8,7 +8,7 @@ import { Object } from 'core-js';
 // need to do with the count in each case?
 
 const counter = (count = 0, action) => {
-    console.log(action);
+
   switch (action.type) {
     case INCREMENT:
     // Fill in the body of this case

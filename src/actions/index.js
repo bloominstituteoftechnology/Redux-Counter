@@ -18,8 +18,6 @@ export const increment = () => (
   })
 )
   // Fill in this function
-  
-  
 
 
 export const decrement = () => (
@@ -29,3 +27,13 @@ export const decrement = () => (
     payload: 1 
   })
 );
+
+export const incrementIfOdd = () => {
+  // Stretch Problem: Implement an increment function that
+  // only increments if the counter value is odd
+};
+
+export const incrementAsync = () => {
+  // Stretch Problem: Implement an increment function that
+  // increments after waiting for one second
+};
