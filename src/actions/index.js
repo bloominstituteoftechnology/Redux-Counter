@@ -11,8 +11,16 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
+  return store.dispatch({
+    type:'INCREMENT',
+    payload:1
+  })
 };
 
 export const decrement = () => {
   // Fill in this function
+  return store.dispatch({
+    type:'DECREMENT',
+    payload:1
+  });
 };
