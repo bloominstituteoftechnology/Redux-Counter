@@ -1,3 +1,13 @@
+p {
+    background: #CCFFFF;
+    font-family: 'Modern Antiqua', cursive;
+    border: 2px solid yellow;
+    width: 300px;
+    padding: 5px;
+    color: #6600CC;
+}
+
+
 button {
  border-radius: 6px;
  background: 	#FF69B4;
