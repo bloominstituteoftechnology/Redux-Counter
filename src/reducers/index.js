@@ -12,7 +12,7 @@ export default (count = 0, action) => {
     return count + 1;
     case DECREMENT:
     // Fill in the body of this case
-    return count -1;
+    return count - 1;
     default:
       return count;
   }
