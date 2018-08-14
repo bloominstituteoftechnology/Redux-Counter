@@ -1,0 +1,66 @@
+.counter-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Comfortaa', cursive;
+}
+
+.description{
+    width: 40%;
+}
+
+.count{
+    font-size: 50px;
+    padding: 20px;
+    border: 1px solid rgb(250, 225, 225);
+    background: white;
+    border-radius: 20px;
+
+}
+
+.plus-minus{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.special-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button{
+    background: rgb(248, 234, 239);
+    color: rgb(138, 61, 97);
+    border: 1px solid rgb(250, 225, 225); 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 12px;
+}
+
+p{
+    color: rgb(138, 61, 97);
+    text-align: center;
+    font-size: 18px;
+    padding: 30px;
+    border: 1px solid rgb(252, 243, 245);
+    margin-top: 30px;
+    border-radius: 20px;
+    background: rgb(252, 243, 245);
+}
+
+h1{
+    color: rgb(138, 61, 97);
+    text-align: center;
+    font-size: 30px;
+    padding: 30px; 
+    margin-top: 30px;
+}
+
+.description h5{
+    color: rgb(138, 61, 97);
+    padding: 0 30px;
+    text-align: center;
+}
