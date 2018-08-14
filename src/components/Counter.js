@@ -7,7 +7,7 @@ class Counter extends Component {
     // Stretch Problem: Implement an increment function that
     // only increments if the counter value is odd
     console.log("Odd Increment", props);
-    if (props.count % 2 != 0) {
+    if (props.count % 2 !== 0) {
       this.props.decrement();
     }
   };
