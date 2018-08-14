@@ -1,5 +1,5 @@
 
-import { INCREMENT, DECREMENT } from '../actions';
+import { INCREMENT, DECREMENT, RESET } from '../actions';
 
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
@@ -10,11 +10,14 @@ export default (count = 0, action) => {
   switch (action.type) {
     case DECREMENT:
     // Fill in the body of this case
-      return (count -= action.payload);
+      return (count=count - action.payload);
 
     case INCREMENT:
     // Fill in the body of this case
-      return (count += action.payload);
+      return (count=count + action.payload);
+
+    case RESET:
+      return(count=0);
 
     default:
       return count;

@@ -1,5 +1,7 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const RESET = 'RESET';
+//action types
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -22,3 +24,14 @@ export const decrement = () => {
     type: "DECREMENT", payload: 1
   };
 };
+
+export const reset = () => {
+  // Fill in this function
+  return {
+    type: "RESET"
+  };
+};
+
+
+//import actions as functions and include them in connect function
+//actions can be accessed on props

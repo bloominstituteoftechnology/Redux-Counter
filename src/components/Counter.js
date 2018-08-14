@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement, reset } from '../actions';
 
 import './Counter.css'
 
@@ -20,7 +20,7 @@ class Counter extends Component {
     }
 
     resetCounter = () => {
-        this.count = 0;
+        this.props.reset();
     }
 
     incrementAsync = () => {
@@ -37,7 +37,7 @@ class Counter extends Component {
             <div className = "counter-container">
             <div className="description">
             <h1> Counter built with React and Redux</h1>
-            <h5>Thanks for visiting.  I hope you enjoy this fanciful counter tool, which demonstrates the capabilities of the React JS library in combinaion with REDUX.  </h5>
+            <h5>Thanks for visiting.  I hope you enjoy this fanciful counter tool, which demonstrates the powerful combination of React and Redux!  </h5>
             </div>
             <p>
                 <div className="count"> {this.props.count} </div>
@@ -93,4 +93,6 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, { increment, decrement, reset })(Counter);
+
+//dispatch is built into connect
