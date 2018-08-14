@@ -1,0 +1,38 @@
+.counter-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.plus-minus{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.special-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button{
+    background: rgb(248, 234, 239);
+    color: rgb(138, 61, 97);
+    border: 1px solid rgb(250, 225, 225); 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
+    border: 1px solid rgb(252, 251, 251);
+    margin-top: 30px;
+    border-radius: 20px;
+    background: rgb(252, 243, 243);
+}

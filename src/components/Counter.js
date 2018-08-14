@@ -2,15 +2,31 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
+import './Counter.css'
+
 class Counter extends Component {
     incrementIfOdd = () => {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
+        if (this.props.count % 2 !== 0) {
+            this.props.increment(); 
+        }
     };
+
+    decrementIfEven = () => {
+        if (this.props.count % 2 ===0) {
+            this.props.decrement();
+        }
+    }
+
+    resetCounter = () => {
+        this.count = 0;
+    }
 
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
+
     };
 
     render() {
@@ -18,9 +34,10 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
+            <div className = "counter-container">
             <p>
                 Clicked: {this.props.count} times
-
+                <div className = "plus-minus">
                 <button onClick={() => this.props.decrement()}>
                     -
                 </button>
@@ -28,15 +45,28 @@ class Counter extends Component {
                 <button onClick={() => this.props.increment()}>
                     +
                 </button>
+                </div>
+
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                <div className = "even">
+                <button onClick={this.decrementIfEven}>
+                    Decrememt If Even
+                </button>
+                </div>
+                <div className = "odd">
+                <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
-                <button onClick={this.incrementAsync}>
+                </div>
+                <button onClick={this.resetCounter}>
+                    Reset
+                </button>
+                {/* <button onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button>   */}
             </p>
+            </div>
         );
     }
 }
