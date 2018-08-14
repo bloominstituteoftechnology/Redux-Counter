@@ -35,8 +35,12 @@ class Counter extends Component {
         // should decrement or increment accordingly
         return (
             <div className = "counter-container">
+            <div className="description">
+            <h1> Counter built with React and Redux</h1>
+            <h5>Thanks for visiting.  I hope you enjoy this fanciful counter tool, which demonstrates the capabilities of the React JS library in combinaion with REDUX.  </h5>
+            </div>
             <p>
-                Clicked: {this.props.count} times
+                <div className="count"> {this.props.count} </div>
                 <div className = "plus-minus">
                 <button onClick={() => this.props.decrement()}>
                     -
