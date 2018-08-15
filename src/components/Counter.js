@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement, incrementIfOdd } from '../actions';
 
 class Counter extends Component {
-    incrementIfOdd = () => {
-        // Stretch Problem: Implement an increment function that
-        // only increments if the counter value is odd
-    };
 
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
@@ -20,18 +16,20 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => /* Fill me in */ this.props.increment() }>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => /* Fill me in */ this.props.decrement() }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+
+                <button onClick={() => this.props.count % 2 === 1 ? this.props.incrementIfOdd() : null}>
                     Increment if odd
                 </button>
-                <button onClick={this.incrementAsync}>
+
+                {/* <button onClick={this.incrementAsync}>
                     Increment async
                 </button>  */}
             </p>
@@ -56,4 +54,6 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+
+// No mapDispatchToProps - sending actions directly
+export default connect(mapStateToProps, { increment, decrement, incrementIfOdd })(Counter);
