@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
       return {
         ...state, 
         count: state.count + 1,
-      }
+      };
     case DECREMENT:
       return{
         ...state,
@@ -29,6 +29,6 @@ export default (state = initialState, action) => {
       };
 
     default:
-      return initialState;
+      return state;
   }
 };
