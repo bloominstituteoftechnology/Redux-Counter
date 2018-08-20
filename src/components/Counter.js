@@ -18,6 +18,7 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
+            <h1>Setting up redux</h1>
             <p>
                 Clicked: {this.props.count} times
                 <button onClick={() => /* Fill me in */ }>
