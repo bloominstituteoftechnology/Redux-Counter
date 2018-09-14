@@ -20,14 +20,6 @@ class Counter extends Component {
                 </button>
                 <button onClick={this.props.ifeven}>Add if odd</button>
                 <button onClick={this.props.waitsec}>wait sec then add</button>
-                //  {/* Uncomment these button tags if you got
-                // around to implementing the extra credit functions */}
-                // {/* <button onClick={this.incrementIfOdd}>
-                //     Increment if odd
-                // </button>
-                // <button onClick={this.incrementAsync}>
-                //     Increment async
-                // </button>  */}
             </p>
         );
     }
