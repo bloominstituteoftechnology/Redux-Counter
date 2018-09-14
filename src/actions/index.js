@@ -32,10 +32,3 @@ export const ifeven = () => {
 		payload: 1,
 	}
 }
-
-export const waitsec = () => {
-	return {
-		type: 'WAITSEC',
-		payload: 1,
-	}
-}

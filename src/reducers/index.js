@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, WAITSEC, IFODD } from '../actions';
+import { INCREMENT, DECREMENT, IFODD } from '../actions';
 
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
@@ -16,10 +16,6 @@ export default (count = 0, action) => {
     // Fill in the body of this case
     	let num2 = count;
     	return num2 - action.payload;
-    case WAITSEC:
-    	let num3 = count;
-			setTimeout(() =>  {return (num3 + action.payload)}, 1000);
-
     case IFODD:
     	let num4 = count;
     	let bolv = false;
@@ -33,7 +29,7 @@ export default (count = 0, action) => {
     	} else if (bolv === true){
     		return num4 + action.payload;
     	}
-
+    break;
     default:
       return count;
   }
