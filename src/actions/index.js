@@ -1,5 +1,8 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const IFODD = 'IFODD';
+export const WAITSEC = 'WAITSEC';
+
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -10,9 +13,29 @@ export const DECREMENT = 'DECREMENT';
 // is left to the reducer(s).
 
 export const increment = () => {
-  // Fill in this function
+  return {
+  	type: 'INCREMENT',
+  	payload: 1,
+  }
 };
 
 export const decrement = () => {
-  // Fill in this function
+   return {
+  	type: 'DECREMENT',
+  	payload: 1,
+  }
 };
+
+export const ifeven = () => {
+	return {
+		type: 'IFODD',
+		payload: 1,
+	}
+}
+
+export const waitsec = () => {
+	return {
+		type: 'WAITSEC',
+		payload: 1,
+	}
+}
