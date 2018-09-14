@@ -1,8 +1,6 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 export const IFODD = 'IFODD';
-export const WAITSEC = 'WAITSEC';
-
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -26,7 +24,7 @@ export const decrement = () => {
   }
 };
 
-export const ifeven = () => {
+export const ifodd = () => {
 	return {
 		type: 'IFODD',
 		payload: 1,

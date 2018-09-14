@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement, ifeven } from '../actions';
+import { increment, decrement, ifodd } from '../actions';
 
 class Counter extends Component {
 
@@ -18,15 +18,15 @@ class Counter extends Component {
                 <button onClick={this.props.decrement }>
                     -
                 </button>
-                <button onClick={this.props.ifeven}>Add if odd</button>
+                <button onClick={this.props.ifodd}>Add if odd</button>
                 <button onClick={()=> setTimeout(this.props.increment, 1000)}>wait sec then add</button>
             </p>
         );
     }
 }
 
-// The mapStateToProps function specifies which portion of the 
-// state tree this component needs to receive. In this case, 
+// The mapStateToProps function specifies which portion of the
+// state tree this component needs to receive. In this case,
 // since our redux store is only storing the value of the count,
 // this component receives the whole state. In a more complex
 // redux application, though, it would receive only the relevant
@@ -42,4 +42,4 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement, ifeven })(Counter);
+export default connect(mapStateToProps, { increment, decrement, ifodd })(Counter);
