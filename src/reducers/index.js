@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, CHECKODD } from '../actions';
+import { INCREMENT, DECREMENT, CHECKODD, WAITING } from '../actions';
 
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
@@ -23,7 +23,14 @@ export default (count = 0, action) => {
         console.log('checking odd')
         action.payload++
         return action.payload;
-      }      
+      }   
+      
+    case WAITING:
+      setTimeout(event => {
+        console.log('I sloth, I take time, don\'t judge.')        
+        action.payload++        
+        return action.payload;                
+      }, 1000);      
 
 
     default:

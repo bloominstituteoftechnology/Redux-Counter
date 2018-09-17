@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement, checkodd } from '../actions';
+import { increment, decrement, checkodd, waiting } from '../actions';
 
 class Counter extends Component {
     incrementIfOdd = () => {
@@ -31,9 +31,9 @@ class Counter extends Component {
                  <button onClick={event => this.props.checkodd(this.props.count)}>
                     Increment if odd
                 </button>
-                {/* <button onClick={this.incrementAsync}>
+                <button onClick={event => this.props.waiting(this.props.count)}>
                     Increment async
-                </button> */}
+                </button>
             </p>
         );
     }
@@ -56,4 +56,4 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement, checkodd })(Counter);
+export default connect(mapStateToProps, { increment, decrement, checkodd, waiting })(Counter);
