@@ -13,9 +13,9 @@ export const DECREMENT = 'DECREMENT';
 console.log(this.props);
 
 export const increment = () => {
-  this.props.store.dispatch({type: 'INCREMENT'})
+  return {type: INCREMENT}
 };
 
 export const decrement = () => {
-  this.props.store.dispatch({type: 'DECREMENT'})
+  return {type: DECREMENT}
 };
