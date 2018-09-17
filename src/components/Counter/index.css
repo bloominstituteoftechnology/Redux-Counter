@@ -24,4 +24,11 @@
   color: #fff;
   padding: 10px;
   margin: 10px;
+  line-height: 24px;
+}
+
+
+.wrapper button:hover {
+  background: #fff;
+  color: #114499;
 }
