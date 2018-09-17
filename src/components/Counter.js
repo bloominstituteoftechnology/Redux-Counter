@@ -9,6 +9,7 @@ class Counter extends Component {
         if (this.props.count%2!==0) {
             this.props.increment();
         }
+       setTimeout(this.props.increment,1000) 
     };
     
     
