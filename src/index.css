@@ -1,0 +1,24 @@
+#root {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 100px;
+}
+
+.clicked {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+button {
+    margin: 0 5px;
+    background: rgb(238, 238, 238);
+    border-radius: 7px;
+    padding: 3px 12px;
+}
+
+button:hover {
+    cursor: pointer;
+    background: rgb(219, 219, 219);
+}
