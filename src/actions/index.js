@@ -1,3 +1,4 @@
+//actions
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
@@ -10,9 +11,9 @@ export const DECREMENT = 'DECREMENT';
 // is left to the reducer(s).
 
 export const increment = () => {
-  // Fill in this function
-};
+  return {type:INCREMENT};
+}
 
 export const decrement = () => {
-  // Fill in this function
+  return {type:DECREMENT};
 };
