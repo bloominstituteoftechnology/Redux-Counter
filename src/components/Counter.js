@@ -11,7 +11,15 @@ class Counter extends Component {
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
-    };
+        let time = 0;
+        let asyncCount = document.getElementById('count');
+
+        setTimeout(function() {
+          return ++asyncCount;
+        }, 1000);
+      };
+
+
 
     render() {
         // Fill in the two button onClick methods
