@@ -11,10 +11,12 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
-  return { type: 'INCREMENT', payload: store.getState().count++ };
+
+  return { type: 'INCREMENT' };
 };
 
 export const decrement = () => {
   // Fill in this function
-  return { type: 'DECREMENT', payload: store.getState().count-- };
+
+  return { type: 'DECREMENT' };
 };
