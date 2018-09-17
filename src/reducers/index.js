@@ -8,9 +8,9 @@ import { INCREMENT, DECREMENT } from '../actions';
 export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
-      return { ...state, count: count + 1 };
+      return ++count;
     case DECREMENT:
-      return { ...state, count: count - 1 };
+      return --count;
     default:
       return count;
   }
