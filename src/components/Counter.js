@@ -2,16 +2,32 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+      if ((new Date().getTime() - start) > milliseconds){
+        break;
+      }
+    }
+  }
+
 class Counter extends Component {
-    incrementIfOdd = () => {
+    incrementIfOdd = value => {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
+        if(value % 2 !== 0){
+            return this.props.increment(value);
+        }
     };
 
-    incrementAsync = () => {
+    incrementAsync = value => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
+        sleep(1000);
+        return this.props.increment(value);
     };
+    
+   
 
     render() {
         // Fill in the two button onClick methods
@@ -20,20 +36,20 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+                <button value={this.props.count} onClick={event => this.props.increment(event.target.value )}>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                <button value={this.props.count} onClick={event => this.props.decrement(event.target.value ) }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                  <button value={this.props.count} onClick={event => this.incrementIfOdd(event.target.value)}>
                     Increment if odd
                 </button>
-                <button onClick={this.incrementAsync}>
+                <button value={this.props.count} onClick={event => this.incrementAsync(event.target.value)}>
                     Increment async
-                </button>  */}
+            </button> 
             </p>
         );
     }
@@ -46,6 +62,7 @@ class Counter extends Component {
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
+    
     return {
         count: state
     };
