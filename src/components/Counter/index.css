@@ -8,3 +8,20 @@
   font-weight: 700;
   color: #114499;
 }
+
+.wrapper .incanddec button {
+  font-size: 4rem;
+}
+
+.wrapper button {
+  box-sizing: border-box;
+  border: 2px solid #333;
+  border-radius: 15px;
+  width: 35%;
+  height: 100px;
+  font-size: 2rem;
+  background: #114499;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+}
