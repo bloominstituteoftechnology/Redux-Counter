@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actions';
+import { INCREMENT, DECREMENT, MULTIPLY_BY_TWO } from '../actions';
 
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
@@ -6,12 +6,14 @@ import { INCREMENT, DECREMENT } from '../actions';
 // by our action creator. What does the reducer
 // need to do with the count in each case?
 export default (count = 0, action) => {
-  console.log('in reducer: ', action);
+  console.log('in reducer: ', count);
   switch (action.type) {
     case INCREMENT:
-      return action.payload + 1;
+      return count + 1;
     case DECREMENT:
-      return action.payload - 1;
+      return count - 1;
+    case MULTIPLY_BY_TWO:
+      return count * 2;
     default:
       return count;
   }
