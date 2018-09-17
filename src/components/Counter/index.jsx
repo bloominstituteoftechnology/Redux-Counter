@@ -4,8 +4,11 @@ import { increment, decrement } from '../../actions';
 
 class Counter extends Component {
     incrementIfOdd = () => {
-        // Stretch Problem: Implement an increment function that
-        // only increments if the counter value is odd
+
+        // if the count mod 2 is 0 then increment (stretch)
+        if(this.props.count % 2 !== 0) {
+            this.props.increment();
+        }
     };
 
     incrementAsync = () => {
@@ -22,14 +25,8 @@ class Counter extends Component {
                 Clicked: <span>{this.props.count}</span> times
                 <button onClick={() => this.props.increment() }>+</button>
                 <button onClick={() => this.props.decrement() }>-</button>
-                 {/* Uncomment these button tags if you got
-                around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
-                    Increment if odd
-                </button>
-                <button onClick={this.incrementAsync}>
-                    Increment async
-                </button>  */}
+                <button onClick={this.incrementIfOdd}>Increment if odd</button>
+                <button onClick={this.incrementAsync}>Increment async</button>
             </div>
         );
     }
