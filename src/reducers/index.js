@@ -9,8 +9,12 @@ export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
     // Fill in the body of this case
+      return {...state, number: action.payload };
+
     case DECREMENT:
     // Fill in the body of this case
+      return (...state, number: action.payload };)
+
     default:
       return count;
   }
