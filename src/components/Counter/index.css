@@ -1,0 +1,10 @@
+.wrapper {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+  font-size: 3rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #114499;
+}
