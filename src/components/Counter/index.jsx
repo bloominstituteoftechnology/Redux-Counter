@@ -26,7 +26,7 @@ class Counter extends Component {
     // should decrement or increment accordingly
     return (
       <div className="wrapper">
-        Clicked: <span>{this.props.count}</span> times
+        Clicked: <span>{this.props.count}</span> {this.props.count === 1 || this.props.count === -1 ? 'time' : 'times'}
         <div className="incanddec">
           <button onClick={() => this.props.increment()}>+</button>
           <button onClick={() => this.props.decrement()}>-</button>
