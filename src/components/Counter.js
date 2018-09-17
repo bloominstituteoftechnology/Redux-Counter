@@ -25,7 +25,7 @@ class Counter extends Component {
       <p>
         Clicked: {this.props.count} times
         <button onClick={() => this.props.increment()}>+</button>
-        <button onClick={() => this.props.decrement}>-</button>
+        <button onClick={() => this.props.decrement()}>-</button>
         <button onClick={this.incrementIfOdd}>Increment if odd</button>
         <button onClick={this.incrementAsync}>Increment async</button>
       </p>
