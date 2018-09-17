@@ -25,17 +25,12 @@ class Counter extends Component {
           onClick={() =>
             /* Fill me in */
 
-            {
-              //console.log(increment());
-              counterReducer(1, increment());
-            }
+            this.props.increment()
           }
         >
           +
         </button>
-        <button onClick={() => /* Fill me in */ console.log(this.props)}>
-          -
-        </button>
+        <button onClick={() => this.props.decrement()}>-</button>
         {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
         {/* <button onClick={this.incrementIfOdd}>
@@ -55,9 +50,9 @@ class Counter extends Component {
 // this component receives the whole state. In a more complex
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
-const mapStateToProps = state => {
+const mapStateToProps = count => {
   return {
-    count: state
+    count
   };
 };
 
