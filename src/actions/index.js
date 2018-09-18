@@ -1,6 +1,7 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
+
 // Our action creators will return
 // an action packet that our reducer will
 // receive. What does the action packet look like?
@@ -20,3 +21,4 @@ export const decrement = (count) => {
   console.log('decrement in action: ', count);
   return { type: 'DECREMENT', payload: count - 1};
 };
+
