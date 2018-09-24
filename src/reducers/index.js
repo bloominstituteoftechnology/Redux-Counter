@@ -10,8 +10,8 @@ export default (count = 0, action) => {
     case INCREMENT:
       return ++count;
     case DECREMENT:
-    // Fill in the body of this case
-    default:
       return --count;
+    default:
+      return count;
   }
 };
