@@ -26,6 +26,7 @@ class Counter extends Component {
                 <button onClick={() => /* Fill me in */ this.props.decrement() }>
                     -
                 </button>
+                <p>{this.props.count}</p>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
                 {/* <button onClick={this.incrementIfOdd}>
