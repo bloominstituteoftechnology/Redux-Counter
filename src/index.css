@@ -12,6 +12,7 @@ body {
   letter-spacing: 0.5px;
 }
 .button-mix {
+  outline: none;
   font-family: inherit;
   font-size: 1rem;
   border-radius: 3px;
@@ -68,6 +69,7 @@ body {
   margin: 5px;
 }
 .container .counter button {
+  outline: none;
   font-family: inherit;
   font-size: 1rem;
   border-radius: 3px;
