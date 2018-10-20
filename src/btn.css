@@ -1,0 +1,46 @@
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 1000px;
+
+}
+
+
+.container {
+    width: 80vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    background: lightgray;
+    height: 60px;
+    align-items: center;
+    border-radius: 30px;
+
+
+    }
+
+
+
+
+.btn {
+    border: 2px solid black;
+    margin: 0 10px 0 0;
+    height: 35px;
+    font-size: 0.800rem;
+    background: lightblue;
+    color: rgb(141, 26, 70);
+    font-weight: bolder;
+    font-family: monaco;
+    border-radius: 10px;
+}
+
+.countbox {
+    font-family: monaco;
+    font-size: 1.500rem;
+  
+
+}
