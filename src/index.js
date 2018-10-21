@@ -21,5 +21,6 @@ ReactDOM.render(
   <Provider store={store}>
     <Counter />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
+
