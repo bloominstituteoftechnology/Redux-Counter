@@ -14,6 +14,7 @@ class Counter extends Component {
   incrementAsync = () => {
     // Stretch Problem: Implement an increment function that
     // increments after waiting for one second
+    setTimeout(() => this.props.increment(), 1000);
   };
 
   render() {
@@ -23,17 +24,16 @@ class Counter extends Component {
     return (
       <p>
         Clicked: {this.props.count} times
-        <button onClick={() => this.props.increment()}>+</button>
-        <button onClick={this.incrementIfOdd}>Increment if odd</button>
-        <button onClick={() => this.props.decrement()}>-</button>
+        <div className="standard-buttons">
+          <button onClick={() => this.props.increment()}>+</button>
+          <button onClick={() => this.props.decrement()}>-</button>
+        </div>
         {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-        {/* <button onClick={this.incrementIfOdd}>
-                    Increment if odd
-                </button>
-                <button onClick={this.incrementAsync}>
-                    Increment async
-                </button>  */}
+        <div className="stretch-buttons">
+          <button onClick={this.incrementIfOdd}>Increment if odd</button>
+          <button onClick={this.incrementAsync}>Increment async</button>
+        </div>
       </p>
     );
   }
