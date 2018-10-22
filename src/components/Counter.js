@@ -48,6 +48,7 @@ class Counter extends Component {
 const mapStateToProps = (state) => {
     return {
         count: state
+          //always returns and object
     };
 };
 
