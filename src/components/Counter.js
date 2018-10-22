@@ -11,10 +11,11 @@ class Counter extends Component {
     }
   };
 
-    incrementAsync = () => {
-        // Stretch Problem: Implement an increment function that
-        // increments after waiting for one second
-    };
+  incrementAsync = () => {
+    // Stretch Problem: Implement an increment function that
+    // increments after waiting for one second
+    setTimeout(this.props.increment, 1000);
+  };
 
   render() {
     // Fill in the two button onClick methods
@@ -26,20 +27,12 @@ class Counter extends Component {
         <button onClick={() => this.props.increment()}>+</button>
         <button onClick={() => this.props.decrement()}>-</button>
         {/* Uncomment these button tags if you got
-                <button onClick={() => /* Fill me in */ }>
-                    -
-                </button>
-                 {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
         <button onClick={this.incrementIfOdd}>Increment if odd</button>
-                    Increment if odd
-                </button>
-                <button onClick={this.incrementAsync}>
-                    Increment async
-                </button>  */}
-            </p>
-        );
-    }
+        <button onClick={this.incrementAsync}>Increment async</button>
+      </p>
+    );
+  }
 }
 
 // The mapStateToProps function specifies which portion of the
