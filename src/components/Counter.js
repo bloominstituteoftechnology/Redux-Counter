@@ -29,13 +29,13 @@ class Counter extends Component {
                 Clicked: {this.props.count} times
                 <button onClick={ev => {
                     ev.preventDefault();
-                    this.props.increment(this.count);
+                    this.props.increment(this.props.count);
                 }}>
                     +
                 </button>
                 <button onClick={ev => {
                     ev.preventDefault();
-                    this.props.decrement(this.count);
+                    this.props.decrement(this.props.count);
                 }}>
                     -
                 </button>
