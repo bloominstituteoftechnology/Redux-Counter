@@ -12,9 +12,9 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
-      return { ...state, count: initialState.count++}
+      return { ...state, count: initialState.count+=1}
     case DECREMENT:
-    return { ...state, count: initialState.count--}
+    return { ...state, count: initialState.count-=1}
     default:
       return state;
   }
