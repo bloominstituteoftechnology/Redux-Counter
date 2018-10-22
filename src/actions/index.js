@@ -11,6 +11,7 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
+  console.log("action : increment")
   return {
     type : INCREMENT,
   }
