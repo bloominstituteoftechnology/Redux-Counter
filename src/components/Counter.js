@@ -2,15 +2,16 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
+import '../btn.css'
+
+
 class Counter extends Component {
     incrementIfOdd = () => {
-        // Stretch Problem: Implement an increment function that
-        // only increments if the counter value is odd
+      return (this.props.count % 2 !== 0) ? this.props.increment() : false;
     };
 
     incrementAsync = () => {
-        // Stretch Problem: Implement an increment function that
-        // increments after waiting for one second
+        setTimeout(this.props.increment, 1000);
     };
 
     render() {
@@ -18,22 +19,21 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
-            <p>
-                Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+            <p className="container">
+                <span className="countbox">Clicked: {this.props.count} times</span>
+                <button className="btn" onClick={this.props.increment}>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                {this.props.count !== 0 &&
+                <button className="btn" onClick={this.props.decrement}>
                     -
-                </button>
-                 {/* Uncomment these button tags if you got
-                around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                </button>}
+                 <button className="btn" onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
-                <button onClick={this.incrementAsync}>
+                <button className="btn" onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button>  
             </p>
         );
     }
