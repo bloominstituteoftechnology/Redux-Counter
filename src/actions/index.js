@@ -1,5 +1,7 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const INCREMENTIFODD = 'INCREMENTIFODD';
+export const INCREMENTASYNC = 'INCREMENTASYNC';
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -9,18 +11,32 @@ export const DECREMENT = 'DECREMENT';
 // logic of updating the central Redux store. That
 // is left to the reducer(s).
 
-export const increment = (count) => {
+export const increment = () => {
 	return {
-		type: INCREMENT,
-		payload: count
+		type: INCREMENT
 	};
 	// Fill in this function
 };
 
-export const decrement = (count) => {
+export const decrement = () => {
 	return {
-		type: DECREMENT,
-		payload: count
+		type: DECREMENT
 	};
 	// Fill in this function
+};
+
+export const incrementIfOdd = () => {
+	return {
+		type: INCREMENTIFODD
+	};
+	// Stretch Problem: Implement an increment function that
+	// only increments if the counter value is odd
+};
+
+export const incrementAsync = () => {
+	return {
+		type: INCREMENTASYNC
+	};
+	// Stretch Problem: Implement an increment function that
+	// increments after waiting for one second
 };
