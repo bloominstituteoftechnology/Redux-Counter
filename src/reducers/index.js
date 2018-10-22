@@ -14,7 +14,7 @@ export default (state = initialState, action) => {
     case INCREMENT:
       return { ...state, count: ++state.count };
     case DECREMENT:
-      return state.count > 0 ? {...state, count: --state.count} : state;
+      return state.count > 0 ? { ...state, count: --state.count } : state;
     default:
       return state;
   }
