@@ -23,3 +23,6 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+
+//first reducers, then actions, then components
