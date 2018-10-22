@@ -1,4 +1,5 @@
 import { INCREMENT, DECREMENT } from '../actions';
+import { bindActionCreators } from 'redux';
 
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
@@ -9,8 +10,10 @@ export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
     // Fill in the body of this case
+    return count++;
     case DECREMENT:
     // Fill in the body of this case
+    return count--;
     default:
       return count;
   }
