@@ -1,0 +1,41 @@
+.Counter {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin: 40px auto 0;
+  flex-wrap: wrap;
+}
+
+p {
+  width: 100%;
+}
+
+p span {
+  font-weight: bold;
+  color: #0652dd;
+  font-size: 20px;
+}
+
+button {
+  border: none;
+  color: white;
+  width: 25%;
+  cursor: pointer;
+  outline: 0;
+}
+
+.inc {
+  background: #0652dd;
+}
+
+.dec {
+  background: #ed4c67;
+}
+
+.inc-odd {
+  background: #006266;
+}
+
+.inc-async {
+  background: #6f1e51;
+}
