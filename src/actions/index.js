@@ -1,5 +1,7 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const INCREMENTIFODD = 'INCREMENTIFODD';
+export const INCREMENTASYNC = 'INCREMENTASYNC';
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -10,9 +12,31 @@ export const DECREMENT = 'DECREMENT';
 // is left to the reducer(s).
 
 export const increment = () => {
-  // Fill in this function
+	return {
+		type: INCREMENT
+	};
+	// Fill in this function
 };
 
 export const decrement = () => {
-  // Fill in this function
+	return {
+		type: DECREMENT
+	};
+	// Fill in this function
+};
+
+export const incrementIfOdd = () => {
+	return {
+		type: INCREMENTIFODD
+	};
+	// Stretch Problem: Implement an increment function that
+	// only increments if the counter value is odd
+};
+
+export const incrementAsync = () => {
+	return {
+		type: INCREMENTASYNC
+	};
+	// Stretch Problem: Implement an increment function that
+	// increments after waiting for one second
 };
