@@ -8,7 +8,7 @@
 */
 
 /* Problem 1
-  Create an object called `person`. 
+  Create an object called `person`.
   It should have a name property, age and hometown.
   Create a `newPerson` object from `person` using Object.assign.
   Lets say that `newPerson` has the same hometown, but different name and age.
@@ -18,16 +18,13 @@
 const person = {
   name: 'Cesar',
   age: 36,
-  hometown: 'Managua',
-};
+  hometown: 'Managua'
+}
 
-const newPerson = Object.assign({}, person);
+const newPerson = Object.assign({}, person, { name: 'Luis', age: 42 })
 
-newPerson.name = 'Luis';
-newPerson.age = 42;
-
-console.log(person);
-console.log(newPerson);
+console.log(person)
+console.log(newPerson)
 
 /* Problem 2
   Create an Array of 'superHeroes`.
@@ -35,21 +32,26 @@ console.log(newPerson);
   Concatenate the two of them together using `.concat()`
 */
 
-const superHeroes = ['Superman', 'Batman', 'Iron Man', 'Spiderman'];
-const superVillains = ['Lex Luther', 'Joker', 'Osama bin Laden', 'Doctor Octopus'];
+const superHeroes = ['Superman', 'Batman', 'Iron Man', 'Spiderman']
+const superVillains = [
+  'Lex Luther',
+  'Joker',
+  'Osama bin Laden',
+  'Doctor Octopus'
+]
 
 // const combinedSupers =  [...superHeroes, ...superVillains]; // using spread operator
 
-const  combinedSupers = superHeroes.concat(superVillains);
+const combinedSupers = superHeroes.concat(superVillains)
 
-console.log(superHeroes);
-console.log(superVillains);
-console.log(combinedSupers);
+console.log(superHeroes)
+console.log(superVillains)
+console.log(combinedSupers)
 
 /* Problem 3
   Create an object `studentScores` with a 'name', 'age' and 'scores'
   Where 'name' is a string, 'age' is a number and 'scores' is an array of numbers
-  The numbers for scores should be between 1 - 50. 
+  The numbers for scores should be between 1 - 50.
   Create a new object `studentAverage` using Object.assign() from the given original object.
   The new object should filter out any scores that are < 34 Array.filter should be used here.
 */
@@ -57,11 +59,12 @@ console.log(combinedSupers);
 const studentScores = {
   name: 'Cesar',
   age: 36,
-  scores: [10, 20, 30, 40, 50],
-};
+  scores: [10, 20, 30, 40, 50]
+}
 
-const  studentAverage = Object.assign({}, studentScores);
-studentAverage.scores = studentAverage.scores.filter( el => el > 34);
+const studentAverage = Object.assign({}, studentScores, {
+  scores: studentScores.scores.filter(el => el > 34)
+})
 
-console.log(studentScores);
-console.log(studentAverage);
+console.log(studentScores)
+console.log(studentAverage)
