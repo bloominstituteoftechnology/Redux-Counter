@@ -5,7 +5,7 @@ import { increment, decrement } from '../actions';
 class Counter extends Component {
     incrementIfOdd = (event) => {
         event.preventDefault();
-        if(this.props.count % 2 === 0) {
+        if(this.props.count % 2 != 0) {
             this.props.increment();
         }
         // Stretch Problem: Implement an increment function that
