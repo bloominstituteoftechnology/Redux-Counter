@@ -13,7 +13,8 @@ export const increment = (count) => {
   // Fill in this function
   return {
     type: INCREMENT,
-payload:count+1
+    // it can work this way too, but since the reducer already has state.count we don't need a dynamic payload
+// payload:count+1
   }
 };
 
@@ -21,6 +22,7 @@ export const decrement = (count) => {
   // Fill in this function
 return {
   type: DECREMENT,
-  payload: count-1
+  //same as for increment
+  // payload: count-1
 }
 };
