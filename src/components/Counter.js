@@ -35,6 +35,7 @@ class Counter extends Component {
 }
 
 const mapStateToProps = (state) => {
+    console.log("State:", state)
     return {
         count: state.count
     };
