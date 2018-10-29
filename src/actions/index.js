@@ -10,6 +10,7 @@ export const DECREMENT = 'DECREMENT';
 // is left to the reducer(s).
 
 export const increment = () => {
+  console.log(this)
   // Fill in this function
 };
 
