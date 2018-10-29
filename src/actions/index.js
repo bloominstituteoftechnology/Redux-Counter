@@ -1,6 +1,6 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
-
+import {createAction} from 'redux-actions';
 // Our action creators will return
 // an action packet that our reducer will
 // receive. What does the action packet look like?
@@ -9,10 +9,10 @@ export const DECREMENT = 'DECREMENT';
 // logic of updating the central Redux store. That
 // is left to the reducer(s).
 
-export const increment = () => {
+export const increment = createAction ('INCREMENT'); {
   // Fill in this function
 };
 
-export const decrement = () => {
+export const decrement = createAction ('DECREMENT'); {
   // Fill in this function
 };
