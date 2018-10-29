@@ -1,0 +1,23 @@
+.counter-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.counter-div * {
+    margin: 10px;
+}
+
+.counter-btn {
+    padding: 5px 10px;
+    font-size: 1.6rem;
+}
+
+.counter-btn:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
