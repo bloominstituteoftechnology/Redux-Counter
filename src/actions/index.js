@@ -1,6 +1,7 @@
+
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
-import {createAction} from 'redux-actions';
+
 // Our action creators will return
 // an action packet that our reducer will
 // receive. What does the action packet look like?
