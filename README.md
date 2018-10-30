@@ -28,6 +28,6 @@ The code is pretty heavily commented. This is to help clear up everything that i
 
 Take your time walking around the code base. There are lots of informative little tidbits in the comments that you won't want to miss. **_I highly encourage you to look at every file first before trying to write any code._**
 
-If you end up finishing quickly, you'll see there are a few Stretch Problem prompts at the top of the `Counter.js` component file. Feel free to take a stab at implementing those. Or, you could take a look at the awesome Redux documentation [here](http://redux.js.org/docs/basics/).
+* [x] If you end up finishing quickly, you'll see there are a few Stretch Problem prompts at the top of the `Counter.js` component file. Feel free to take a stab at implementing those. Or, you could take a look at the awesome Redux documentation [here](http://redux.js.org/docs/basics/).
 
 Good luck and have fun!
