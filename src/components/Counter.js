@@ -14,16 +14,17 @@ class Counter extends Component {
     };
 
     render() {
+        console.log(this.props)
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => increment() }>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => decrement() }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
@@ -45,12 +46,14 @@ class Counter extends Component {
 // this component receives the whole state. In a more complex
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
+
 const mapStateToProps = (state) => {
+    console.log('state', state)
     return {
         count: state.count
     };
 };
-
+console.log('in Counter')
 // The connect function is called in order to make this component aware
 // of the rest of the redux architecture. Without this, this component
 // is only a dumb React component. We pass in all of the functions that
