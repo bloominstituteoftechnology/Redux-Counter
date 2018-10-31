@@ -1,3 +1,4 @@
+// Reducers
 import { INCREMENT, DECREMENT } from '../actions';
 
 const initialState = {
@@ -12,9 +13,9 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
-    // Fill in the body of this case
+      return {count: state.count + 1};
     case DECREMENT:
-    // Fill in the body of this case
+      return {count: state.count - 1};
     default:
       return state;
   }
