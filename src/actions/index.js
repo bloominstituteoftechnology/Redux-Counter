@@ -5,11 +5,9 @@ export const DECREMENT = 'DECREMENT';
 // Note that the action creator is not at all responsible for handling any of the actual logic of updating the central Redux store. That is left to the reducer(s).
 
 export const increment = () => {
-  // Fill in this function
-  // SEE SCREENSHOTS
+  return { type: INCREMENT }
 };
 
 export const decrement = () => {
-  // Fill in this function
-  // SEE SCREENSHOTS
+  return { type: DECREMENT }
 };
