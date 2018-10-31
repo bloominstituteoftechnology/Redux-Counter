@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import reducer from './reducers'
 import Counter from './components/Counter';
 import counter from './reducers';
 
@@ -12,7 +13,13 @@ import counter from './reducers';
 // that is responsible for updating the store, along
 // with any initial state that we may want the store
 // to start out with (which is none in this case).
-const store = createStore(counter);
+const store = createStore(counter, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+//const store = createStore(
+//  counter, reducer, /* preloadedState, */
+//+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+//);
+
 
 // Here, we wrap our main React component inside of
 // Provider tags, which come from the react-redux package.
