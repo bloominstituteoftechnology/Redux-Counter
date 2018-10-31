@@ -13,7 +13,7 @@
 
 In this Project, you'll be eased into the code base of a small Redux application. The application itself is just a counter with increment and decrement buttons.
 
-### Counter Project
+# Counter Project
 
 * The increment button should increment the counter by 1.
 * Conversely, the decrement button should decrement the counter by 1. The aim of this project is to familiarize you with the overarching data flow pattern of Redux, as well as exposing you to how Redux is typically hooked up to a React application.
