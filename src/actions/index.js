@@ -1,4 +1,3 @@
-import {createAction} from 'react';
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
@@ -10,10 +9,18 @@ export const DECREMENT = 'DECREMENT';
 // logic of updating the central Redux store. That
 // is left to the reducer(s).
 
-export const increment = createAction ('INCREMENT'); {
+export const increment = () => {
+  return { 
+    type: INCREMENT,
+    payload: 1
+  }
   // Fill in this function
 };
 
-export const decrement = createAction ('DECREMENT'); {
+export const decrement = () => {
+  return{
+    type: DECREMENT,
+    payload: 1
+  }
   // Fill in this function
 };
