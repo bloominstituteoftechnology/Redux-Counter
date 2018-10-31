@@ -39,12 +39,7 @@ class Counter extends Component {
     }
 }
 
-// The mapStateToProps function specifies which portion of the 
-// state tree this component needs to receive. In this case, 
-// since our redux store is only storing the value of the count,
-// this component receives the whole state. In a more complex
-// redux application, though, it would receive only the relevant
-// parts it needs from the state object.
+// The mapStateToProps function specifies which portion of the  state tree this component needs to receive. In this case, since our redux store is only storing the value of the count, this component receives the whole state. In a more complex redux application, though, it would receive only the relevant parts it needs from the state object.
 const mapStateToProps = (state) => {
     return {
         count: state.count
