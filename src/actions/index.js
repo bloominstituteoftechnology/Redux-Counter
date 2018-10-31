@@ -14,7 +14,7 @@ export const DECREMENT = 'DECREMENT';
 export const increment = () => {
   // Fill in this function 
   return {
-    type: 'INCREMENT_NUM',
+    type: 'INCREMENT',
     payload: 1
     }
 };
@@ -22,7 +22,7 @@ export const increment = () => {
 export const decrement = () => {
   // Fill in this function
   return {
-    type: 'DECREMENT_NUM',
+    type: 'DECREMENT',
     payload: 1
     }  
 };
