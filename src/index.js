@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import Counter from './components/Counter';
 import counter from './reducers';
 
+
+
 // This line instantiates our central Redux store.
 // The `createStore` function receives the reducer
 // that is responsible for updating the store, along
