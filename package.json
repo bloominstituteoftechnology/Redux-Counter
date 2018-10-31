@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "babel-core": "^6.26.0",
+    "buffer": "^5.2.0",
     "prop-types": "^15.5.10",
     "react": "^15.5.0",
     "react-dom": "^15.5.0",
