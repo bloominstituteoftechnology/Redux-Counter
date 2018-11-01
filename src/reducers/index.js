@@ -12,9 +12,11 @@ import { INCREMENT, DECREMENT } from '../actions';
 export default (count = 0, action) => {
     switch (action.type) {
         case INCREMENT:
-            return ++count;
+            // Fill in the body of this case
+		return ++count; 
         case DECREMENT:
-          return --count;
+            // Fill in the body of this case
+        return --count;
         default:
             return count;
     }

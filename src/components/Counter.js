@@ -14,7 +14,7 @@ class Counter extends Component {
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
-        window.setTimeout(() => {
+        setTimeout(() => {
             this.props.increment()
         }, 1000);
     };
@@ -37,12 +37,12 @@ class Counter extends Component {
                 {" "}
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
                 <button onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button>
             </p>
         );
     }
@@ -56,7 +56,7 @@ class Counter extends Component {
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
     return {
-        count: state.count
+        count: state
     };
 };
 
