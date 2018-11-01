@@ -19,10 +19,10 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
     // case: what we're changing?
-      return {type: INCREMENT}
+      return { count: state.count + 1 }
     // needs to be something 
     case DECREMENT:
-      return {type: DECREMENT}
+        return { count: state.count - 1}
     default:
       return state;
   }
