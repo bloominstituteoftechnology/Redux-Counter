@@ -1,7 +1,5 @@
 import { INCREMENT, DECREMENT } from '../actions';
-import {createStore} from 'redux';
-import {Provider} from 'react-redux';
-import reducer from './reducer';
+
 
 const initialState = {
   count: 0
