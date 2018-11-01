@@ -22,7 +22,3 @@ export const decrement = () => {
 export const incrementIfOdd = () => {
   return { type: "INCREMENT_ODD" }
 };
-
-export const incrementAsync = () => {
-  return { type: "INCREMENT_ASYNC" }
-};
