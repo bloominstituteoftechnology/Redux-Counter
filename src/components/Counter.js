@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {increment, decrement} from '../actions';
 
 class Counter extends Component {
-  incrementIfOdd = () => {
+  incrementIfOdd= () => {
     if (this.props.count % 2 !== 0) {
        this.props.increment()
     } else {
