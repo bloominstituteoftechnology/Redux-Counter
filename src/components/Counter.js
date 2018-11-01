@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement, reset } from '../actions';
 
 class Counter extends Component {
     incrementIfOdd = () => {
@@ -19,24 +19,32 @@ class Counter extends Component {
         // should decrement or increment accordingly
         return (
 // ☞ ac1f9861-9c2e-4129-ac82-b9df9526ca46
-            <p>
-                Clicked: {this.props.count} times
-                <button onClick={this.props.increment}>
-                    +
-                </button>
-                <button onClick={this.props.decrement }>
-                    -
-                </button>
-             
-                 {/* Uncomment these button tags if you got
-                around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
-                    Increment if odd
-                </button>
-                <button onClick={this.incrementAsync}>
-                    Increment async
-                </button>  */}
-            </p>
+            <div className="counterContainer">
+                <div>
+                    Clicked: {this.props.count} times
+                </div>
+            
+                <div>
+                    <button className="btn-increment" onClick={this.props.increment}>
+                        +
+                    </button>
+                    <button className="btn-decrement"  onClick={this.props.decrement }>
+                        -
+                    </button>
+                    <button className="btn-reset" onClick={this.props.reset}>
+                        Reset
+                    </button>
+                
+                    {/* Uncomment these button tags if you got
+                    around to implementing the extra credit functions */}
+                    {/* <button onClick={this.incrementIfOdd}>
+                        Increment if odd
+                        </button>
+                        <button onClick={this.incrementAsync}>
+                        Increment async
+                    </button>  */}
+                </div>
+            </div>
         );
     }
 }
@@ -51,4 +59,4 @@ const mapStateToProps = (state) => {
 // The connect function is called in order to make this component aware  of the rest of the redux architecture. Without this, this component is only a dumb React component. We pass in all of the functions that are reliant on Redux, along with the component itself, so that Redux makes itself known to this component.
 
 // export default connect(mapStateToProps, { increment, decrement })(Counter);
-export default connect(mapStateToProps, { increment: increment, decrement: decrement })(Counter);
+export default connect(mapStateToProps, { increment: increment, decrement: decrement, reset: reset })(Counter);
