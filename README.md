@@ -1,4 +1,5 @@
 # Redux Counter
+Just ran yarn to install the dependencies about to work on the project
 
 ## Topics
 
