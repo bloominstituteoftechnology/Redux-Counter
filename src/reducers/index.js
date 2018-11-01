@@ -3,7 +3,7 @@ import { INCREMENT, DECREMENT } from '../actions';
 const initialState = {
   count: 0
 }
-
+console.log("here")
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
 // of our redux store, along with an action created
@@ -12,11 +12,11 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
+        console.log("increment")
         return { count: state.count + 1}
-        break;
     case DECREMENT:
+        console.log("decrement")
         return { count: state.count - 1}
-        break;
     default:
       return state;
   }
