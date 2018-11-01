@@ -19,8 +19,8 @@ In this Project, you'll be eased into the code base of a small Redux application
 * Conversely, the decrement button should decrement the counter by 1. The aim of this project is to familiarize you with the overarching data flow pattern of Redux, as well as exposing you to how Redux is typically hooked up to a React application.
 
 [x] To run the project code, use the command `yarn` from the root directory to install your `node_modules`. Then `yarn start`. You'll see that the application isn't working.
-* There are a couple of spots in the application where you'll need to write the code to get the application functional.
-* These spots are in `reducers/index.js`, `actions/index.js`, and `components/Counter.js`.
+[x] There are a couple of spots in the application where you'll need to write the code to get the application functional.
+[x] These spots are in `reducers/index.js`, `actions/index.js`, and `components/Counter.js`.
 
 The code is pretty heavily commented. This is to help clear up everything that is going on with the code you have been provided.
 
