@@ -1,8 +1,6 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
-//ACTIONS
-
 // Our action creators will return
 // an action packet that our reducer will
 // receive. What does the action packet look like?
@@ -12,17 +10,20 @@ export const DECREMENT = 'DECREMENT';
 // is left to the reducer(s).
 
 export const increment = () => {
-  // Fill in this function 
   return {
-    type: 'INCREMENT',
-    payload: 1
-    }
+      type:INCREMENT
+
+    
+
+  }
+  // Fill in this function
 };
 
-export const decrement = () => {
-  // Fill in this function
+export const decrement = dispatch => {
   return {
-    type: 'DECREMENT',
-    payload: 1
-    }  
+    
+    type: DECREMENT
+  
+  }
+  // Fill in this function
 };
