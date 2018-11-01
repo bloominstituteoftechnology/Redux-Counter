@@ -1,5 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actions';
-
+import { INCREMENT, DECREMENT, INCREMENT_ODD } from '../actions';
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
 // of our redux store, along with an action created
@@ -12,7 +11,9 @@ export default (count = 0, action) => {
       return ++count;
     case DECREMENT:
     // Fill in the body of this case
-    return --count;
+      return --count;
+    case INCREMENT_ODD:
+      return ++count;
     default:
       return count;
   }
