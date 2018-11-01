@@ -24,7 +24,8 @@ export default (state = initialState, action) => {
       return Object.assign({}, state, {count: state.count * 10});
 
     case CLEAR:
-      return Object.assign({}, state, {count: state.count * 0});
+     //  return Object.assign({}, state,t {count: state.count * 0});
+      return Object.assign({}, state, {initialState});    // this works better
 
     default:
       return state;
