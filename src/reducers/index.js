@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, MULTIPLY_BY_10 } from '../actions';    // I added MULTIPLY_BY_10
+import { INCREMENT, DECREMENT, MULTIPLY_BY_10, CLEAR } from '../actions';    // I added MULTIPLY_BY_10, CLEAR
 
 const initialState = {
   count: 0
@@ -22,6 +22,9 @@ export default (state = initialState, action) => {
 
     case MULTIPLY_BY_10:
       return Object.assign({}, state, {count: state.count * 10});
+
+    case CLEAR:
+      return Object.assign({}, state, {count: state.count * 0});
 
     default:
       return state;
