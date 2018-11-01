@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import Counter from './components/Counter';
-import counter from './reducers';
+import React from "react";
+import ReactDOM from "react-dom";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import Counter from "./components/Counter";
+import counter from "./reducers";
 
 // This line instantiates our central Redux store.
 // The `createStore` function receives the reducer
@@ -21,5 +21,5 @@ ReactDOM.render(
   <Provider store={store}>
     <Counter />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
