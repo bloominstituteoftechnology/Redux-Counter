@@ -9,13 +9,7 @@ class Counter extends Component {
     } else {
       return ''
     }
-
   }
-
-
-
-
-
   incrementAsync = () => {
     // Stretch Problem: Implement an increment function that
     // increments after waiting for one second
