@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actions';
+import { INCREMENT, DECREMENT, INCREMENT_ODD, INCREMENT_ASYNC } from '../actions';
 
 const initialState = {
   count: 0
@@ -14,6 +14,10 @@ export default (state = initialState, action) => {
     case INCREMENT:
       return { count: state.count + 1 };
     case DECREMENT:
+      return { count: state.count - 1 };
+    case INCREMENT_ODD:
+      return (state.count%2 === 1 ? { count: state.count + 1 }: state);
+    case INCREMENT_ASYNC:
       return { count: state.count - 1 };
     default:
       return state;
