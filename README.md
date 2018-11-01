@@ -15,7 +15,7 @@ In this Project, you'll be eased into the code base of a small Redux application
 
 # Counter Project
 
-* The increment button should increment the counter by 1.
+ The increment button should increment the counter by 1.
 * Conversely, the decrement button should decrement the counter by 1. The aim of this project is to familiarize you with the overarching data flow pattern of Redux, as well as exposing you to how Redux is typically hooked up to a React application.
 
 * To run the project code, use the command `yarn` from the root directory to install your `node_modules`. Then `yarn start`. You'll see that the application isn't working.
