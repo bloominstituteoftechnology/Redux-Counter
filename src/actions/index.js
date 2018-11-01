@@ -1,5 +1,6 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const MULTIPLY_BY_10 = 'MULTIPLY_BY_10';       // added this
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -23,4 +24,11 @@ export const decrement = () => {
     type: 'DECREMENT'
   }
 
+};
+
+
+export const multBy10 = () => {
+  return {
+    type: 'MULTIPLY_BY_10'
+  }
 };
