@@ -14,18 +14,20 @@ class Counter extends Component {
     };
 
     render() {
+        console.log("Counter Props:", this.props)
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ this.props.count + 1 }>
+                <button onClick={() => this.props.increment() }>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ this.props.count - 1 }>
+                <button onClick={() => /* Fill me in */ this.props.decrement() }>
                     -
                 </button>
+                Animal State Demo: {this.props.animal}
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
                 {/* <button onClick={this.incrementIfOdd}>
@@ -47,7 +49,8 @@ class Counter extends Component {
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
     return {
-        count: state.count
+        count: state.count,      // count: state
+        animal: state.animal
     };
 };
 
@@ -57,3 +60,5 @@ const mapStateToProps = (state) => {
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
 export default connect(mapStateToProps, { increment, decrement })(Counter);
+
+// const mapDispatchToProps --> { increment, decrement }
