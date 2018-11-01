@@ -18,16 +18,16 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
+// ☞ ac1f9861-9c2e-4129-ac82-b9df9526ca46
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => {this.props.incrementCounter
-                    
-                } }>
+                <button onClick={this.props.increment}>
                     +
                 </button>
-                <button onClick={() => {this.props.decrementCounter} }>
+                <button onClick={this.props.decrement }>
                     -
                 </button>
+             
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
                 {/* <button onClick={this.incrementIfOdd}>
