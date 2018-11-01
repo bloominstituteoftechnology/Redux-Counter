@@ -1,14 +1,51 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement, oddincrement } from '../actions';
+
+
+var title = {
+    width: '50%',
+    margin: '10px auto',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+}
+
+
+var style = {
+    border: '1px solid black',
+    width: '50%',
+    margin: '20px auto',
+    backgroundColor: 'tomato',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    padding: '10px'
+}
+
+var count = {
+    color: 'antiquewhite',
+    margin: '20px'
+}
+
+var blockButton = {
+    display: 'block',
+    width: '90%',
+    margin: '5px'
+}
 
 class Counter extends Component {
-    incrementIfOdd = () => {
-        // Stretch Problem: Implement an increment function that
-        // only increments if the counter value is odd
+    incrementIfOdd = (e) => {
+        e.preventDefault();
+       if (this.props.count % 2 !== 0) {
+           this.props.increment()
+       }
     };
 
-    incrementAsync = () => {
+    incrementAsync = (e) => {
+        e.preventDefault();
+        setTimeout(() => this.props.increment(), 1000);
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
     };
@@ -18,23 +55,24 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
-            <p>
-                Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
-                    +
-                </button>
-                <button onClick={() => /* Fill me in */ }>
+            <div>
+            <h1 style={title}>Knit Row Counter</h1>
+            <div style={style}>
+                <button onClick={() => this.props.decrement() }>
                     -
                 </button>
-                 {/* Uncomment these button tags if you got
-                around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
-                    Increment if odd
+                <h2 style={count}>{this.props.count}</h2>
+                <button onClick={() => this.props.increment()}>
+                    +
                 </button>
-                <button onClick={this.incrementAsync}>
+                <button onClick={this.incrementIfOdd} style={blockButton}>
+                    Increment if Odd
+                </button>
+                <button onClick={this.incrementAsync} style={blockButton}>
                     Increment async
-                </button>  */}
-            </p>
+                </button>
+            </div>
+            </div>
         );
     }
 }
