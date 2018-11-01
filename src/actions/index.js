@@ -18,3 +18,7 @@ export const decrement = () => {
   // Fill in this function
   return { type: 'DECREMENT' };
 };
+
+export const incrementOdd = () => {
+  return { type: 'INCREMENT_ODD' };
+};

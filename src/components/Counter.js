@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement, incrementOdd } from '../actions';
 
 class Counter extends Component {
   incrementIfOdd = () => {
@@ -8,7 +8,8 @@ class Counter extends Component {
     // only increments if the counter value is odd
     // console.log(this.props.count);
     if (this.props.count % 2 !== 0) {
-      this.props.increment();
+      //   this.props.increment();
+      this.props.incrementOdd();
     }
   };
 
@@ -55,5 +56,5 @@ const mapStateToProps = state => {
 // makes itself known to this component.
 export default connect(
   mapStateToProps,
-  { increment, decrement }
+  { increment, decrement, incrementOdd }
 )(Counter);
