@@ -8,7 +8,7 @@ class Counter extends Component {
         // only increments if the counter value is odd
     };
 
-    incrementAsync = () => {
+    iancrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
     };
