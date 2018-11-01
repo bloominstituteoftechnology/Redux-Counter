@@ -15,5 +15,6 @@ export const increment = () => {
 
 export const decrement = () => {
   return {type: "DECREMENT"}
-  // thank you to Julie who, in her own monosyllabic way.
+  // thank you to Julie who, in her own monosyllabic way, helped.
 };
+

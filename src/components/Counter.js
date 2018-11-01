@@ -9,9 +9,27 @@ class Counter extends Component {
     };
 
     incrementAsync = () => {
-        // Stretch Problem: Implement an increment function that
-        // increments after waiting for one second
-    };
+        // setTimeout(function(increment)), 1000
+
+        window.setTimeout(() => {
+            this.props.increment();
+        }, 1000)
+
+    }
+
+    decrementAsync = () => {
+        window.setTimeout(() => {
+            this.props.decrement();
+        }, 1000)
+    }
+
+
+    //     export default (state = initialState, action) => {
+    //         switch (action.type) {
+    //           case INCREMENTASYNC:
+    //             return { count: state.count + 1 }
+    //         }
+    //       }
 
     render() {
         // Fill in the two button onClick methods
@@ -28,12 +46,15 @@ class Counter extends Component {
                 </button>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
                 <button onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button> 
+                <button onClick={this.decrementAsync}>
+                    Decrement async
+                </button> 
             </p>
         );
     }
