@@ -1,0 +1,22 @@
+h1{
+  color:navy;
+}
+
+.container{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons{
+display:flex;
+flex-direction: column;
+width: 300px;
+}
+button{
+background-color:blue;
+color:white;
+font-weight: 900;
+margin-top: 5px;
+}

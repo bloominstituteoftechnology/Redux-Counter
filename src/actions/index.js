@@ -1,5 +1,7 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const INCREMENTIFODD = 'INCREMENTIFODD';
+export const INCREMENTASYNC = 'INCREMENTASYNC'
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -10,9 +12,17 @@ export const DECREMENT = 'DECREMENT';
 // is left to the reducer(s).
 
 export const increment = () => {
-  // Fill in this function
+  return {type: INCREMENT}
 };
 
 export const decrement = () => {
-  // Fill in this function
+  return {type: DECREMENT}
 };
+
+export const incrementIfOdd = () => {
+  return {type: INCREMENTIFODD}
+}
+
+export const incrementAsync = () => {
+  return {type: INCREMENTASYNC}
+}
