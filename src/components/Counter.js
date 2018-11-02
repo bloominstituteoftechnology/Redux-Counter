@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement, multBy10, clear } from '../actions';   // added multBY10, clear
+import { increment, decrement, multBy10, clear } from '../actions';   // added multBy10, clear
 
 class Counter extends Component {
     incrementIfOdd = () => {
