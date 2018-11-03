@@ -6,13 +6,10 @@ class Counter extends Component {
     incrementIfOdd = () => {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
-        console.log(this.props);
-        if(this.props.count %2 !== 0) this.props.increment(); // call increment ONLY if count odd (not even)
+        console.log(this.props);                  // call increment ONLY if count odd (not even)
+        if(this.props.count %2 !== 0) this.props.increment();
 
     };
-
-
-
 
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
@@ -20,21 +17,14 @@ class Counter extends Component {
 
         setTimeout( () => {
           this.props.increment();                   // added 1 sec delay
-
         }, 1000  )
 
     };
 
-
-
-
     render() {
         // Fill in the two button onClick methods
-        // Upon clicking these buttons, the count
-        // should decrement or increment accordingly              // NOTICE how props passed!!
-
-
-
+        // Upon clicking these buttons, the count should decrement or increment accordingly
+                                                            // NOTICE how props passed!!
         return (
             <p>
                 Clicked: {this.props.count} times
@@ -47,9 +37,7 @@ class Counter extends Component {
                     -
                 </button>
 
-
                  <button onClick={this.incrementIfOdd}>
-
 
                     Increment if odd
                 </button>
@@ -70,21 +58,19 @@ class Counter extends Component {
     }
 }
 
-// The mapStateToProps function specifies which portion of the 
-// state tree this component needs to receive. In this case, 
-// since our redux store is only storing the value of the count,
-// this component receives the whole state. In a more complex
-// redux application, though, it would receive only the relevant
-// parts it needs from the state object.
+// The mapStateToProps function specifies which portion of the  state tree this component
+// needs to receive. In this case, since our redux store is only storing the value of the
+// count, this component receives the whole state. In a more complex redux application,
+// though, it would receive only the relevant parts it needs from the state object.
 const mapStateToProps = (state) => {
     return {
         count: state.count
     };
 };
 
-// The connect function is called in order to make this component aware
-// of the rest of the redux architecture. Without this, this component
-// is only a dumb React component. We pass in all of the functions that
-// are reliant on Redux, along with the component itself, so that Redux
-// makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement, multBy10, clear })(Counter);  // added multBy10, clear
+// The connect function is called in order to make this component aware of the rest of
+// the redux architecture. Without this, this component is only a dumb React component.
+// We pass in all of the functions that are reliant on Redux, along with the component
+// itself, so that Redux makes itself known to this component.
+                                                                // added multBy10, clear
+export default connect(mapStateToProps, { increment, decrement, multBy10, clear })(Counter);

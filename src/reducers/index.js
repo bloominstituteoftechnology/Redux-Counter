@@ -13,8 +13,11 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
     // Fill in the body of this case
-      return Object.assign({}, state, {count: state.count + 1});     // does NOT mutate state
-      //  return {count: state.count + 1};     // should do same as above
+     // return Object.assign({}, state, {count: state.count + 1});     // does NOT mutate state
+     //  return {...state, count: state.count + 1 };     // using spread
+      return {count: ++state.count};
+
+    //  return {count: state.count + 1};     // should do same as above
 
     case DECREMENT:
     // Fill in the body of this case
@@ -26,7 +29,7 @@ export default (state = initialState, action) => {
     case CLEAR:
      //  return Object.assign({}, state,t {count: state.count * 0});
       // return Object.assign({}, state, {count: state.count = 0});    // this works better
-      return {... state, count: state.count = 0};         //  with spread operator
+      return {...state, count: state.count = 0};         //  with spread operator
 
     default:
       return state;
