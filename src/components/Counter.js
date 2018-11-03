@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement, reset } from '../actions';
+import './Counter.css';
 
 
 class Counter extends Component {
@@ -33,20 +34,27 @@ class Counter extends Component {
         // should decrement or increment accordingly
   
         return (
-            <p>
-                Clicked: {this.props.count} times
-                {/* NOTE: PASSED PROP METHODS REQUIRE () FOR RETURN CALLBACKS */}
-                {/* NOTE: PASSED PROP METHODS REQUIRE () FOR RETURN CALLBACKS */}
-                <button onClick={() => this.props.increment()}>
+            <div className = 'container'>
+               <div className = 'counter-container'>
+                   <h1>Clicked: {this.props.count} times</h1>
+                  {/* NOTE: PASSED PROP METHODS THAT ARE ANONYMOUS FUNCTIONS 
+                   REQUIRE () FOR RETURN CALLBACKS */}
+                   <div className = 'counter-buttons'>
+                   <button onClick={() => this.props.increment()}>
                     +
-                </button>
+                   </button>
                 
-                 {/* NOTE: PASSED PROP METHODS REQUIRE () FOR RETURN CALLBACKS */}
-                 <button onClick={() => this.props.decrement() }>
+                  {/* NOTE: PASSED PROP METHODS THAT ARE ANONYMOUS FUNCTIONS 
+                   REQUIRE () FOR RETURN CALLBACKS */}
+                   <button onClick={() => this.props.decrement()}>
                     -
-                </button>
+                   </button>
+                   </div>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
+                </div>
+
+                <div className = 'bonus-buttons'>
                 {/* NOTE: CONSTRUCTOR DECLARED METHODS SHOULD NOT HAVE (), 
             OR THEY WILL CALL INFINITELY */}
                 <button onClick={this.incrementIfOdd}>
@@ -55,7 +63,9 @@ class Counter extends Component {
                 <button onClick={this.incrementAsync}>
                     Increment async
                 </button>
-            </p>
+                <button onClick={() => this.props.reset()}>RESET</button>
+                </div>
+            </div>
         );
     }
 }
@@ -67,6 +77,7 @@ class Counter extends Component {
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
+    console.log('state', state);
     return {
         count: state.count
     };
@@ -77,4 +88,4 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, { increment, decrement, reset })(Counter);

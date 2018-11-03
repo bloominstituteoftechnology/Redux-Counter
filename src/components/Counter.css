@@ -1,0 +1,35 @@
+body {
+    background: #fefbd8;
+}
+ .container {
+    background: #d5f4e6;
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+ .container h1 {
+    color:#80ced6;
+    text-align: center;
+}
+ .counter-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+ .counter-container button {
+    margin: 20px;
+    padding: 0px 20px;
+}
+ .bonus-buttons {
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+}
+ .bonus-buttons button {
+    margin: 10px;
+    width: 200px;
+    align-self: center;
+}
