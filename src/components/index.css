@@ -1,0 +1,50 @@
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.0rem;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 50px;
+    background-color: grey;
+    color: salmon;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+div {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+* {
+    font-size: 62.5%;
+}
+
+button {
+    width: 150px;
+    height: 60px;
+    background-color: steelblue;
+    margin: 20px;
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.long-button {
+    width: 350px;
+}
+
+.button-div {
+    background-color: black;
+    margin-top: 0px;
+    padding-top: 0px;
+
+}
+
