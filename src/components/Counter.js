@@ -20,10 +20,10 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => increment}>
+                <button onClick={increment}>
                     +
                 </button>
-                <button onClick={() => decrement}>
+                <button onClick={decrement}>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
@@ -56,4 +56,4 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, { increment: increment, decrement: increment })(Counter);
