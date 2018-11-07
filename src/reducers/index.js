@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actions';
+import { INCREMENT, DECREMENT } from '../actions/';
 
 const initialState = {
   count: 0
@@ -12,10 +12,10 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
-    return Object.assign({}, state, {count: state.count + 1})
+     return {count: state.count + 1}
     // Fill in the body of this case
     case DECREMENT:
-    return Object.assign({}, state, {count: state.count - 1})
+     return {count: state.count - 1}
     // Fill in the body of this case
     default:
       return state;
