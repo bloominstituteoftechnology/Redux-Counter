@@ -11,7 +11,7 @@ class Counter extends Component {
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
-    };
+    }; 
 
     render() {
         // Fill in the two button onClick methods
