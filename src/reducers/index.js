@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, INCREMENTIFODD } from '../actions/';
+import { INCREMENT, DECREMENT, INCREMENTIFODD, INCREMENTASYNC } from '../actions/';
 
 const initialState = {
   count: 0
@@ -19,6 +19,8 @@ export default (state = initialState, action) => {
     // Fill in the body of this case
     case INCREMENTIFODD:
     return {count: state.count % 2 !== 0 ? state.count + 1 : state.count }
+    case INCREMENTASYNC:
+    return { count: setTimeout(function(){count: state.count + 1}, 1000)}
     default:
       return state;
   }

@@ -27,3 +27,7 @@ export const incrementIfOdd = () => {
  console.log('also clicked')
  return {type: INCREMENTIFODD}
 }
+
+export const incrementAsync = () => {
+ return {type: INCREMENTASYNC}
+}
