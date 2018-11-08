@@ -3,15 +3,15 @@ import { connect } from 'react-redux';
 import { increment, decrement, incrementIfOdd, incrementAsync } from '../actions';
 
 class Counter extends Component {
-    incrementIfOdd = () => {
-        // Stretch Problem: Implement an increment function that
-        // only increments if the counter value is odd
-    };
+    // incrementIfOdd = () => {
+    //     // Stretch Problem: Implement an increment function that
+    //     // only increments if the counter value is odd
+    // };
 
-    incrementAsync = () => {
-        // Stretch Problem: Implement an increment function that
-        // increments after waiting for one second
-    }; 
+    // incrementAsync = () => {
+    //     // Stretch Problem: Implement an increment function that
+    //     // increments after waiting for one second
+    // }; 
 
     render() {
         // Fill in the two button onClick methods

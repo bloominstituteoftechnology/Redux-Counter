@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
     return {count: state.count % 2 !== 0 ? state.count + 1 : state.count }
     case INCREMENTASYNC:
     // return { count: setTimeout(state.count + 1, 1000)}
-    return {count: setTimeout(incrementAsync, 4000, state.count + 1)}
+    return {count: setInterval(incrementAsync, 4000, state.count + 1)}
     default:
       return state;
   }
