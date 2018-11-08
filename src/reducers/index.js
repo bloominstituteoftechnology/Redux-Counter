@@ -20,7 +20,7 @@ export default (state = initialState, action) => {
     case INCREMENTIFODD:
     return {count: state.count % 2 !== 0 ? state.count + 1 : state.count }
     case INCREMENTASYNC:
-    return { count: setTimeout(function(){count: state.count + 1}, 1000)}
+    return { count: setTimeout(function(){count: state.count + 1}, 4000)}
     default:
       return state;
   }

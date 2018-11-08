@@ -29,5 +29,6 @@ export const incrementIfOdd = () => {
 }
 
 export const incrementAsync = () => {
+ console.log('async click')
  return {type: INCREMENTASYNC}
 }
