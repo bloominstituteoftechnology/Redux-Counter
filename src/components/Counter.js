@@ -28,7 +28,7 @@ class Counter extends Component {
                     +
                 </button>
                 {" "}
-                <button onClick={() => this.props.decrement() }>
+                <button className= 'decrease' onClick={() => this.props.decrement() }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
