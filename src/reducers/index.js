@@ -11,10 +11,16 @@ const initialState = {
 // need to do with the count in each case?
 export default (state = initialState, action) => {
   switch (action.type) {
-    case INCREMENT:
-    // Fill in the body of this case
-    case DECREMENT:
-    // Fill in the body of this case
+    case 'INCREMENT':
+    console.log('clicked increment')
+    console.log(state);
+    return {count:action.payload+1};
+   
+    case 'DECREMENT':
+    console.log('clicked decrement')
+    console.log(state);
+    return {count:action.payload-1};
+    
     default:
       return state;
   }
