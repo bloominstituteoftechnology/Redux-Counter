@@ -57,4 +57,3 @@ const mapStateToProps = (state) => {
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
 export default connect(mapStateToProps, { increment, decrement })(Counter);
-s
