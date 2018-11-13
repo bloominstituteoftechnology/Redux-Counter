@@ -11,8 +11,12 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
+  console.log('in action: increment');
+  return { type: 'INCREMENT' };
 };
 
 export const decrement = () => {
   // Fill in this function
+  console.log('in action: decrement');
+  return { type: 'DECREMENT'};
 };
