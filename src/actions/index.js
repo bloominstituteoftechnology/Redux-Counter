@@ -11,10 +11,11 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
-  type: "INCREMENT"
+  console.log('increment invoked');
+  return {type: INCREMENT};
 };
 
 export const decrement = () => {
   // Fill in this function
-  type: "DECREMENT",
+  return {type: DECREMENT};
 };
