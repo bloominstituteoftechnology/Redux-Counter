@@ -1,8 +1,8 @@
-import { INCREMENT, DECREMENT } from '../actions';
+import { INCREMENT, DECREMENT } from "../actions";
 
 const initialState = {
   count: 0
-}
+};
 
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
@@ -12,8 +12,18 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
+      console.log("inc");
+      return {
+        ...state,
+        count: action.payload
+      };
     // Fill in the body of this case
     case DECREMENT:
+      console.log("dec");
+      return {
+        ...state,
+        count: action.payload
+      };
     // Fill in the body of this case
     default:
       return state;
