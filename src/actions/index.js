@@ -13,30 +13,22 @@ export const increment = () => {
   // Fill in this function
   // return {
   //   ...state, 
-  //   counter: state.counter +1
+  //   count: state.count +1
   // }
   return {
-    type: INCREMENT
+    type: 'INCREMENT'
   };
+  // dispatch({type: 'INCREMENT'})
 };
 
 export const decrement = () => {
   // Fill in this function
   // return {
   //   ...state,
-  //   counter: state.counter -1
+  //   count: state.count -1
   // }
   return {
-    type: DECREMENT
+    type: 'DECREMENT'
   };
+  // dispatch({type: 'DECREMENT'})
 };
-
-// export const CHANGE_TITLE = 'CHANGE_TITLE';
-
-// export const changeTitle = title => {
-//   console.log('inside action', title);
-//   return {
-//     type: CHANGE_TITLE,
-//     payload: title
-//   };
-// };
