@@ -11,8 +11,32 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
+  // return {
+  //   ...state, 
+  //   counter: state.counter +1
+  // }
+  return {
+    type: INCREMENT
+  };
 };
 
 export const decrement = () => {
   // Fill in this function
+  // return {
+  //   ...state,
+  //   counter: state.counter -1
+  // }
+  return {
+    type: DECREMENT
+  };
 };
+
+// export const CHANGE_TITLE = 'CHANGE_TITLE';
+
+// export const changeTitle = title => {
+//   console.log('inside action', title);
+//   return {
+//     type: CHANGE_TITLE,
+//     payload: title
+//   };
+// };
