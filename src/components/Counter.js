@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
+import { connect } from 'react-redux';    // Higher Order Component, created to extend functionality of Counter component
 import { increment, decrement } from '../actions';
 
 class Counter extends Component {
@@ -20,10 +20,10 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => this.props.increment() }>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => this.props.decrement() }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
