@@ -11,8 +11,24 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
+  // return {
+  //   ...state, 
+  //   count: state.count +1
+  // }
+  return {
+    type: 'INCREMENT'
+  };
+  // dispatch({type: 'INCREMENT'})
 };
 
 export const decrement = () => {
   // Fill in this function
+  // return {
+  //   ...state,
+  //   count: state.count -1
+  // }
+  return {
+    type: 'DECREMENT'
+  };
+  // dispatch({type: 'DECREMENT'})
 };
