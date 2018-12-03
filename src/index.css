@@ -92,16 +92,32 @@ body {
 
 .count-container .increment-button {
     width: 40px;
+    padding: 5px;
     border: 1px solid #89B6A5;
     background-color: #595758;
     color: #89B6A5;
     cursor: pointer;
+    font-size: 1.4rem;
+    margin: 10px 0;
 }
 
 .count-container .decrement-button {
     width: 40px;
+    padding: 5px;
     border: 1px solid #AA6373;
     background-color: #595758;
     color: #AA6373;
     cursor: pointer;
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+.count-container .odd-button, .count-container .async-button {
+    padding: 5px;
+    border: 1px solid #BFC3BA;
+    background-color: #595758;
+    color: #BFC3BA;
+    cursor: pointer;
+    font-size: 1.4rem;
+    margin: 10px 0;
 }
