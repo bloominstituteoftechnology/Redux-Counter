@@ -1,0 +1,123 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #595758;
+    color: #FFE4F3;
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.count-container p {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.count-container .count-number {
+    font-size: 10rem;
+}
+
+.count-container .button-container {
+    width: 15rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.count-container button:focus {
+    outline: 0;
+}
+
+
+.count-container .increment-button {
+    width: 40px;
+    padding: 5px;
+    border: 1px solid #89B6A5;
+    background-color: #595758;
+    color: #89B6A5;
+    cursor: pointer;
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+.count-container .decrement-button {
+    width: 40px;
+    padding: 5px;
+    border: 1px solid #AA6373;
+    background-color: #595758;
+    color: #AA6373;
+    cursor: pointer;
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+.count-container .odd-button, .count-container .async-button {
+    padding: 5px;
+    border: 1px solid #BFC3BA;
+    background-color: #595758;
+    color: #BFC3BA;
+    cursor: pointer;
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
