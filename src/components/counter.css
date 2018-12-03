@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+.counter-wrapper {
+  min-width: 600px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px 40px;
+  border: 2px solid #222;
+  font-size: 40px;
+}
+
+.text {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.count-digit {
+  color: #222;
+  font-weight: bold;
+  font-size: 54px;
+}
+
+.button-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.button {
+  background: 0;
+  border: 0;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: dodgerblue;
+}
+
+.text-button {
+  font-size: 18px;
+}
+
+.button:active {
+  outline: 0;
+  color: red;
+}
+
+.button:focus {
+  outline: 0;
+}
