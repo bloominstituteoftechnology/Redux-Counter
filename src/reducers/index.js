@@ -21,10 +21,11 @@ export default (state = initialState, action) => {
 
     case DECREMENT:
     // Fill in the body of this case
+    if (state.count >= 1) {
     return {
     ...state,
         count: state.count -1
-    }
+    } }
     default:
       return state;
   }
