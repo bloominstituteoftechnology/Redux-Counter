@@ -1,6 +1,8 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
+//intial comment, so i can commit woo woo.
+
 // Our action creators will return
 // an action packet that our reducer will
 // receive. What does the action packet look like?
@@ -11,8 +13,9 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
+  return{type: INCREMENT}
 };
 
 export const decrement = () => {
-  // Fill in this function
+  return{type: DECREMENT}
 };

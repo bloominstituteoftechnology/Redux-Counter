@@ -11,10 +11,15 @@ const initialState = {
 // need to do with the count in each case?
 export default (state = initialState, action) => {
   switch (action.type) {
+    
     case INCREMENT:
-    // Fill in the body of this case
+    return state = {...state, count: ++state.count}; //that is so weird. count ++ doesnt work
+     
+    console.log(state);
     case DECREMENT:
-    // Fill in the body of this case
+    return state = {...state, count: --state.count};
+    
+    console.log(state);
     default:
       return state;
   }
