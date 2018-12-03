@@ -1,0 +1,26 @@
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto;
+}
+
+div {
+    margin: 10px 0;
+}
+
+button {
+    margin: 0 10px;
+    min-width: 50px;    
+}
+
+.counterBtn {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.counterTxt {
+    font-size: 24px;
+    
+}
