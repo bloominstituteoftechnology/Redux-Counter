@@ -10,7 +10,7 @@ import counter from "./reducers/index";
 // that is responsible for updating the store, along
 // with any initial state that we may want the store
 // to start out with (which is none in this case).
-const store = createStore(counter);
+const store = createStore(counter, { count: 0 });
 
 // Here, we wrap our main React component inside of
 // Provider tags, which come from the react-redux package.
