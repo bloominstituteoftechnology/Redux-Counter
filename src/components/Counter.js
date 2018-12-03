@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement,oddIncrement,incWithDelay } from '../actions';
 
 class Counter extends Component {
-    incrementIfOdd = () => {
-        // Stretch Problem: Implement an increment function that
-        // only increments if the counter value is odd
-    };
+    // incrementIfOdd = () => {
+    //     // Stretch Problem: Implement an increment function that
+    //     // only increments if the counter value is odd
+    // };
 
-    incrementAsync = () => {
-        // Stretch Problem: Implement an increment function that
-        // increments after waiting for one second
-    };
+    // incrementAsync = () => {
+    //     // Stretch Problem: Implement an increment function that
+    //     // increments after waiting for one second
+    // };
 
     render() {
         // Fill in the two button onClick methods
@@ -29,6 +29,16 @@ class Counter extends Component {
                     this.props.decrement()
                     } }>
                     -
+                </button>
+                <button onClick={() => {
+                    this.props.oddIncrement()
+                    } }>
+                    + if Odd
+                </button>
+                <button onClick={ () =>
+                    setTimeout(this.props.incWithDelay,1000)
+                     }>
+                    + with 1 Sec delay
                 </button>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
@@ -60,4 +70,4 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, { increment, decrement,oddIncrement,incWithDelay })(Counter);
