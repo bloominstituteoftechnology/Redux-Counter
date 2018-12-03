@@ -4,13 +4,13 @@ import { increment, decrement } from '../actions';
 
 class Counter extends Component {
     incrementIfOdd = () => {
-        // Stretch Problem: Implement an increment function that
-        // only increments if the counter value is odd
+        this.props.count % 2 === 1 && this.props.increment();
     };
 
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
+        setTimeout(this.props.increment, 1000)
     };
 
     render() {
@@ -18,23 +18,38 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
-            <p>
-                Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
-                    +
-                </button>
-                <button onClick={() => /* Fill me in */ }>
-                    -
-                </button>
-                 {/* Uncomment these button tags if you got
-                around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
-                    Increment if odd
-                </button>
-                <button onClick={this.incrementAsync}>
-                    Increment async
-                </button>  */}
-            </p>
+            <div style={{ margin: '20px'}} className='ui raised very padded text center aligned container segment'>
+                <h1>Weird Counter</h1>
+                <div className="ui list">
+                    <div className="ui center item">
+                        <button className="ui secondary button" onClick={this.incrementAsync}>
+                            Increment async
+                        </button> 
+                    </div>
+                    <div className="ui center item">
+                        {/* Uncomment these button tags if you got
+                        around to implementing the extra credit functions */}
+                        <button className="ui secondary button" onClick={this.incrementIfOdd}>
+                            Increment if odd
+                        </button>
+                    </div>
+                    <div className="ui item">
+                        <button className="ui secondary button" onClick={() => this.props.increment() }>
+                            +
+                        </button>
+                    </div>
+                    <div className="ui item">
+                        <h2 className="ui">
+                            {this.props.count}
+                        </h2>
+                    </div>
+                    <div className="ui item">
+                        <button className="ui secondary button" onClick={() => this.props.decrement() }>
+                            -
+                        </button>
+                    </div>
+                </div>
+            </div>
         );
     }
 }
