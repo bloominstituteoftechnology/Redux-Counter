@@ -18,3 +18,16 @@ button:hover {
   background: mediumslateblue;
   border-color: lightgray;
 }
+
+.counter {
+  background: darkgrey;
+  border: 2px dashed black;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}

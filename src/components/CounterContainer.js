@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { increment, decrement } from "../actions";
-import Counter from "./Counter";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { increment, decrement } from '../actions';
+import Counter from './Counter';
 
 class CounterContainer extends Component {
   incrementIfOdd = () => {
@@ -25,13 +25,16 @@ class CounterContainer extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    count: state
-  };
-};
+const mapStateToProps = (state, { id }) => ({
+  count: state.find(c => c.id === id).count
+});
+
+const mapDispatchToProps = (dispatch, { id }) => ({
+  increment: () => dispatch(increment(id)),
+  decrement: () => dispatch(decrement(id))
+});
 
 export default connect(
   mapStateToProps,
-  { increment, decrement }
+  mapDispatchToProps
 )(CounterContainer);
