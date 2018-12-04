@@ -7,13 +7,9 @@ class Counter extends Component {
     if (this.props.count % 2 !== 0) {
       this.props.increment();
     }
-    // Stretch Problem: Implement an increment function that
-    // only increments if the counter value is odd
   };
 
   incrementAsync = () => {
-    // Stretch Problem: Implement an increment function that
-    // increments after waiting for one second
     setTimeout(this.props.increment, 1000);
   };
 
