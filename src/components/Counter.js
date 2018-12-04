@@ -3,6 +3,13 @@ import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
 class Counter extends Component {
+    
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         newCount: null
+    //     };
+    // }
     incrementIfOdd = () => {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
@@ -13,17 +20,21 @@ class Counter extends Component {
         // increments after waiting for one second
     };
 
+
+ 
+  
     render() {
+        console.log("what's happening?!")
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={ () => this.props.increment() }>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={ () => this.props.decrement() }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
@@ -50,6 +61,12 @@ const mapStateToProps = (state) => {
         count: state.count
     };
 };
+
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         increment: number => dispatch(increment(number))
+//     }
+// }
 
 // The connect function is called in order to make this component aware
 // of the rest of the redux architecture. Without this, this component

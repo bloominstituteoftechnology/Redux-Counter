@@ -5,12 +5,32 @@ import { Provider } from 'react-redux';
 import Counter from './components/Counter';
 import counter from './reducers';
 
+
+class App extends React.Component {
+
+
+
+  render() {
+    console.log("work")
+    return (
+      <div className="App">
+        <h1>My Counter</h1>
+        <Counter />
+        
+      </div>
+    )
+  }
+
+}
+
 // This line instantiates our central Redux store.
 // The `createStore` function receives the reducer
 // that is responsible for updating the store, along
 // with any initial state that we may want the store
 // to start out with (which is none in this case).
 const store = createStore(counter);
+
+// store.subscribe(() => console.log(store.getState()));
 
 // Here, we wrap our main React component inside of
 // Provider tags, which come from the react-redux package.
@@ -19,7 +39,8 @@ const store = createStore(counter);
 // where the store "lives".
 ReactDOM.render(
   <Provider store={store}>
-    <Counter />
+    <App />
+    {/* <Counter /> */}
   </Provider>,
   document.getElementById('root')
 );
