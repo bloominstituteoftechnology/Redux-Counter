@@ -24,12 +24,8 @@ class Counter extends Component {
     return (
       <p>
         Clicked: {this.props.count} times
-        <button onClick={() => this.props.increment({ type: "INCREMENT" })}>
-          +
-        </button>
-        <button onClick={() => this.props.decrement({ type: "DECREMENT" })}>
-          -
-        </button>
+        <button onClick={() => this.props.increment()}>+</button>
+        <button onClick={() => this.props.decrement()}>-</button>
         {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
         <button onClick={this.incrementIfOdd}>Increment if odd</button>
@@ -58,6 +54,5 @@ const mapStateToProps = state => {
 // makes itself known to this component.
 export default connect(
   mapStateToProps,
-
   { increment, decrement }
 )(Counter);
