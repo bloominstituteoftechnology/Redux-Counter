@@ -1,0 +1,16 @@
+.counter {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 30px auto;
+    font-size: 30px;
+}
+
+.counter button {
+    width: 50%;
+    margin: 10px auto;
+    background-color: teal;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
