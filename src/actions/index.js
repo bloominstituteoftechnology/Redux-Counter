@@ -1,6 +1,7 @@
 export const INCREMENT = "INCREMENT";
 export const DECREMENT = "DECREMENT";
 export const ODDINCREMENT = "ODDINCREMENT";
+export const ASYNC = "ASYNC";
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -27,5 +28,11 @@ export const decrement = () => {
 export const incrementIfOdd = () => {
   return {
     type: ODDINCREMENT
+  };
+};
+
+export const incrementAsync = () => {
+  return {
+    type: ASYNC
   };
 };
