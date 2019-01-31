@@ -11,10 +11,18 @@ const initialState = {
 // need to do with the count in each case?
 export default (state = initialState, action) => {
   switch (action.type) {
-    case INCREMENT:
+    case INCREMENT: 'INCREMENT'
     // Fill in the body of this case
-    case DECREMENT:
+    return {
+      ...state,
+      title:action.payload
+    }
+    case DECREMENT:'DECREMENT'
     // Fill in the body of this case
+    return{
+      ...state,
+      title:action.payload
+    }
     default:
       return state;
   }
