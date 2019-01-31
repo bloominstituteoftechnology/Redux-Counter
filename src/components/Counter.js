@@ -8,7 +8,7 @@ class Counter extends Component {
         // only increments if the counter value is odd
     //};
 
-    incrementAsync = () => {
+    //incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
     //};
@@ -20,12 +20,10 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => { const action = {type: 'INCREMENT'};
-                    dispatch(action);}}>
+                <button onClick={() => this.props.increment() }>
                     +increment
                 </button>
-                <button onClick={() => { const action = {type: 'DECREMENT'};
-                    dispatch(action);}}>>
+                <button onClick={() => this.props.decrement() }>
                     -decrement
                 </button>
                  {/* Uncomment these button tags if you got
@@ -53,13 +51,6 @@ const mapStateToProps = (state) => {
     };
 };
 
-//function mapDispatchToProps(dispatch){
-   //return {
-      // onIncrementClick:()=> {
-         //  console.log('clickin')
-  //     }
- //  }
-//}
 
 // The connect function is called in order to make this component aware
 // of the rest of the redux architecture. Without this, this component
