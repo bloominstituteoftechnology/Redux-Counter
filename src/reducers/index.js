@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from "../actions";
+import { INCREMENT, DECREMENT, ODDINCREMENT } from "../actions";
 
 const initialState = {
   count: 0
@@ -20,6 +20,10 @@ export default (state = initialState, action) => {
       return {
         count: (state.count -= 1)
       };
+    case ODDINCREMENT:
+      if (state.count % 2 !== 0) {
+        return { count: (state.count += 1) };
+      } else return state;
     // Fill in the body of this case
     default:
       return state;
