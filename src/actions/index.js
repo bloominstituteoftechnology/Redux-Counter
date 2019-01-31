@@ -1,5 +1,7 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const INCIFODD = 'INCIFODD';
+export const INCIFASYNC = 'INCIFASYNC';
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -18,3 +20,15 @@ export const decrement = () => {
   // Fill in this function
 return {type: 'DECREMENT'}
 };
+
+export const incrementIfOdd = () => {
+  // Fill in this function
+return {type: 'INCIFODD'}
+};
+
+
+export const incrementAsync = () => {
+  // Fill in this function
+return {type: 'INCIFASYNC'}
+};
+

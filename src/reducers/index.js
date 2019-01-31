@@ -18,8 +18,17 @@ export default  (state = initialState, action) => {
       // return {count: state.count + 1}
     // Fill in the body of this case
     case DECREMENT:
+    console.log('decrement')
     // Fill in the body of this case
     return Object.assign({}, state, {count: state.count - 1})
+    // case INCIFODD:
+    // console.log('odd inc')
+    // // Fill in the body of this case
+    // return Object.assign({}, state, {count: state.count - 1})
+    // case INCIFASYNC:
+    // console.log('async inc')
+    // // Fill in the body of this case
+    // return Object.assign({}, state, {count: state.count - 1})
     default:
       return state;
   }
