@@ -10,9 +10,6 @@ class Counter extends Component {
         console.log('odd # increments:')
         console.log(this.props.count )
         if (this.props.count % 2 !== 0){
-            console.log(this.props.count)
-            console.log(this.count)
-            console.log(this.props.increment())
             this.props.increment()
         }
     };
