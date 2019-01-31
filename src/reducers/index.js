@@ -19,6 +19,10 @@ export default (state = initialState, action) => {
     // Fill in the body of this case
 
     case DECREMENT:
+    let minus = state.count - 1;
+    return {
+      ...state, count: minus
+    } 
     // Fill in the body of this case
     default:
       return state;
