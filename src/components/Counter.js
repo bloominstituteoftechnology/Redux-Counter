@@ -14,7 +14,6 @@ class Counter extends Component {
     };
 
     incrementCount = () => {
-        console.log(this.props.count)
         increment(this.props.count)
     }
 
@@ -29,10 +28,10 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => this.incrementCount }>
+                <button onClick={this.incrementCount }>
                     +
                 </button>
-                <button onClick={() => this.decrementCount }>
+                <button onClick={this.decrementCount }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
