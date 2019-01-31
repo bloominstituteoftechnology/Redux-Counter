@@ -14,11 +14,12 @@ class Counter extends Component {
     };
 
     incrementCount = () => {
-        increment(this.props.count + 1)
+        console.log(this.props.count)
+        increment(this.props.count)
     }
 
     decrementCount = () => {
-        decrement(this.props.count - 1)
+        decrement(this.props.count)
     }
 
     render() {
