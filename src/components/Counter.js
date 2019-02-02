@@ -16,9 +16,7 @@ class Counter extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return {
-    count: state.count
-  };
+  return { count: state.count };
 };
 
 export default connect(mapStateToProps, { increment, decrement })(Counter);
