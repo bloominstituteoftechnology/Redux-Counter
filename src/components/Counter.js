@@ -2,28 +2,38 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
-class Counter extends Component {
-    incrementIfOdd = () => {
-        // Stretch Problem: Implement an increment function that
-        // only increments if the counter value is odd
-    };
 
-    incrementAsync = () => {
-        // Stretch Problem: Implement an increment function that
-        // increments after waiting for one second
-    };
+
+class Counter extends Component {
+    // incrementIfOdd = () => {
+    //     // Stretch Problem: Implement an increment function that
+    //     // only increments if the counter value is odd
+    // };
+
+    // incrementAsync = () => {
+    //     // Stretch Problem: Implement an increment function that
+    //     // increments after waiting for one second
+    // };
+
+
 
     render() {
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
+        // const Add = (e, count) => {
+        //     e.preventDefault()
+        //     this.props.increment
+        // }
+        
+
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={count => this.props.increment(count) }>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={count => this.props.decrement(count) }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
