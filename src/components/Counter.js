@@ -5,30 +5,27 @@ import { increment, decrement } from '../actions';
 
 
 class Counter extends Component {
-    incrementIfOdd = () => {
+    incrementIfOdd = (e) => {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
         if (this.props.count >= 0) {
             if (this.props.count % 2 !== 0) {
-                this.props.increment();
+                this.props.increment(e, this.props.count);
             }
         } else {
             if (this.props.count % 2 !== 0) {
-                this.props.decrement();
+                this.props.decrement(e, this.props.count);
             }
         }
-        // if (this.props.count % 2 !== 0) {
-        //     this.props.increment();
-        // }
     };
 
-    incrementAsync = () => {
+    incrementAsync = (e) => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
         if (this.props.count >= 0) {
-            setTimeout(() => this.props.increment(), 1000)
+            setTimeout(() => this.props.increment(e, this.props.count), 1000)
         } else {
-            setTimeout(() => this.props.decrement(), 1000)
+            setTimeout(() => this.props.decrement(e, this.props.count), 1000)
         }
         
     };
@@ -43,25 +40,23 @@ class Counter extends Component {
         //     e.preventDefault()
         //     this.props.increment
         // }
-        
-
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={count => this.props.increment(count) }>
+                <button onClick={e => this.props.increment(e, this.props.count) }>
                     +
                 </button>
-                <button onClick={count => this.props.decrement(count) }>
+                <button onClick={e => this.props.decrement(e, this.props.count) }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                <button onClick={this.incrementIfOdd}>
+                <button onClick={e => this.incrementIfOdd(e)}>
                     Increment or Decrement if odd
                 </button>
-                <button onClick={this.incrementAsync}>
+                <button onClick={e => this.incrementAsync(e)}>
                     Increment or Decrement async
-                </button> 
+                </button>
             </p>
         );
     }
