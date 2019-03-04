@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
+import { bindActionCreators } from 'redux';
 
 class Counter extends Component {
     incrementIfOdd = () => {
@@ -20,10 +21,10 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => this.props.increment()/* Fill me in */ }>
                     +
                 </button>
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={() => this.props.decrement()/* Fill me in */ }>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
@@ -51,9 +52,16 @@ const mapStateToProps = (state) => {
     };
 };
 
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({
+    increment,
+    decrement,
+    }, dispatch);
+}
+
 // The connect function is called in order to make this component aware
 // of the rest of the redux architecture. Without this, this component
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(Counter)
