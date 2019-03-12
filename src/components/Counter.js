@@ -24,8 +24,10 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
-            <p>
+            <p className="App">
+                <h1 className="title">Super Counter</h1>
                 Clicked: {this.props.count} times
+
                 <button onClick={this.props.increment}>
                     +
                 </button>

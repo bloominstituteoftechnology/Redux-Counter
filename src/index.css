@@ -1,0 +1,15 @@
+.App {
+  width: 500px;
+  height: 200px;
+  background-color: #DDA0DD;
+  margin: 100px auto;
+  border-bottom: 2px solid lightgrey;
+  border-right: 2px solid lightgrey;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
