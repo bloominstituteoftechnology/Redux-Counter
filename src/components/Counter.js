@@ -7,7 +7,7 @@ class Counter extends Component {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
         if (this.props.count % 2 !== 0) {
-            this.props.increment(this.state)
+            this.props.increment()
         }
     };
 
@@ -24,10 +24,10 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => this.props.increment(this.state)}>
+                <button onClick={() => this.props.increment()}>
                     +
                 </button>
-                <button onClick={() => this.props.decrement(this.state)}>
+                <button onClick={() => this.props.decrement()}>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
@@ -43,6 +43,8 @@ class Counter extends Component {
     }
 }
 
+// mapStateToProps is foobar banana - it is a function that takes state, 
+// and returns an object. 
 // The mapStateToProps function specifies which portion of the 
 // state tree this component needs to receive. In this case, 
 // since our redux store is only storing the value of the count,
@@ -51,7 +53,7 @@ class Counter extends Component {
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
     return {
-        count: state.count
+        count: state.count // count is foobar banana
     };
 };
 
@@ -60,4 +62,15 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, { increment, decrement })(Counter); // same as { increment: increment}
+/* We pass into connect mapStateToProps and object with action creators
+Connect is an HOC
+First invocation:
+    2 arguments:
+      - a function (mapStateToProps)
+      - an object - add action creators to props
+Second invocation:
+    1 argument:
+      1 - Component
+
+*/
