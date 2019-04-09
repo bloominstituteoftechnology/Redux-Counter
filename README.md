@@ -1,6 +1,6 @@
 # Redux Counter
 
-## Topics
+## Topics 
 
 * Immutability in JavaScript
 * Redux
