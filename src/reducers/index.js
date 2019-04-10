@@ -13,8 +13,12 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
     // Fill in the body of this case
+      state.count ++;
+      return state;
     case DECREMENT:
     // Fill in the body of this case
+      state.count --;
+      return state;
     default:
       return state;
   }
