@@ -23,6 +23,7 @@ class Counter extends Component {
         <button
           onClick={() => {
             /* Fill me in */
+            this.props.increment();
           }}
         >
           +
@@ -30,6 +31,7 @@ class Counter extends Component {
         <button
           onClick={() => {
             /* Fill me in */
+            this.props.decrement();
           }}
         >
           -
