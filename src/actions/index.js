@@ -1,6 +1,6 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
-export const INCREMENTIFODD = 'INCREMENTIFODD'
+export const INCREMENTODD = 'INCREMENTODD'
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -10,25 +10,25 @@ export const INCREMENTIFODD = 'INCREMENTIFODD'
 // logic of updating the central Redux store. That
 // is left to the reducer(s).
 
-export const increment = (num) => {
+export const increment = () => {
   // Fill in this function
   return {
     type: INCREMENT,
-    payload: num
+    
   }
 };
 
-export const decrement = (num) => {
+export const decrement = () => {
   // Fill in this function
   return {
     type: DECREMENT,
-    payload: num
+    
   }
 };
 
-export const incrementIfOdd = num => {
+export const incrementOdd = () => {
   return {
-    type: INCREMENTIFODD,
-    payload: num
+    type: INCREMENTODD,
+    
   }
 }
