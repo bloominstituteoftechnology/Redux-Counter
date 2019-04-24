@@ -10,12 +10,16 @@ class Counter extends Component {
             return this.props.increment()
         }
     }
-
+//For incrementIfOdd, see => https://css-tricks.com/snippets/javascript/check-if-number-is-evenodd/
+//    => http://www.hackingwithreact.com/read/1/7/how-to-write-if-else-conditional-statements-in-jsx
+//    => 
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
         setTimeout(() =>{this.props.increment()},1000)
     };
+//For incrementAsync, see => https://www.w3schools.com/jsref/met_win_settimeout.asp
+//                        => https://www.electrictoolbox.com/using-settimeout-javascript/
 
     render() {
         // Fill in the two button onClick methods
