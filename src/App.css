@@ -1,0 +1,11 @@
+body {
+    background: black;
+    color: darkred;
+}
+
+button {
+    margin: 5px;
+    border: 2px solid darkred;
+    background: black;
+    color: darkred;
+}
