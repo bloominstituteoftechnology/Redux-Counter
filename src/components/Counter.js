@@ -15,9 +15,6 @@ class Counter extends Component {
     };
 
     render() {
-        // Fill in the two button onClick methods
-        // Upon clicking these buttons, the count
-        // should decrement or increment accordingly
         return (
             <p>
                 Clicked: {this.props.count} times
@@ -27,7 +24,7 @@ class Counter extends Component {
                 <button onClick={() => {this.props.decrement()}}>
                     -
                 </button>
-                
+
                 <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
