@@ -5,7 +5,7 @@ const initialState = {
 };
 
 // Our reducer that handles our two action cases:
-// increment and decrement. It receives the state
+// increment and decrement. It receives the stat
 // of our redux store, along with an action created
 // by our action creator. What does the reducer
 // need to do with the count in each case?
