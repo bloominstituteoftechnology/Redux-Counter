@@ -1,5 +1,5 @@
 # Redux Counter
-
+Jose Montero
 ## Topics
 
 * Immutability in JavaScript
