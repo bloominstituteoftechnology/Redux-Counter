@@ -4,6 +4,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Counter from './components/Counter';
 import counter from './reducers';
+import rootReducer from './reducers'
 
 // This line instantiates our central Redux store.
 // The `createStore` function receives the reducer
@@ -12,6 +13,12 @@ import counter from './reducers';
 // to start out with (which is none in this case).
 const store = createStore(counter);
 
+
+const store2 = createStore(rootReducer);
+
+// store.dispatch({type:'DECREMENT',payload:100, })
+//  store.dispatch({type:'INCREMENT', payload:300})
+
 // Here, we wrap our main React component inside of
 // Provider tags, which come from the react-redux package.
 // This is needed because the store needs to know where it
@@ -19,7 +26,7 @@ const store = createStore(counter);
 // where the store "lives".
 ReactDOM.render(
   <Provider store={store}>
-    <Counter />
+    <Counter  counter = {counter} />
   </Provider>,
   document.getElementById('root')
 );
