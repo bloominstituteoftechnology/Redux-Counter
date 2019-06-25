@@ -18,19 +18,32 @@ class Counter extends Component {
     // Upon clicking these buttons, the count
     // should decrement or increment accordingly
     return (
-      <p>
-        Clicked: {this.props.count} times
-        <button onClick={() => this.props.increment()}>+</button>
-        <button onClick={() => this.props.decrement()}>-</button>
-        {/* Uncomment these button tags if you got
+      <div className="container mt-5 text-center">
+        <h1>Redux Counter Project</h1>
+        <p className="lead">
+          Clicked: {this.props.count} times
+          <button
+            className="btn btn-primary ml-4"
+            onClick={() => this.props.increment()}
+          >
+            +
+          </button>
+          <button
+            className="btn btn-danger ml-1"
+            onClick={() => this.props.decrement()}
+          >
+            -
+          </button>
+          {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-        {/* <button onClick={this.incrementIfOdd}>
+          {/* <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
                 <button onClick={this.incrementAsync}>
                     Increment async
                 </button>  */}
-      </p>
+        </p>
+      </div>
     );
   }
 }
