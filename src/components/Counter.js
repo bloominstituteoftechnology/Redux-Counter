@@ -20,10 +20,13 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => {/* Fill me in */ }}>
+                <button onClick={() => { 
+                    this.props.increment();
+                    console.log(this.props.count) 
+                }}>
                     +
                 </button>
-                <button onClick={() => {/* Fill me in */ }}>
+                <button onClick={() => { this.props.decrement() }}>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
@@ -46,6 +49,7 @@ class Counter extends Component {
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
+    console.log('mapStateToProps', state);
     return {
         count: state.count
     };
