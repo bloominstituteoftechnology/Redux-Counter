@@ -1,0 +1,170 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  /* font-size 16px; */
+  font-size: 62.5%; /*16 x.625 = 10*/
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: url('https://lh3.googleusercontent.com/nPcR2f7hX33C0hI3C9Nd_9QLzw9JJfSOhUr6DI7IEX4K62iGbzgQgf72HUgBjykvL4wXs3pJVJHk-AouN1XQ931AiB_THqP4KXsRgQjTaQy11ZE6r_JpgQ6u_yyrbo90fAd0qCtQ4nacZe3oXBE4L3hwOD6gMZaPa191p4jvZnGnmV5gJLvfe9pkVzuGc-opsKLfWuCGRAAa4lCgM7aO4E-OvubodhO2jRKMDLRmWo8l0vKr8bDI3_vxMtoX0xBky18nkeRkmBTqlXSxFnhSaL68gxZQO6VDuL2kBB83FVvviLwR7f_2XScYuhuIRKZXxqya2RHBXRI3TQG6YIaRo0j0fdYp-cRqT3BnUbSuifnOIDA1MiZ4i-O2MvOBLmyMh-kC9p-n-mI-h4q4XCJJV-uieaGT8Nd5MLtOb3FnfVkptcNRYHm3fazTNghb784RKUIYtsySqWVsgfckIYgAizoTfA9nT5iBYXbR3Ztfuw0JCYmtTtOVo-ikA8hiCAU1To5eaAxsbx0CuKG4Ne7Dbql8uf4xEZSEtjwH0bXrTpGmCY7yGlgXDhoAt_W4LN4Y69NpqKGl6_gvOZtpVZ_QlkUr2oa9Pm_EOfI0Vd8qh7Hy4vdzBXmwbZfzQQ6qddb8zmPDlt9cMv6_rfp-5BQdoM1UDU3jxxTxzKX1yVUtfCmufeTotj0U5IE=w1172-h753-no');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    margin: 1%;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 1%;
+    background: whitesmoke;
+}
+button {
+    padding: 1%;
+    margin: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    background: whitesmoke;
+}
+.butt {
+    padding: 1%;
+    margin: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    width: 70px;
+    background: whitesmoke;
+}
