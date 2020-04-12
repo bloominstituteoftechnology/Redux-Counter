@@ -1,19 +1,18 @@
 {
   "name": "counter",
-  "version": "0.0.1",
+  "version": "0.0.22",
   "private": true,
   "devDependencies": {
-    "enzyme": "^2.8.2",
-    "react-scripts": "^1.0.2",
-    "react-test-renderer": "^15.6.1"
+    "enzyme": "^3.10.0",
+    "react-scripts": "^3.0.1",
+    "react-test-renderer": "^16.8.6"
   },
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "prop-types": "^15.5.10",
-    "react": "^15.5.0",
-    "react-dom": "^15.5.0",
-    "react-redux": "^5.0.5",
-    "redux": "^3.5.2"
+    "prop-types": "^15.7.2",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
