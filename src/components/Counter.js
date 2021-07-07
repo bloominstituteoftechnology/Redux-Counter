@@ -6,12 +6,20 @@ class Counter extends Component {
     incrementIfOdd = () => {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
-    };
-
+        if(this.props.count%2===1 || this.props.count%2===-1){
+            return this.props.increment()
+        }
+    }
+//For incrementIfOdd, see => https://css-tricks.com/snippets/javascript/check-if-number-is-evenodd/
+//    => http://www.hackingwithreact.com/read/1/7/how-to-write-if-else-conditional-statements-in-jsx
+//    => 
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
+        setTimeout(() =>{this.props.increment()},1000)
     };
+//For incrementAsync, see => https://www.w3schools.com/jsref/met_win_settimeout.asp
+//                        => https://www.electrictoolbox.com/using-settimeout-javascript/
 
     render() {
         // Fill in the two button onClick methods
@@ -20,20 +28,20 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => {/* Fill me in */ }}>
+                <button onClick={() => {this.props.increment()}}>
                     +
                 </button>
-                <button onClick={() => {/* Fill me in */ }}>
+                <button onClick={() => {this.props.decrement()}}>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
                 <button onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button> 
             </p>
         );
     }
