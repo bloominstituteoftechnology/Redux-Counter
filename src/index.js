@@ -4,6 +4,9 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Counter from './components/Counter';
 import counter from './reducers';
+import './index.css'
+
+
 
 // This line instantiates our central Redux store.
 // The `createStore` function receives the reducer

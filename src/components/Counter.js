@@ -3,12 +3,18 @@ import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
 class Counter extends Component {
+   
+
     incrementIfOdd = () => {
+        if (this.props.count % 2 !== 0) {
+            this.props.increment()
+        }
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
     };
 
     incrementAsync = () => {
+        setTimeout(this.props.increment, 1000)
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
     };
@@ -18,22 +24,24 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
-            <p>
+            <p className="App">
+                <h1 className="title">Super Counter</h1>
                 Clicked: {this.props.count} times
-                <button onClick={() => {/* Fill me in */ }}>
+
+                <button onClick={this.props.increment}>
                     +
                 </button>
-                <button onClick={() => {/* Fill me in */ }}>
+                <button onClick={this.props.decrement}>
                     -
                 </button>
-                 {/* Uncomment these button tags if you got
+                 {/*Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
                 <button onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button> 
             </p>
         );
     }
@@ -47,7 +55,7 @@ class Counter extends Component {
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
     return {
-        count: state.count
+        count: state
     };
 };
 
